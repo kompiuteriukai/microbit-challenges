@@ -1,32 +1,32 @@
-Data Types
-==========
+Duomenų tipai
+=============
 
-We will use values of different types in our micro:bit programs, for example: we could capture acceleration values from the accelerometer. Alternatively, we might want to count the number of button presses the user has made or to show a message to the user telling them the temperature of the room. In order to do these things we need to be able to describe the data we want to use. Python, and most other programming languages, recognise several data types including:
+„Micro:bit” programose naudosime įvairių tipų vertes, pavyzdžiui: galime gauti pagreičio reikšmes iš akselerometro. Kita vertus, galbūt norime suskaičiuoti, kiek mygtukų paspaudžia vartotojas, arba parodyti vartotojui pranešimą, nurodantį kambario temperatūrą. Norėdami visą tai padaryti, turime sugebėti apibūdinti visus duomenis, kurios norime naudoti. „Python“ ir dauguma kitų programavimo kalbų atpažįsta kelis duomenų tipus, įskaitant:
 
-* Integers - these are whole numbers.
-* Floats - these are numbers that contain decimal points or for fractions.
-* Strings - these can contain a combination of any characters that we want to treat as text such as letters, numbers and symbols.  
-* Boolean - used for True and False values.
+* Sveikuosius skaičius - tai yra sveikieji skaičiai.
+* Realiuosius skaičius - tai yra skaičiai su kableliu ir liekana po kablelio.
+* Eilutes - juose gali būti simbolių, kurios norime traktuoti kaip tekstą, pavyzdžiui: raidžių, skaičių ir simbolių derinys.  
+* Būlius - tai yra loginės sistemos dalis, kuri turi dvi reikšmes, teigiamą ir neigiamą.
 
-In a simple program we might use all of these. Here are the data types we could use for a program storing information about our favourite micro:bit games:
+Paprastoje programoje galėtume juos visus panaudoti. Čia pateikiami duomenų tipai, kuriuos galėtume naudoti programoje, kurioje saugoma informacija apie mėgstamus „micro:bit” žaidimus:
 
 .. figure:: dataTypes.png
 
-   Image from: <http://www.bbc.co.uk/education/guides/zwmbgk7/revision/3>
+   Paveiksliukas iš: <http://www.bbc.co.uk/education/guides/zwmbgk7/revision/3>
 
-Variables
----------
+Kintamieji
+----------
 
-A variable can be thought of as a box that the computer can use to store a value. The value held in that box can change or ‘vary’.  All variables are made up of three parts: a name, a type and a value. In the figure below there are three variables of different types:
+Galime įsivaizduoti kintamajį kaip dėžutę, kurioje kompiuteris gali laikyti reikšmę. Reikšmė toje dėžutėje gali pasikeisti ar kisti. Visi kintamieji yra sudaryti iš trijų dalių: pavadinimo, tipo ir reikšmės. Žemiau pavaizduoti trijų tipų kintamieji::
 
 .. figure:: variable.jpg
    :scale: 60 %
 
-   Image from: <https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables>
+   Paveiksliukas iš: <https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables>
 
-The variable ``name`` contains the string ``Bob``, the variable ``winner`` contains the value ``True`` and the variable ``score`` contains the value ``35``.
+Kintamasis ``name`` turi eilutę ``Bob``, kintamasis ``winner`` turi eilutę ``True`` ir kintamasis ``score`` turi eilutę ``35``.
 
-In Python we must give the variables we want to use a name and once we have done that we can start to use them, assigning and manipulating values::
+„Python” programavimo kalboje, mes privalome duoti pavadinimus kintamiesiems ir kai tai padarome, galime pradėti juos naudoti, paskirti ir manipuliuoti jų reikšmėmis::
 
 	from microbit import *
 
@@ -38,21 +38,20 @@ In Python we must give the variables we want to use a name and once we have done
 	   sleep(2000)
 	   print("Number of presses: " + str(count))
 
-Here we have used the variable ``myCount`` to count the number of button presses for button ``A``.  Can you tell what else this snippet of code does?
+Čia panaudojome kintamąjį ``myCount`` tam, kad suskaičiuoti kiek kartų buvo paspaustas mygtukas ``A``. Ar gali pasakyti ką dar šis programos fragmentas daro?
 
-
-
-Operations
+Operacijos
 ----------
 
-Numbers
-^^^^^^^
-You can use numeric values with the basic arithmetic operators: ``+,-,*,/`` in the same way as you would with a calculator. 
-Let's look at an example using arithmetic operators. Imagine that you want to convert the temperature you read from the microbit in Celsius to Fahrenheit, you could use code like this::
+Numeriai
+^^^^^^^^
+Skaitmenines reikšmes galime naudoti su pagrindiniais aritmetiniais operatoriais: `` +, -, *, / `` tokiu pat būdu, kaip ir su skaičiuokle.
+Pažvelkime į aritmetinių operatorių pavyzdį. Įsivaizduokite, kad norite konvertuoti temperatūrą, kurią „micro:bit” pateikia Celsijaus formatu, į Farenheitą, galite naudoti tokį kodą::
+
 	celsiusTemp = temperature()
 	fahrenheitTemp = celsiusTemp * 9 / 5 + 32  
 
-The special operator ``%``, called ``mod`` is used to calculate the remainder when one value is divided by another. For example: maybe you'd like to know whether a number is odd or even, you could try dividing it by 2, if it is even then there will be no remainder::
+Likusiam skaičiui apskaičiuoti naudojamas specialus operatorius „%”, vadinamas „mod”. Pavyzdžiui: galbūt norėtumėte žinoti, ar numeris yra lyginis, ar nelyginis, galite pabandyti jį padalinti iš 2, jei jis yra lyginis tada nebus jokio likučio::
 
 	theNumber = 3
 	if theNumber % 2 == 1:
@@ -60,68 +59,66 @@ The special operator ``%``, called ``mod`` is used to calculate the remainder wh
 	else:
 	   print("The number is even")
 
-If the remainder is equal to 1 then this program will print the message "The number is odd", otherwise. the program will print the message "The number is even". You might have written this program in a different way, This shows that people think about problems in different ways and not two programs are likely to be the same. 
+Jei likutis lygus 1, ši programa išspausdins pranešimą „The number is odd“, kitaip, programa spausdins pranešimą „The number is even“. Galite parašyti šią programą kitaip, tai rodo, kad žmonės galvoja apie problemas skirtingais būdais, o dvi programos nėra tokios pačios. 
 
-
-Strings
+Eilutės
 ^^^^^^^
-The main thing to note about strings is that you can add them together, or concatenate them, with a ``+`` symbol. The code::
+Svarbiausias dalykas apie eilutes, į kurį reikia atreikti dėmesį, yra tai, kad galite jas sujungti arba susieti naudojantis simboliu „+”. Kodas::
 
 	name = "Hayley"
 
 	message = "Well done " + name + ". You are a winner!"
 
-Will concatenate the items on the right hand side of the ``=`` and put the result in the variable called ``message``.
+Sujungs elementus dešinėje pusėje `` = `` ir įterps rezultatą į kintamąjį, vadinamą ``message``.
 
-You cannot join numbers and strings together; you must first convert the number to a string using the ``str()`` function if you want to do that::
+Negalite sujungti skaičių su eilutėmis; norint tą padaryti pirmiausia turite konvertuoti skaičių į eilutę pasinaudojant funkcija ``str()``::
 
 	x = temperature
 	if temperature < 6:
 	   display.scroll("Cold" + str(temperature))
 
 
-Comparisons
+Palyginimai
 -----------
 
 .. figure:: booleanLogic.jpg 
    :scale: 60 %
 
-   Image from <http://www.bbc.co.uk/education/guides/zy9thyc/revision>
+   Paveiksliukas iš: <http://www.bbc.co.uk/education/guides/zy9thyc/revision>
 
-Often in programming we want to compare one value to another, a kind of test. We use these tests or comparisons in selection or loops. Here are some examples of comaparisons written in English::
+Dažnai programuojant mes norime palyginti vieną vertę su kita, patestuoti. Šiuos testus arba palyginimus naudojame atrankoje arba kilpose. Štai keletas anglų kalba parašytų palyginimų pavyzdžių::
 
 	score is greater than 100
 	name equals "Harry"
  	x acceleration is not equal to 0
 
-Python has a set of comparison operators that allow us to write comparisons easily:
+„Python” programavimo kalba turi palyginimo operatorių rinkinį, kuris leidžia mums lengvai atlikti palyginimus:
 
 .. tabularcolumns:: |L|l|
 
 +--------------------------------+----------------------------------------+
-| **Comparison Operator**        | **Meaning**                            |
+| **Palyginimų operatoriai**     | **Reikšmė**                            |
 +================================+========================================+
-| ==                             | Equal to                               |
+| ==                             | Lygu                                   |
 +--------------------------------+----------------------------------------+
-| <, <=                          | Less than, less than or equal to       |
+| <, <=                          | Mažiau, mažiau arba lygu               |
 +--------------------------------+----------------------------------------+
-| >, >=                          | Greater than, greater than or equal to |
+| >, >=                          | Daugiau, diaugiau arba lygu            |
 +--------------------------------+----------------------------------------+
-| !=                             | not equal to                           |
+| !=                             | Nelygu                                 |
 +--------------------------------+----------------------------------------+
 
-Rewriting the comparisons above in Python would be::
+Perašius palyginimus viršuje į „Python“ programavimo kalbą, tai atrodytų taip::
 
 	score > 100
 	name ==  "Harry"
  	acceleration  != 0
 
 
-Using Comparisons
-^^^^^^^^^^^^^^^^^
+Naudojant palyginimus
+^^^^^^^^^^^^^^^^^^^^^
 
-The result of a comparison is either ``True`` or ``False``. ``True`` and ``False`` are special values known as **Boolean values**  and we can use can use them to determine what our programs will do. You may have already used some examples that do this. In this example, the micro:bit will show an arrow pointing in the direction
-of the tilt in the x axis:: 
+Palyginimo rezultatas yra teigiamas arba neigiamas. ``True`` ir ``False`` yra specialios vertės, žinomos kaip ** būlio vertės **, ir mes galime jas naudoti, kad nustatytume, ką atliks mūsų programos. Galbūt jau naudojote tai kituose pavyzdžiuose. Šiame pavyzdyje „micro:bit” rodys rodyklę, nukreiptą į x ašies pasvirimo taško kryptį::
 
 	from microbit import *
 	
@@ -135,16 +132,16 @@ of the tilt in the x axis::
 	    if  x_acceleration < 100:
 	         display.show(Image.ARROW_W) 
 
-Lists
------
+Sąrašai
+-------
 
 .. figure:: lists.jpg 
  
-   Image from <http://www.bbc.co.uk/education/guides/zy9thyc/revision>
+   Paveiksliukas iš: <http://www.bbc.co.uk/education/guides/zy9thyc/revision>
 
-Lists are useful for storing several values together. Let's say we want to store a player's scores, we could use a list like the one pictured above. The list has one box for each value. The cells or boxes are known as `elelments`. 
+Sąrašai yra naudingi saugant kelias vertes kartu. Tarkime, mes norime išsaugoti žaidėjo balus, galėtume naudoti tokį sąrašą, koks yra pavaizduotas aukščiau. Sąrašas turi vieną langelį kiekvienai vertei. Langeliai arba dėžutės yra žinomos kaip „elementai”.
 
-Let's see how to use a list in Python. To create a list we can tell Python the name  of the list and what it will contain:: 
+Pažiūrėkime kaip sudaryti sąrašus „Python” programavimo kalboje. Norėdami sukurti sąrašą „Python” turime sugalvoti sąrašo pavadinimą ir kas jame bus:: 
 
 	from microbit import *
 
@@ -152,10 +149,9 @@ Let's see how to use a list in Python. To create a list we can tell Python the n
 	print(highScores[0])			# Print 25
 	print(highScores[3])			# Print 15
 
+Sąrašo elemento vertės nustatymas yra paprastas, tereikia prisiminti, kad „Python” skaičiuoja elementus pradedant nuo „0”. Mūsų sąrašo ``highScores``, kuris yra viršuje, ``highScores[0]`` yra 25 ir ``highScores[3]`` yra 15.
 
-Finding the value of one of the elements in a list is easy as long as you remember that Python counts the elements from '0'. In our ``highScores`` list above, ``highScores[0]`` is 25 and ``highScores[3]`` is 15.
-
-Not surprisingly, Python has some features to help us do things with lists. The code snippet below will go through the array elements one by one so that we can sum them and calculate the average high score::
+Nenuostabu, kad „Python” turi tam tikrų funkcijų, padedančių mums daryti sąrašus. Toliau pateiktame kodo fragmente bus peržiūrėtas masyvas elementais, kad galėtume juos apibendrinti ir apskaičiuoti vidutinį aukštą rezultatą::
 
 	print("Average High Score: ") 		
 
@@ -166,10 +162,9 @@ Not surprisingly, Python has some features to help us do things with lists. The 
 	average = total / len(highScores)  # Use the len() function here to find the length of the array 
 	print(average)  
 
-Add to a List
-^^^^^^^^^^^^^
-There will be times when we don't know how large to make an array in advance or what the values in the list are going to be. You might want to fill a list with
-temperature readings or accelerometer values, for example.  This code illustrates how you can do that:: 
+Pridėti į sąrašą
+^^^^^^^^^^^^^^^^
+Bus laikas, kai mes iš anksto nežinome, kokio dydžio turi būti masyvas arba kokios bus sąraše esančios vertės. Galite užpildyti sąrašą su temperatūros rodmenimis arba pagreičio matuoklio reikšmėmis. Šis kodas parodo, kaip tai padaryti::
 
 	from microbit import *
 
@@ -178,21 +173,21 @@ temperature readings or accelerometer values, for example.  This code illustrate
 		recordedTemperature.append(temperature())
 		sleep(1000)			 
 
-The ``for`` loop is executed 100 times and ``i`` will have values from 0 to 99. This will measure the temperature every second for 100 seconds and append the value on to the end of the list. 
+``For`` kylpa įvykdoma 100 kartų ir ``i`` turės reikšmes nuo 0 iki 99. Tai pamatuos temperatūrą kas sekundę šimtą kartų ir įkels gautas vertes į sąrašo galą.
 
-
-Delete from a List
+Ištrinti iš sąrašo
 ^^^^^^^^^^^^^^^^^^
-There are two ways to delete elements from lists that are helpful, you might want to delete an element with a particular value from a list::
+Yra du būdai, kaip ištrinti elementus iš sąrašų, kurie yra naudingi, galbūt norėsite iš sąrašo ištrinti tam tikros vertės elementą::
 
 	highScores.delete(24)
 
-This will delete the first element with the value 24.
-Alternatively, you might want to delete an element at a specific position, if you know it:: 
+Tai ištrins pirmą elementą, kurio vertė yra 24.
+Arba, galbūt norėsite ištrinti elementą tam tikroje vietoje, jei žinote tikslią jo vietą::
  
 	highScores.pop(3)
 
-This will delete or 'pop' the element at the given position in the list. Note that::
+Tai ištrins arba arba 'pokštels' elementą tam tikroje sąrašo vietoje. Prisimink tai::
 
 	highScores.pop() 
-will delete the last element in the list.
+	
+ištrins paskutinį elementą sąraše.
