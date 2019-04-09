@@ -1,25 +1,25 @@
 ***********
-Buttons 
+Mygtukai 
 ***********
 
 .. py:module:: microbit.button
 
-The micro:bit has two buttons: labelled ``A`` and ``B``.
+„Micro:bit“ turi du mygtukus: jie yra pažymėti ``A`` ir ``B`` raidėmis.
 
 .. image:: microbit_button.jpg
    :scale: 50 %
 
-You can use the buttons to get input from the user. Perhaps you'd like to start or stop your program with a button press 
-or maybe you'd like to know how many times each button has been pressed. 
+Gali naudoti mygtukus įvesties duomenims iš vartotojo gauti. Galbūt norėtum pradėti arba sustabdyti savo programą
+mygtuko paspaudimu arba norėtum žinoti kiek kartų mygtukas buvo paspaustas.
 
-Basic Functions
-================
+Paprastos funkcijos
+===================
 
-Checking whether a button is pressed
-------------------------------------
+Patikrinti ar mygtukas buvo paspaustas
+--------------------------------------
 
-Sometimes we just want a program to wait until something happens, for example: we could ask the micro:bit to wait until, say, button 
-``A`` is pressed and then print a message. We could do that like this::
+Kartais mes norime, kad programa palauktų kol, kas nors nutiks, pavyzdžiui: norėtume, kad „micro:bit“ palauktų iki kol
+mygtukas ``A`` yra paspautas ir tada atspausdintų žinutę. Galime tai padaryti taip::
 
 	from microbit import *
 
@@ -27,21 +27,21 @@ Sometimes we just want a program to wait until something happens, for example: w
             if button_a.is_pressed():
                 display.scroll("A")
 
-Let's break this up into parts. The first bit::
+Pasiaiškinkime tai dalimis. Pirma eilutė::
 
 	while True:
 
-This is a standard way to tell the micro:bit to repeat whatever code follows it forever and ever and ever ..... you get the idea.
-The next line looks similar to normal English::
+Tai yra standartinis būdas „micro:bit“ kompiuteriukui pasakyti, kad kol reikšmė yra teigiama, vykdyti programą amžinai.
+Sekanti eilutę atrodo kaip normalus anglų kalbos tekstas::
 
         while True:
             if button_a.is_pressed():
                 display.scroll("A")
 
-This means, if button ``A`` is pressed then display an ``A`` on the LED screen.
+Tai reiškia, jeigu mygtukas ``A`` yra paspaustas tuomet rodyti ``A`` raidę LED ekrane.
 
-Of course, we usually want to do something a bit more complicated than that. There is a way to check two things,
-we can use an ``if`` with an ``else`` like this:: 
+Žinoma, dažniausiai mes norime atlikti sudėtingesnius veiksmus. Yra būdas kaip patikrinti du dalykus, mes galime
+naudoti ``if`` ir ``else`` štai taip::
 
         while True:
             if button_a.is_pressed():
@@ -49,12 +49,12 @@ we can use an ``if`` with an ``else`` like this::
 	    else:
 		display.scroll(Image.ASLEEP)
 
-This means, if button ``A`` is pressed then display an ``A`` on the LED screen, otherwise, display ``Image.ASLEEP``.
+Tai reiškia, jeigu mygtukas ``A`` yra paspaustas rodyti raidę ``A`` LED ekrane, kitu atvėju, rodyti ``Image.ASLEEP``.
 
-Counting the number of presses
+Skaičiuoti procesų skaičių
 ------------------------------
-Sometimes you might want to count the number of button presses in a time period. You can do this using the 
-``get_presses()`` method.  Here is an example::
+Kartais gali prireikti suskaičiuoti kiek kartų mygtukas buvo paspaustas per tam tikrą laiką. Gali tai padaryti
+pasinaudojant ``get_presses()`` metodu. Štai pavyzdys::
 
     from microbit import *
 
@@ -63,15 +63,14 @@ Sometimes you might want to count the number of button presses in a time period.
             count = button_a.get_presses()
             display.scroll(str(count))
 
-The micro:bit will sleep for 3 seconds and then wake up and check how many times button ``A`` was pressed. The number of presses is 
-stored in a variable called ``count``. We can't print numbers directly on the LED screen so we convert ``count`` to a string and then display it. Can you think of another way to do this? (Hint: check whether the button has been pressed and add 1 to a counter if it has). 
+„Micro:bit“ užmigs 3 sekundėms, po to pabus ir patikrins kiek kartų buvo paspaustas mygtukas ``A``. Paspaudimų skaičius bus išsaugotas kintamąjame kuris vadinasi ``count``. Mes negalime tiesiogiai atvaizduoti skaičiaus LED ekrane, todėl konvertuojame kintamajį ``count`` į eilutę ir tada atvaizduojame ekrane. Ar gali sugalvoti kitą būdą kaip tai padaryti? (Užuomena: patikrink ar mygtukas buvo paspaustas ir pridėk 1 prie kintamojo jeigu tai buvo padaryta).
 
-Advanced Functions
-===================
+Išplėstinės funkcijos
+======================
 
-Checking for both buttons
+Patikrinti abu mygtukus
 -------------------------
-It is possible to check a series of events by using ``if``, ``elif`` and ``else``. Say you wanted to check whether button ``A`` was pressed or button ``B`` was pressed or whether both buttons were pressed at the same time. We could do that like so::  
+Yra įmanoma patikrinti ir daugiau įvykių pasinaudojant ``if``, ``elif`` ir ``else``. Tarkim norėtum patikrinti kuris mygtukas buvo paspaustas ``A``, ``B`` ar abu vienu metu. Galime tai padaryti šitaip::
 
 	from microbit import *
 
@@ -85,23 +84,22 @@ It is possible to check a series of events by using ``if``, ``elif`` and ``else`
 	        display.scroll("B")
 	    sleep(100)
 
-.. note:: The keyword ``elif`` just means ``else if``. You can use the longer form ``else if`` if you want.
+.. pastaba:: Raktažodis ``elif`` reiškia tą patį ką ir ``else if``. Gali naudoti ir pilną variantą ``else if`` jeigu nori.
 
-The code above displays the letter corresponding to the button. If both buttons are pressed at the same time it displays ``AB``.
+Programa parašyta viršuje parodo raides pagal mygtuko paspaudimą. Jeigu abu mygtukai yra paspaudžiami vienu metu tai ekrane bus rodoma ``AB``.
 
-Has the button been pressed?
+Ar mygtukas buvo paspaustas?
 ----------------------------
-The problem with using ``is_pressed()`` is that unless you are pressing the button at that precise moment then you won't 
-detect whether the button was ever pressed or not.  
+Problema naudojant ``is_pressed()`` yra tai, kad jeigu nepaspausi mygtuko tam tikru tiksliu momentu, tai programa neaptiks
+ar mygtukas kadanors buvo paspaustas ar ne.
 
-The ``was_pressed()`` function is useful is you want to write code that
-occasionally checks whether the button has been pushed but then goes on to
-do something else. While the code is doing the something else, it might be
-the case that the user pushes the button and lets it go and, because you
-haven’t checked to see if it’s pressed then, you might miss it. Well,
-the following function will tell you whether a button has been pushed or
-released since you last called that function - while your code is doing
-something else. In this way you need never miss a button press again::
+Funkcija ``was_pressed()`` yra naudinga kai nori parašyti programą kuri
+retkarčiais patikrina ar mygtukas buvo paspaustas ir toliau vykdo kitus nurodymus.
+Kol programa vykdo kitus nurodymus gali atsitikti taip, kad vartotojas paspaudžia
+mygtuką ir jį atleidžia, bet programa tuo metu nepatikrina ir to nepamato.
+Sekanti funkcija pasakys ar mygtukas buvo paspaustas ir atleistas nuo
+paskutinio karto kai ta funkcija buvo įvykdyta kol programa darė kažką kitą.
+Tokiu atvėju niekada nepraleisi mygtuko paspaudimo::
 
 	from microbit import *
 
@@ -112,17 +110,15 @@ something else. In this way you need never miss a button press again::
 		display.scroll(Image.ASLEEP)
 	    sleep(1000)
 
-What you’ll see is that the display will show an ``A`` for a second
-if you press the button, and then ``Image.ASLEEP`` is displayed. If you
-press the button while the program is delaying, then the ``A`` won’t
-show up immediately, but they will show up when it next tests to see if
-the button has been pressed. You’ll see this more clearly if you make
-the delay bigger.
+Paspaudus mygtuką trumpam pamatysi raidę ``A`` ir tada bus rodoma ``Image.ASLEEP``.
+Jeigu paspausi mygtuką kol programa miega, tai raidė ``A`` iškart nepasirodys,
+bet ji pasirodys kai funcija sekantį kartą patikrins ar mygtukas buvo paspaustas.
+Tai gali pamatyti aiškiau jeigu nustatysi ilgesnį miego laiką.
 
-Now try using ``button_a.isPressed()`` instead of ``button_a.was_pressed()``. What you will find is 
-that if you press the button while the code is delaying the micro:bit will never realise that you pressed it at all.
+Dabar pabandyk panaudoti funkciją ``button_a.isPressed()`` vietoj ``button_a.was_pressed()``.
+Tokiu atvėju jeigu programa tuo metu miegojo ji niekada nesupras, kad mygtukas buvo paspaustas.
  
-Ideas for Projects with the Buttons
-===================================
-* Change what is displayed when you press the button.
-* Games that need user input… can you make one up?
+Keletas idėjų projektams su mygtukais
+======================================
+* Pakeisk kas yra rodoma paspaudus mygtuką
+* Žaidimai reikalaujantys vartotojo komandų... gal gali sugalvoti vieną?
