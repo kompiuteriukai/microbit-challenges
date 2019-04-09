@@ -1,25 +1,26 @@
-******************
-Control Structures
-******************
-Sometimes you need to control what happens in your program, do you need to repeat something over and over again? 
-Loops will help you there. Perhaps you only want something to happen if a particular event has occurred? Take a look at conditions
-to help you there. Of course, in any program you will likely use all of these to make your micro:bit do what you want and that's where 
-things get interesting.
+********************
+Kontrolės struktūros
+********************
+Kartais norime kontroliuoti kas vyksta programoje, nori pakartoti kokį nors veiksmą daugybę kartų?
+Programinės kilpos tau padės. Galbūt nori, kad kas nors įvyktų tik tuomet kai įvyko tam tikras įvykis? Pažvelk į
+sąlygas, jos tau padės. Žinoma, bet kurioje programoje naudosi visus šiuos dalykus tam, kad „micro:bit” darytų
+viską ką nori ir štai čia prasideda visas įdomumas.
 
 .. image:: control_structures_icons.jpg
    :align: left
 
-You have already seen how to write instructions or statements sequentially and generated input and output. In the remainder of this chapter we will look at loops, selection and functions.
+Jau matei kaip rašyti instrukcijas ar pareiškimus iš eilės ir generuoti duomenis juos įvedant ar pateikiant. Likusioje
+šio skyriaus dalyje apžvelgsime programines kilpas, pasirinkimus ir funkcijas.
 
-Loops
-=====
-There are two types of loops: ``for`` loops let you count the number of times you do something and ``while`` loops which let you
-perform an action until a condition you've specified is no longer happening. 
+Programinės kilpos
+==================
+Yra dviejų tipų kilpos: ``for`` šios kilpos leidžia skaičiuoti kiek kartų veiksmas buvo atliktas ir ``while`` kilpos leidžia
+atlikti veiksmą iki kol nurodyta sąlyga daugiau nebevyksta.
 
-For loops
----------
-There are times when you want to do an action a specific number of times. For example: perhaps you'd like to turn on the
-LEDs on two sides of the display to make a track. You can use a ``for`` loop to count for you like this::
+„For” kilpos
+------------
+Kartais norime atlikti veiksmą tam tikrą skaičių kartų. Pavyzdžiui: uždegti LED lemputes abiejose ekrano pusėse taip sukuriant
+trasą. Galime naudoti ``for`` kilpas kurios atliktų skaičiavimą taip::
 
 	from microbit import *
 
@@ -27,7 +28,7 @@ LEDs on two sides of the display to make a track. You can use a ``for`` loop to 
 	   display.set_pixel(0,i,9) 	# set the pixel in column 0, row i to 9 
 	   display.set_pixel(4,i,9)	# set the pixel in column 4, row i to 9 
 
-Here is another example.  You could use a ``for loop`` to set all the LEDs on one at a time::
+Dar vienas pavyzdys. Galime naudoti ``for loop`` taip, kad uždegtų LED lemputes vienoje pusėje ir paskui kitoje::
 
     from microbit import *
 
@@ -36,35 +37,33 @@ Here is another example.  You could use a ``for loop`` to set all the LEDs on on
         for y in range(0, 5):
             display.set_pixel(x,y,9)  
 
-The ``for loop`` lets you execute a loop a specific number of times using a counter. The outer loop::
+``For loop`` leidžia atlikti kilpą norimą kiekį kartų kuris buvo nustatytas. Išorinė kilpa::
 
         for x in range(0,5):
 
-will execute the loop five times substituting ``x`` for consecutive values in the range ``0`` to ``4`` each time. The loop will stop before it reaches 5, the final value in the range.
+įvykdys veiksmą penkis kartus pakeičiant ``x`` iš eilės einančiomis vertėmis nuo ``0`` iki ``4`` kiek vieną kartą. Kilpa sustos pasiekus 5, paskutinę vertę diapozone.
 
-The inner loop::
+Vidinė kilpa::
 
         for y in range(0,5):
 
-will execute the loop five times substituting ``y`` for consecutive values in the range ``0`` to ``4`` each time. Again, the loop will stop before it reaches the final value in the range.
+įvykdys veiksmą penkis kartus pakeičiant ``y`` iš eilės einančiomis vertėmis nuo ``0`` iki ``4`` kiek vieną kartą. Vėlgi, kilpa sustos pasiekus 5, paskutinę vertę diapozone.
 
-
-While loops
------------
-One of the most common things you might want to do with a ``while`` loop is to do something forever, that is until the micro:bit
-is turned off or reset. Maybe you have programmed your micro:bit with your favourite game or perhaps it is collecting 
-temperature data in the corner of a classroom. Here is an example of some code to repeat forever::
+„While” kilpos
+--------------
+Vienas iš labiausiai paplitusių dalykų kada naudojame kilpą ``while`` tai kai norime, kad kažkas vyktų amžinai iki kol 
+„micro:bit” yra išjuntas arba perkrautas. Galbūt suprogramavai „micro:bit” su savo mėgstamiausiu žaidimu arba galbūt jis
+renka temperatūros duomenis klasės kampe. Žemiau pateikiamas pavyzdys programos kuri kartosis amžinai::
 
 	from microbit import *
 	
 	while True:
 	    display.scroll("Hello UCL)
 
-This code will repeatedly display the message ``Hello UCL``. You will likely have at least one ``while True:`` loop in your program
-to keep the micro:bit going.
+Ši programa pakartotinai rodys žinutę ``Hello UCL``. Tikriausiai turėsi bent vieną ``while True:`` kilpą savo programoje
+tam, kad „micro:bit” pastoviai veiktų.
 
-But what if you want to do an action only whilst something is happening? Perhaps you would like to display an image
-if the temperature on the micro:bit goes below a certain value so you'll need to test the temperature::
+Bet kas, jeigu nori imtis veiksmų tik tada, kai vyksta veiksmas? Galbūt nori parodyti atvaizdą jeigu temperatūra kurią matuoja „micro:bit” nukrenta žemiau tam tikros vertės, tada tau reikės patikrinti temperatūrą taip::
 
 	from microbit import *
 	
@@ -74,10 +73,10 @@ if the temperature on the micro:bit goes below a certain value so you'll need to
 
 	display.clear()
 
-Selection
-=========
-Choices, choices, choices. Sometimes you want to trigger an action if something specific has happened. We can use an ``if ... else`` statement for that.
-In this example we display a flashing heart if button ``A`` is pressed and a happy face if button ``B`` is pressed. If no buttons are pressed then we display a ghost:: 
+Pasirinkimas
+============
+Pasirinkimai, pasirinkimai, pasirinkimai. Kartais norime pradėti veiksmą, jei įvyko kažkas konkretaus. Tam galime naudoti ``if`` ir ``else`` pareiškimus.
+Šiame pavyzdyje rodysime mirksinčią širdutę jeigu mygtukas ``A`` yra paspaustas ir linksmą veiduką jeigu mygtukas ``B`` yra paspaustas. Jeigu joks mygtukas nėra paspaustas rodysime vaiduoklį::
 
 	from microbit import *
 	import love
@@ -94,33 +93,30 @@ In this example we display a flashing heart if button ``A`` is pressed and a hap
 
 	    sleep(100)
 
-Notice how we have shortened ``else if`` to become ``elif``, you don't have to do this if you don't want to, it just saves typing.
+Atkreiptike dėmesį į tai kaip sutrumpinamas ``else if`` pavirsta ``elif``, neprivalai to daryti jeigu nenori, tai tik sutaupo laiko rašant.
 
-Functions 
+Funkcijos 
 =========
-Functions and methods are used in programming to 'parcel up' useful snippets of code and use them whenever we want. You have likely already used both functions and methods without us needing to talk about it. In this tutorial we will not discuss methods further but we will explain how to use functions and how to write your own. 
+Programavimo metu naudojamos funkcijos ir metodai „supakuojami“ į naudingus kodo fragmentus ir galime juos naudoti, kai tik norime. Tikriausiai jau naudojai funkcijas ir metodus dar prieš mums pradedant apie tai kalbėti. Šioje pamokoje mes nebeaptarinėsime metodų, bet paaiškinsime, kaip naudoti ir parašyti savo funkcijas.
 
-Using Functions
----------------
-A great thing about functions is that we can use them in more than one program if we want to. In the same way we can use functions that other people have written too. In python, useful functions can be bundled up into modules (although you don't have to do this), the random module is a good example. To use functions in the random module we must first `import` the module. Once we've done that, we can use any of the functions in that module. Here are two examples of functions in the random module that you might .
-nt to use.
+Funkcijų naudojimas
+-------------------
+Funkcijos yra puikus dalykas, nes galime jas naudoti daugiau nei tik vienoje programoje. Taipogi galime naudoti ir kitų žmonių parašytas funkcijas. „Python” programavimo kalboje naudingos funkcijos gali būti sugrupuotos į modulius (žinoma neprivalai to daryti), „random” modulis yra geras pavyzdys. Tam, kad galėtume naudoti funkciją iš „random” modulio visų pirma turime jį įkelti į programą. Kai tai padarėme galime naudoti bet kurią funkciją iš to modulio. Pateikiame du pavyzdžius su funkcijomis iš „random” modulio, kurias tikriausiai norėtum panaudoti.
 
-Random number in a range
-^^^^^^^^^^^^^^^^^^^^^^^^
-Most of time, we will want to generate a random integer in a given range. The ``random.randint()`` function will allow us to do that::
+Atsitiktinis skaičius intervale
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Daugeliu atvėju norėsime sugeneruoti atsitiktinį sveiką skaičių iš tam tikro intervalo. ``Random.randint()`` funkcija leis mums tai padaryti::
 
 	from microbit import *
 	import random
 	
 	display.show(str(random.randint(1, 6)))
 
-In the code above, a random number between 1 and 5 will be generated - the upper bound, 6 in this case,  is never included.
-
-
-	
-Random choice
-^^^^^^^^^^^^^
-In this code snippet, the function ``random.choice`` will check how many elements are in the names list, generate a random integer in the range 0 to the list length and return the list element for the random integer::
+Programoje, pateiktoje aukščiau, atsitiktinis skaičius bus sugeneruotas tarp 1 ir 5, viršutinė riba, šiuo atveju 6 nebus įtraukta.
+    
+Atsitiktinis pasirinkimas
+^^^^^^^^^^^^^^^^^^^^^^^^^
+Šiame programos fragmente funkcija ``random.choice`` patikrins kiek elemtų yra vardų sąraše, sugeneruos atsitiktinį sveikąjį skaičių intervale nuo 0 iki vardų sumos sąraše skaičiaus ir pateiks atsitiktinį vardą iš sąrašo susijusiu su tuo skaičiu::
 
 	from microbit import *
 	import random
@@ -130,19 +126,19 @@ In this code snippet, the function ``random.choice`` will check how many element
 	display.scroll(random.choice(names))
 
 
-Writing your own Functions
---------------------------
-Writing your own functions can help you to organise your code and keep it neat and tidy. Here is an example of a simple function that prints out a message::
+Parašyk savo funkciją
+---------------------
+Savų funkcijų rašymas gali padėti susiorganizuoti savo programos kodą, padaryti ji švarų ir gražų. Štai paprastos funkcijos, kuri spausdina pranešimą, pavyzdys::
 
 
 	def showGreeting():
 		print("Hello Friend!")
 
-To use the function we've just written we can call it like this::
+Norėdami panaudoti šią funkciją galime ją iškviesti taip::
 
 	showGreeting()
 
-That's not a very interesting function is it? We can make functions more powerful by using `parameters` and `return values`. If we think of a function like a black box then a parameter is an input value and a return value is what we will get out of the other end. Let's say we wanted to write a small program that will greet some friends with a message containing their name and age. Our program might look like this::
+Tai nėra labai įdomi funkcija? Naudodami „parametrus” ir „grąžinamas vertes” galime sukurti sudėtingesnias funkcijas. Jei galvotume apie funkciją kaip apie juodają dėžę, tai įvedus reikšmes vienoje pusėje gautume jas kitoje. Tarkime, mes norime parašyti nedidelę programą, kuri pasveikintų draugus žinute kurioje būtų jų vardai ir amžius. Programa atrodytų štai taip::
 
 	from microbit import *
 
@@ -154,4 +150,4 @@ That's not a very interesting function is it? We can make functions more powerfu
  	display.scroll(printBirthday("Henry", 9))
  	display.scroll(printBirthday("Maria", 11))
 		
-The function ``printBirthday`` composes the birthday message for us and returns a string. We have used the python function ``str()`` to turn ``age``, which is a number, into a string.  You don't have to use functions or return values in your functions unless you want to.	
+Funkcija ``printBirthday`` sukuria gimtadienio sveikinimą ir paverčia tai į eilutę. Panaudojome „python” funkciją ``str()`` tam, kad paverstume ``age``, kuris yra skaičius, į eilutę. Neprivalai naudoti kitų funkcijų ar grąžinti reikšmes savo funkcijose, nebent to nori.
