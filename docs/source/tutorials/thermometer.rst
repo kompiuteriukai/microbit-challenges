@@ -1,17 +1,17 @@
 ***************
-Thermometer
+Termometras
 ***************
 .. py:module:: microbit
 
-The thermometer on the micro:bit is embedded in one of the chips – and chips get warm when you power them up. Consequently, it doesn’t measure room temperature all that well. The chip that is used to measure temperature can be found on the left hand side of the back of the micro:bit:
+Termometras „micro:bit” kompiuteriuke yra integruotas viename iš lustų ir lustai įšyla įjungus kompiuteriuką. Todėl kambario temperatūra matuojama nevisai tiksliai. Lustas matuojantis temperatūrą gali būti surastas galinėje kairėje „micro:bit” kompiuteriuko pusėje:
 
 .. image:: thermometer.jpg
    :scale: 80 %
 
 
-Basic Functions
-================
-There is only one basic function for the thermometer – to get the temperature, which comes back as an integer in degrees Celsius:: 
+Paprastos funkcijos
+===================
+Termometras turi vieną paprastą funkciją - gauti temperatūros rodmenis sveikojo skaičiaus pavidalu celsijaus formate::
 
    from microbit import *
    
@@ -20,14 +20,13 @@ There is only one basic function for the thermometer – to get the temperature,
       display.scroll(str(temp) + 'C')
       sleep(500)
 
+Sukompiliuokite, paleiskite programą ir pažiūrėkite kas bus.
 
-Compile and run the code and see what happens.
+Pamatysite, kad temperatūra, kurią matuoja termometras, dažniausiai bus aukštesnė negu tikra kambario temperatūra, nes termometras yra šildomas tiek kambario, tiek elektronikos.
+Jeigu žinome, kad temperatūra yra 27°C ir „micro:bit” pastoviai rodo temperatūrą 3 laipsniais aukštesnę, mes galime tai pakoreguoti. Norėdami padaryti tai tiksliai turite sužinoti tikrąją temperatūrą nenaudojant „micro:bit”. Gali sugalvoti kaip tai padaryti?
 
-You will see that the The temperature the thermometer measures will typically be higher than the true temperature because it’s getting heated from both the room and the electronics on the board. 
-If we know that the temperature is 27°C but the micro:bit is consistently reporting temperatures that are, say, 3 degrees higher, then we can correct the reading. To do this accurately, you need to know the real temperature without using the micro:bit. Can you find a way to do that?
-
-Ideas for Projects with the Thermometer
-=======================================
-* Try calibrating the thermometer. Does it still give the right temperature when you move it to a warmer or cooler place?
-* Make the LEDs change pattern as temperature changes
-* Find out how much the temperature changes in a room when you open a window – what do you think that tells you about heating energy wasted?
+Idėjos projektams su termometru
+=================================
+* Pabandykite sukalibruoti termometrą. Ar jis vis dar rodo tikslią temperatūrą kai perkeliate į šiltesnę ar šaltesnę vietą?
+* Padarykite taip, kad LED lemputės pakeistų šabloną pasikeitus temperatūrai.
+* Patikrinkite kaip pasikeičia kambario temperatūra atidarius langą - kaip manote ką tai pasako apie šildymo energijos švaistymą?
