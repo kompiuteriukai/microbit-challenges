@@ -1,55 +1,55 @@
 ****************************
-Micro:bit - Getting Started 
+„Micro:bit“ - Įvadas 
 ****************************
 
-The BBC micro:bit is a tiny computer that you can use to create all kinds of projects from robots to musical instruments – 
-the possibilities are endless. Let's take a look at the features that you can use in your designs:
+„BBC micro:bit“ yra mažas kompiuteriukas su kuriuo galima kurti įvairiausius projektus nuo robotų iki muzikinių instrumentų - galimybės beribės.
+Pasižiūrėkime į funkcijas, kurias gali naudoti savo kūrybos projektuose.
 
- * 25 red LED lights that can flash messages.
- * Two programmable buttons (A and B) that can be used to tell the micro:bit when to start and stop things.
- * A thermistor to measure the temperature.
- * A light sensor to measure the change in light.
- * An accelerometer to detect motion.
- * A magnetometer to tell you which direction you’re heading in.
- * A radio and a Bluetooth Low Energy connection to interact with other devices.
+ * 25 raudonos LED lemputės galinčios nušviesti žinutes.
+ * Du programuojami mygtukai (A ir B) su kuriais galima pranešti „micro:bit“ kada pradėti ar užbaigti veiksmus.
+ * Termometrą temperatūrai matuoti.
+ * Šviesos jutiklį matuojantį pokyčius šviesoje.
+ * Akselerometrą judesiams aptikti.
+ * Magnetometrą kuris nusako į kurią kryptį judi.
+ * Radijo ir „Bluetooth“ mažos energijos jungtis sąveikavimui su kitais įrenginiais.
 
 .. image:: microbit-front-back.jpg
    :scale: 60%
    :align: center
 
-Now you will create your first micro:bit program; after that, well we've listed a few ideas but it's really up to you.
+O dabar sukursi savo pirmąją „micro:bit“ programą ir vėliau pateiksime keletą įdėjų kuriomis gali pasinaudoti arba ne, čia jau tau spęsti.
 
-Your First Program
+Tavo Pirmoji Programa
 ===================
-Coding using the micro:bit is composed of these 4 steps. You can expect to go around the loop  quite a few times before you get your code working.
+„Micro:bit“ programavimas susideda iš 4 žingsnių. Gali nusiteikti pakartotį šį procesą daugybę kartų kol pavyks sukurti veikiančią programą.
 
 .. image:: microbit_lifecycle.jpg
    :scale: 60%
    :align: center
 
 
-Design the Code
-----------------
+Programinio kodo maketavimas
+----------------------------
 
-First of all you are going to write a program to display the message “Hello UCL!” followed by an image on the display of your micro:bit. There's not much planning and design to do here, but just so that you understand what a plan might look like:
+Pirmiausiai parašysi programą kuri parodys žinutę "Hello UCL!" ir drugelio atvaizdą. Šiuo atveju tai nepareikalaus daug laiko skirti maketuojant programą, bet padės suprasti kaip galėtų atrodyti planas:
 
 .. image:: microbit_plan.jpg
    :scale: 70%
    :align: center
 
-Write the Code
+Kodo rašymas
 --------------
-We will use a special text editor to write our programs, it looks like the one shown here: 
+Naudosime specialią teksto redagavimo programą savo kodo rašymui, kuri atrodys panašiai kaip padotyta paveiksliuke:
 
 .. image:: getting_started.jpg
    :scale: 60%
    :align: center
 
-Let's go through this line-by-line::
+Apžvelkime viską paeiliui::
 
 	while True: 
 
-This means do something (whatever follows this statement and is indented) forever and ever and ever. This is called  a loop, it's a bit like a video clip that's stuck on repeat.  ``True`` and ``False`` have a special meaning in python. ``True`` is always, well ``True``. The rest of the program is straightforward::
+Tai reiškia daryti kažką (kas seka šį teiginį ir yra įtraukta) amžinai ir visą laiką. Tai vadinama kilpa, tai šiek tiek panašu į vaizdo klipą, kuris vis kartojasi iš naujo. ``True`` ir ``False`` turi specialią prasmę „python“ programavimo kalboje. ``True`` visada yra tiesa, kitaip tariant ``True``. Likusi programos dalis yra paprasta::
 
 	from microbit import *
 
@@ -58,42 +58,39 @@ This means do something (whatever follows this statement and is indented) foreve
             display.show(Image.BUTTERFLY)
 	    print('Hi There!!!')    
     	    sleep(2000)
-      
-This displays ``Hello UCL`` on the LED display one character at a time and then shows the butterfly. 
-The statement ``print('Hi There!!')``, will print the message in the REPL. Press the REPL button in the menu now to show the REPL window:
 
+Tai parodys užrašą ``Hello UCL`` LED ekrane, kuriame bus rodoma po vieną simbolį išeilės ir po to parodys drugelį.
+Teiginys ``print('Hi There!!')``, atspausdins žinutę „REPL“ sąsajoje. Paspausk mygtuką „REPL“ įrankių juostoje, jis atidarys „REPL“ langą:
 
 .. image:: mu_repl_button.jpg
    :scale: 60%
    :align: center
 
-The REPL window shows us messages from the micro:bit and also allows us to send commands directly to the micro:bit. For now, we'll just be using the REPL to see messages that we print and error messages. 
+„REPL“ langas parodys mums žinutę iš „micro:bit“ ir dar jis leidžia mums siūsti komandas tiesiai į „micro:bit“. Kolkas mes naudosime „REPL“ langą žinučių ir klaidų rodymui.
 
-You might be wondering why we've asked the 
-micro:bit to sleep for ``2000``! This value is in microseconds so we've really only asked it to sleep for 2 seconds. That will give us enough time to see the image before the micro:bit starts all over again.
+Gali būti įdomu kodėl mes prašome „micro:bit“ užmigti šiam ``2000`` laikotarpiui! Ši vertė yra išreikšta milisekundėmis, todėl mes paprašėme užmigti tik 2 sekundėms. Tai suteiks mums pakankamai laiko pamatyti paveiksliuką prieš pradedant kartoti visą programą iš naujo.
 
-
-Upload the Code
+Kodo įkėlimas
 ----------------
-Final checks. Is your micro:bit connected to your computer? Yes? Then press the flash button:
+Paskutinis pasitikrinimas. Ar „micro:bit“ prijungtas prie kompiuterio? Taip? Tuomet spausk „flash“ mygtuką:
 
 .. image:: mu_flash.jpg
    :scale: 60%
    :align: center
 
-You should see the message and the image displayed on the micro:bit and the message "Hello There!!" should be printed on the REPL.
+Turėtum matyti žinutę ir paveiksliuką „micro:bit“ ekrane ir žinutė "Hello There!!" bus atspausdinta „REPL“ sąsajoje.
 
 .. image:: mu_first_program_repl.jpg
    :scale: 60%
    :align: center
 
 
-Make a change 
--------------
-Change the text that is displayed on the screen and make it scroll across the LED display. You can do this by changing the word ``show`` to ``scroll``. Don't forget to save your program and remember to  ``flash`` the new code to the micro:bit.
+Atlik pakeitimą 
+---------------
+Pakeisk tekstą kuris yra rodomas ekrane ir padaryk taip, kad jis keliautų per LED ekraną. Gali tai padaryti pakeisdamas žodį ``show`` į ``scroll``. Nepamiršk išsaugoti savo programos ir nusiūsk ``flash`` naują kodą į „micro:bit“.
 
 .. image:: high_five.png
    :scale: 60%
    :align: center
 
-You have written your first program. Carry on and see what else you can do with the micro:bit.
+Tu parašiai savo pirmąją programą. Skaityk toliau ir pamatyk ką dar gali padaryti su „micro:bit“.
