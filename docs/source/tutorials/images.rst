@@ -1,38 +1,35 @@
 ***********
-LED Display
+LED Ekranas
 ***********
 
-This is a quick guide to some of the things you can do with the LED display. The idea is that you can use this information to experiment and create something for yourselves. Try stuff out – see what happens and see what you can make.
-There are 25 LEDs  set out like the picture below. The LEDs are numbered from (0,0) in the  top left hand corner, to (4,4) in the bottom right hand corner. You can use the LEDs like a very tiny screen to display  single characters, a string of characters or  a small picture like the smiley face here.  The LEDs can be set to different brightnesses.  Let's find out how to use them.
-
+Tai yra greita apžvalga parodanti ką galite padaryti su LED ekranu. Idėja yra ta, kad galite naudoti šią informaciją eksperimentuoti ir sukurti kažką sau. Pabandyk, pasinagrinėk, pažiūrėk kas gaunasi ir ką galėtum sukurti. „Micro:bit“ turi 25 šviesos diodus išdėstytus kaip pateikta paveiksliuke žemiau. Diodai sunumeruoti nuo (0,0) viršutinio kairiojo kampo iki (4,4) apatinio dešniojo kampo. Gali naudoti diodus kaip labai mažą ekraną kuris rodytų simbolį, simbolių eilutę arba mažą paveikliuką panašiai kaip šypsenėlė rodoma čia. Galime valdyti ir diodų ryškumą. Pažiūrėkime kaip juos naudoti.
 
 .. image:: happy.png
    :scale: 40 %
 
 
-Basic Functions
-===============
+Paprastos funkcijos
+===================
 
-Display a string or an image
-----------------------------
+Rodyti teksto eilutę arba paveiksliuką
+--------------------------------------
 
-You can display characters on the LED display very easily like this::
+Galite lengvai atvaizduoti simbolius LED ekrane štai taip::
 
     from microbit import *
 
     display.show("Hello")
 
-The characters you display must be within a pair of quotes, either " " or ' '. 
- 
-MicroPython comes with lots of built-in pictures to show on the display.
-For example, to make the device appear happy you type::
+Simboliai kuriuos rodysite turi būti parašyti tarp kabučių " " arba ' '.
+
+„Micro:bit“ turi daug paveiksliukų kuriuos galite naudoti.
+Pavyzdžiui, jeigu norite, kad įrenginys nusišypsotų, rašote::
 
     from microbit import *
 
     display.show(Image.HAPPY)
 
-
-Here's some of the the other images you can use:
+Čia pateikiama keletas kitų atvaizdų kuriuos galite naudoti:
 
     * ``Image.HEART``, ``Image.HEART_SMALL`` 
     * ``Image.HAPPY``, ``Image.SMILE``, ``Image.SAD``, ``Image.CONFUSED``, ``Image.ANGRY``, ``Image.ASLEEP``, ``Image.SURPRISED``, ``Image.SILLY``, ``Image.FABULOUS``, ``Image.MEH``, ``Image.YES``, ``Image.NO``
@@ -42,38 +39,36 @@ Here's some of the the other images you can use:
     * ``Image.RABBIT``, ``Image.COW``, ``Image.DUCK``, ``Image.HOUSE``, ``Image.TORTOISE``, ``Image.BUTTERFLY``, ``Image.GIRAFFE``, ``Image.SNAKE``
 
 
-Scroll a string 
----------------
-To continuously scroll a string across the display you can use::
+Išeilės einanti teksto eilutė 
+-----------------------------
+Tam, kad teksto eilutė vientisai judėtų ekrane, naudokite::
 
     from microbit import *
 
     display.scroll("Hello!")
 
 
-Clear the display
+Išvalyti ekraną
 -----------------
-If you want to clear the LED display, you can do so like this::
+Jeigu norite išvalyti LED ekraną, galite tai padaryti taip::
 
     from microbit import *
 
     display.clear()
 
 
-Advanced Functions
-==================
+Išplėstinės funkcijos
+=====================
 
-Set a pixel
------------
-You can set a pixel in the LED display using the ``set_pixel`` method::
+Pikselio nustatymas
+-------------------
+Galite nustatyti pikselį LED ekrane naudodami ``set_pixel`` metodą::
 
     from microbit import *
 
     display.set_pixel(0,4,9)
 
-This sets the LED at column ``0`` and row ``4`` to a brightness of ``9``. The brightness value can be any whole number
-between 0 and 9 with 0 switching the LED off and 9 being the brightest setting. You could use a ``for loop`` 
-to set all the LEDs one at a time::
+Tai nustato diodą stulpelyje ``0`` ir eilutėje ``4`` į ryškumą ``9``. Ryškumo reikšmė gali būti bet kuris sveikas skaičius nuo 0 iki 9, kai 0 išjungia diodą, o 9 nustato jį ryškiausiu. Galite naudoti ``for loop`` norėdami įjungti visus diodus išeilės::
 
     from microbit import *
 
@@ -82,29 +77,25 @@ to set all the LEDs one at a time::
     	for y in range(0, 5):
     	    display.set_pixel(x,y,9)  
 
-The ``for loop`` lets you execute a loop a specific number of times using a counter. The outer loop::
+``For loop`` leidžia atlikti kilpą tam tikrą kiekį kartų, naudojant skaitiklį. Išorinė kilpa::
 
 	for x in range(0,5)
 
-will execute the loop five times substituting ``x`` consecutive values in the range ``0`` to ``4`` for ``x`` each time. The loop will stop before it reaches the final value in the range.
+įvykdys kilpą penkis kartus nuosekliai pakeičiant ``x`` diapazone nuo ``0`` iki ``4`` kiek vieną kartą. Kilpa sustos prieš jai pasiekiant paskutinę reikšmę diapazone.
 
-The inner loop::
+Vidinė kilpa::
 
 	for y in range(0,5):
 
-will execute the loop five times substituting ``y`` consecutive values in the range ``0`` to ``4`` for ``y`` each time. The loop will stop before it reaches the final value in the range.
+įvykdys kilpą penkis kartus nuosekliai pakeičiant ``y`` diapazone nuo ``0`` iki ``4`` kiek vieną kartą. Kilpa sustos prieš jai pasiekiant paskutinę reikšmę diapazone.
 
-DIY images
-----------
-Of course, you want to make your own image to display on the micro:bit, right?
+Pasidaryk paveiksliukus pats
+----------------------------
+Žinoma, nori susikurti savo paveiksliukus ir atvaizduoti juos „micro:bit“ ekrane, ar ne taip?
 
-That's easy.  Each LED pixel on the physical display can be set to one of ten values. If a
-pixel is set to ``0`` (zero) then it's off. It literally has zero brightness.
-However, if it is set to ``9`` then it is at its brightest level. The values
-``1`` to ``8`` represent the brightness levels between off (``0``) and full on
-(``9``).
+Tai paprasta. Kiek vienam diodui gali būti suteikta viena iš dešimties reikšmių. Jeigu pikselis nustatytas į ``0`` (nulį) tai jis yra išjungtas. Jo ryškumas yra nulinis. Tačiau, jeigu nustatome ``9`` tuomet tai ryškiausias lygis. Reikšmės nuo ``1`` iki ``8`` reprezentuoja ryškumo lygius tarp išjungta (``0``) ir ryškiausia (``9``).
 
-Armed with this information, it's possible to create a new image like this::
+Apsišarvavę visa šita informacija, galime sukurti naujus paveiksliukus::
 
     from microbit import *
 
@@ -116,51 +107,32 @@ Armed with this information, it's possible to create a new image like this::
 
     display.show(boat)
 
-In fact, you don't need to write this over several lines. If you think you can
-keep track of each line, you can rewrite it like this::
+Beje, neprivalai rašyti šito per kelias eilutes. Jeigu manai, kad gali sekti kiek vieną eilutę, gali rašyti vientisai:: 
 
     boat = Image("05050:05050:05050:99999:09990")
 
-(When run, the device should display an old-fashioned "Blue Peter" sailing ship
-with the masts dimmer than the boat's hull.)
+(Kai paleisite programą, įrenginys rodys senovinį burlaivį „Blue Peter“ kurio stiebai yra reguliuojami laivo korpuse.)
 
-Have you figured out how to draw a picture? Have you noticed that each line of
-the physical display is represented by a line of numbers ending in ``:`` and
-enclosed between ``"`` double quotes? Each number specifies a brightness.
-There are five lines of five numbers so it's possible to specify the individual
-brightness for each of the five pixels on each of the five lines on the
-physical display. 
+Ar išsiaiškinai kaip piešti paveiksliuką? Ar pastebėjai, kad kiek viena fizinė ekrano eilutė atvaizduota skaičių eile pasibaigiančia ``:`` ir įterpta tarp ``"`` dvigubų kabučių? Kiek vienas skaičius nusako ryškumą. Yra penkios eilutės su penkiais skaičiais tad įmanoma individualiai nustatyti kiek vieno pikselio ryškumą kiek vienoje fizinio ekrano eilutėje.
 
-
-Animation
+Animacija
 ---------
-Static images are fun, but it's even more fun to make them move. This is also
-amazingly simple to do with MicroPython ~ just use a list of images!
+Statiniai vaizdai yra įdomūs, bet dar smagiau yra priversti juos judėti. Tai irgi neįtikėtinai lengva padaryti su „micro:bit“, tiesiog naudokite vaizdų sąrašą!
 
-Luckily we have a
-couple of lists of images already built in. They're called ``Image.ALL_CLOCKS``
-and ``Image.ALL_ARROWS``::
+Laimei mes jau turime keletą integruotų sąrašų su paveiksliukais. Jie vadinasi ``Image.ALL_CLOCKS`` ir ``Image.ALL_ARROWS``::
 
     from microbit import *
 
     display.show(Image.ALL_CLOCKS, loop=True, delay=100)
 
-We tell MicroPython to use ``Image.ALL_CLOCKS`` and
-it understands that it needs to show each image in the list, one after the
-other. We also tell MicroPython to keep looping over the list of images (so
-the animation lasts forever) by saying ``loop=True``. Furthermore, we tell it
-that we want the delay between each image to be only 100 milliseconds (a tenth
-of a second) with the argument ``delay=100``.
+Mes nurodome „micro:bit“ naudoti ``Image.ALL_CLOCKS`` ir jis supranta, kad jam reikia atvaizduoti kiek vieną paveiksliuką sąraše, vieną po kito. Dar mes nurodome „micro:bit“ laikyti visą tai kilpoje (tam, kad animaciją tęstūsi amžinai) pasakydami ``loop=True``. Be to mes taip pat pasakome, kad tarpas tarp kiek vieno vaizdo turėtų būti tik 100 milisekundžių (viena dešimtoji sekundės) naudodami argumentą ``delay=100``.
 
-Now, here's how to create your own animation.  First you need to create a list.
-Here is a list of boats::
+Dabar pažiūrėkime kaip susikurti savo animaciją. Pirmiausia reikia sukurti sąrašą.
+Štai valčių sąrašas::
 
     all_boats = [boat1, boat2, boat3, boat4, boat5, boat6]
 
-You can store anything in a list with Python, even images. 
-In my example I'm going to
-make my boat sink into the bottom of the display. To do that, 
-I'm going to create 6 images and put them into a list called ``all_boats``::
+„Python“ programavimo kalboje, sąraše gali laikyti be ką, net ir paveiksliukus. Mano pavyzdyje aš padarysiu taip, kad valtis paskestų ekrano apačioje. Norėdamas tai įgyvendinti sukursiu 6 paveiksliukus ir sudėsiu juos į sąrašą pavadinimu ``all_boats``::
 
     from microbit import *
 
@@ -203,11 +175,11 @@ I'm going to create 6 images and put them into a list called ``all_boats``::
     all_boats = [boat1, boat2, boat3, boat4, boat5, boat6]
     display.show(all_boats, delay=200)
 
-Finally, we can tell MicroPython to animate a list of images using ``display.show``. 
+Galiausiai galime nurodyti „micro:bit“ animuoti paveiksliukų sąrašą naudojant ``display.show``.
 
-Projects with LED Display
+Projektai su LED ekranu
 ==========================
-* Try out some of the built-in images to see what they look like. 
-* Animate the ``Image.ALL_ARROWS`` list. How do you avoid looping forever (hint: the opposite of ``True`` is ``False``). Can you change the speed of the animation?
-* Make your own image. Next try to make it fade out and then fade in again?
-* Make a sprite, use a single LED on the display. Can you make it jump when you press a button?
+* Išbandyk keletą jau sukurtų paveiksliukų ir pažiūrėk kaip jie atrodo.
+* Sukurk animaciją iš ``Image.ALL_ARROWS`` sąrašo. Kaip išvegti amžinos kilpos (užuomena: priešingai negu ``True`` yra ``False``). Gali pakeisti animacijos greitį?
+* Sukurk savo paveiksliuką. Pabandyk padaryti taip, kad jis išlėto išnyktų ir vėl atsirastų.
+* Sukurk taškiuką LED ekrane. Priversk jį šokinėti paspaudus mygtuką.
