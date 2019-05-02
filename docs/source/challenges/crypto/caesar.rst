@@ -1,102 +1,96 @@
-**********************
-Caesar Cipher - Part I
-**********************
+***************************
+„Caesar“ Šifras - I dalis
+***************************
 
 .. tabularcolumns:: |L|l|
 
 +--------------------------------+----------------------+
-| **Total points possible**	 | **Uses**	        |
+| **Galimi taškai**		 | **Naudoja**	        |
 +================================+======================+
-| 10			 	 | LED display, buttons |
+| 10			 	 | LED ekraną, mygtukus |
 +--------------------------------+----------------------+
 	
-Description
+Aprašymas
 ===========
 
-Humans have been interested in hiding messages for as long as they have been able to communicate by writing things
-down. One of the earliest ciphers is known as the Caesar cipher, named after Julius Caesar, and was used by the 
-Roman emporer to communicate with troops on the battlefield. Using the Caesar cipher you encrypt all the letters in a message by shifting the alphabet a number of places. The figure below shows how to encrypt a message with a shift of 3 letters:
+Žmonės buvo suinteresuoti paslėpti žinutes jau nuo seno, kai tik išmoko komunikuoti užrašydami jas. Vienas lengviausių šifrų yra žinomas kaip „Caesar“ šifras, pavadintas Julijaus Cezario garbei ir buvo naudojamas Romos imperatoriaus komunikacijoms su kariais mūšyje. Naudojant „Caesar“ šifrą, šifruoji visas pranešimo raides pastumiant abėcėlės raides tam tikrą skaičių kartų. Žemiau esanti figūra parodo kaip šifruoti pranešimą perkeliant 3 raides:
 
 .. figure:: shift.png
 
-Your goal is to turn your micro:bit into a machine that can **encode** messages using the Caesar cipher. We
-call the message to be encrypted *plain text* and the encrypted message *cipher text*. 
+Tavo tikslas paversti „micro:bit“ į įrenginį galintį **šifruoti** pranešimus naudojant „Caesar“ šifrą. Galime naudoti pranešimą, kurį norime užkoduoti **paprastu tekstu** ir užkoduoti jį su *šifruotu tekstu*.
 
-There is a trick you can use to encrypt, or shift the message. The trick relies on the fact that your
-micro:bit sees the letters of the alphabet as numbers. You can translate a letter to a number, and back again using the python functions ``ord()`` and ``chr()``.                 
-                                                                     
-Let's say you want to shift each character by 4 places.  Try using this code to turn the character into a 
-number and  add 4::
+Yra triukas, kurį gali naudoti norint šifruoti ar pastumti žinutę. Triukas remiasi tuo, kad „micro:bit“ mato abėcėlės raides kaip skaičius. Gali išversti raidę į numerį ir atvirkščiai naudojant „python“ funkcijas ``ord()`` ir ``chr()``.
+
+Tarkime, nori perkelti kiek vieną simbolį per 4 vietas. Pabandyk naudoti šį kodą, kuris pavers kiek vieną simbolį į skaičių ir pridės 4::
 
 	ascii_char = ord(plaintext_char) + 4      	               
-                                                                     
-In English this means: translate ``plaintext_char`` into a number using the ``ord()`` function and add 4, the number of characters we want to shift. 
 
-But hold on, there is one more thing that we need to do. If you look at the picture above, you will see that we need to wrap around going from Z back to A. To do this we need to subtract 26 (the number of letters in the alphabet) if we have gone past the letter 'Z'::
+Anglų kalboje tai reiškia: išversti ``plaintext_char`` į skaičių naudojant ``ord()`` funkciją ir pridėti 4, skaičius vietų per kiek nori pastumti.
+
+Palukėk, yra dar vienas dalykas, kurį turi padaryti. Pažvelgus į paveiksliuką viršuje, pamatysi, kad turi grįšti atgal nuo Z į A. Norėdamas tai padaryti, turi atimti 26 (raidžių skaičius abėcėlėje) jeigu peržengėme raidę 'Z'::
 
         ascii_char = ord(plaintext_char) + 4                       
 	if ascii_char > ord('Z') 
 		ascii_char = ascii_char - 26
 	encrypted_char = chr(ascii_char) 
 
-Try this out, experiment using the REPL. 
+Išbandyk ir eksperimentuok naudodamas „REPL“.
 
-                                                                     
-Basic Challenge
-===============
-Collect points for these stages: 
+Paprastas iššūkis
+=================
+Rink taškus už šiuos etapus:
 
 .. tabularcolumns:: |p{14cm}|R|
 
 +---------------------------------------------------------+------------+
-| **Tasks** 		                                  | **Points** |
+| **Užduotys** 		                                  | **Taškai** |
 +=========================================================+============+
-| Display a welcome messge.                               | 	 1     |
+| Rodyti sveikinimo pranešimą.                            | 	 1     |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| You need to find out from the player how many places    |      2     |
-| to shift the message. One way to do this is             |            |
-| to shift the message by the number of button presses    |            |
-| the user makes. Keep a count of how many times          |            |
-| button ``A`` is pressed. The player can press button    |            |
-| ``B`` to indicate they have finished.                   |            |
-|                                                         |            |
-+---------------------------------------------------------+------------+
-|                                                         |            |
-| In your program you should store the    		  |      1     |
-| message you want to translate in a string like this:	  |            |
-| ``message = 'KEEP THIS A SECRET```.                     |            |
-|                                                         |            |
+| Turi sužinoti iš žaidėjo per kiek vietų pastumti        |      2     |
+| pranešimą. Vienas iš būdų kaip tai padaryti, tai        |            |
+| pastumti pranešimą tiek kartų kiek paspaustas mygtukas. |            |
+| Įsiminti kiek kartų mygtukas ``A`` paspaustas.          |            |
+| Žaidėjas gali paspausti mygtuką ``B`` norėdamas         |            |
+| praneši, kad baigė.                                     |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Now display the message a character at a time using a   |      1     |
-| ``for`` loop. Hint: to get each character in the message|            |
-| use ``for c in message:``. 				  |            |
+| Savo programoje turėtum saugoti pranešimą, kurį nori    |      1     |
+| išversti į tekstinę eilutę šitaip:               	  |            |
+| ``message = 'KEEP THIS A SECRET'``.                     |            |
+|                                                         |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Use the ``ord()`` function to translate each character  |     1      |
-| into an numeric value and add the number of characters  |            |
-| you want to shift.                                      |            |
+| Dabar parodyk pranešimą po vieną raidę vienu metu	  |      1     |
+| naudojantis ``for`` kilpa. Užuomena: tam, kad gauti kiek|            |
+| vieną simbolį iš žinutės naudok ``for c in message:``.  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Make sure you have wrapped the result around.           |     1      |
-| Hint: Check whether the shifted value is greater than   |            |
-| the numeric value for ``Z``.                            |            |
+| Naudok ``ord()`` funkciją tam, kad išversti kiek vieną  |     1      |
+| simbolį į skaičių ir pridėk skaičių per kiek vietų      |            |
+| norėtum jį pastumti.                                    |            |
+|                                                         |            |
++---------------------------------------------------------+------------+
+|                                                         |            |
+| Įsitikint, kad abėcėlė prasideda nuo pradžių.           |     1      |
+| Užuomena: patikrink ar perkelta reikšmė yra didesnė     |            |
+| negu numerinė ``Z`` reikšmė.                            |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
 |                                                         |            |
-| Use ``chr()`` to translate each number            	  |      2     |
-| back into a character 				  |            |
-| Hint: Don't encrypt the spaces.                         |            |
+| Naudok ``chr()`` tam, kad išversti kiekvieną numerį  	  |      2     |
+| atgal į simbolį. Užuomena: nešifruok tarpų.		  |            |
+| 				                          |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Display the encrypted text on the micro:bit and print   |      1     |
-| encrypted text in the REPL using the ``print()`` 	  |            |
-| function.   						  |            |
+| Atvaizduok šifruotą tekstą „micro:bit“ ir atspausdink   |      1     |
+| šifruotą tekstą „REPL“ naudojant ``print()`` funkciją.  |            |
+| 							  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
