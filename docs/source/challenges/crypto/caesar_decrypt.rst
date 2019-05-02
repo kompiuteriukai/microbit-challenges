@@ -1,100 +1,96 @@
-***********************
-Caesar Cipher - Part II 
-***********************
+***************************
+„Caesar“ Šifras - II dalis
+***************************
 
 .. tabularcolumns:: |L|l|
 
 +--------------------------------+----------------------+
-| **Total points possible**	 | **Uses**	        |
+| **Galimi taškai**		 | **Naudoja**	        |
 +================================+======================+
-| 10			 	 | LED display          |
+| 10			 	 | LED ekraną           |
 +--------------------------------+----------------------+
 	
-Description
+Aprašymas
 ===========
 
-This challenge is about decrypting messages that have been encoded using the Caesar cipher. If you haven't tried encrypting messages with the Caesar cipher then maybe you could attempt that first.
+šis iššūkis yra apie pranešimų iššifravimą, kurie buvo užkoduoti naudojant „Caesar“ šifrą. Jeigu nebandei šifruoti pranešimų su „Caesar“ šifru, vertėtų tai pabandyti prieš tęsiant.
 
-Using the Caesar cipher you can encrypt or decrypt all the letters in a message by shifting the alphabet a number of places. The figure below shows how to encrypt a message with a shift of 3 letters:
+Naudojant „Caesar“ šifrą gali šifruoti ir iššifruoti visas pranešimo raides pastumiant abėcėlės raides tam tikrą kiekį kartų. Žemiau pateikta figūra parodo kaip šifruoti pranešimą perkėlus 3 raides:
 
 .. figure:: shift.png
 
-Your goal is to turn your micro:bit into a machine that can **decode** messages that have been encrypted 
-using the Caesar cipher. We call the encrypted message *cipher text* and the decrypted message *plain text*. 
+Tavo tikslas yra paversti „micro:bit“ į įrenginį, kuris galėtų **iššifruoti** pranešimus užkoduotus naudojant „Caesar“ šifrą. Visus užkoduotus pranešimus vadiname *šifruotu tekstu* ir iššifruotus pranešimus *atviru tekstu*.
 
-There is a trick you can use to decrypt, or shift the message. The trick relies on the fact that your
-micro:bit sees the letters of the alphabet as special numbers known as *ascii values*. You can translate a letter to an ascii number, and back again using the python functions ``ord()`` and ``chr()``.                 
-                                                                    
-Here is an example: Let's say you have an encrypted message  which has been shifted by 4 places.  Try using this code to turn the character into a number and  subtract 4::
+Yra triukas, kurį gali naudoti norint iššifruoti ar pastumti žinutę. Triukas remiasi tuo, kad „micro:bit“ mato abėcėlės raides kaip specialiuosius skaičius žinomus kaip *„ascii“ vertės*. Gali išversti raidę į atitinkamą „ascii“ skaičių ir atvirkščiai naudojant „python“ funkcijas ``ord()`` ir ``chr()``.
+
+Pavyzdys: Tarkime, turi šifruotą pranešimą, kuris buvo pastumtas per 4 vietas. Pabandyk naudoti šį kodą, kuris pavers kiek vieną simbolį į skaičių ir atims 4::
 
 	ascii_char = ord(encrypted_char) - 4      	               
-                                                                     
-In English this means: translate ``encrypted_char`` into an ascii number using the ``ord()`` function and subtract 
-4, the number of characters we want to shift. 
 
-But hold on, there is one more thing that we need to do. If you look at the picture above, you will see that we need to wrap around going from A back to Z. To do this we need to add 26 (the number of letters in the alphabet) if we have gone past A::
+Anglų kalboje tai reiškia: išversti ``encrypted_char`` į „ascii“ skaičių naudojant ``ord()`` funkciją ir atimti 4, skaičius vietų per kiek nori pastumti.
+
+Palukėk, yra dar vienas dalykas, kurį turi padaryti. Pažvelgus į paveiksliuką viršuje, pamatysi, kad turi grįšti atgal nuo A į Z. Norėdamas tai padaryti, turi pridėti 26 (raidžių skaičius abėcėlėje) jeigu peržengėme raidę 'A'::
 
         ascii_char = ord(plaintext_char) - 4                       
 	if ascii_char > ord('Z') 
 		ascii_char = ascii_char + 26
 	encrypted_char = chr(ascii_char) 
 
-Try this out, experiment using the REPL. 
+Išbandyk ir eksperimentuok naudodamas „REPL“.
 
                                                                      
-Basic Challenge
-===============
-Collect points for these stages: 
+Paprastas iššūkis
+=================
+Rink taškus už šiuos etapus:
 
 .. tabularcolumns:: |p{14cm}|R|
 
 +---------------------------------------------------------+------------+
-| **Tasks** 		                                  | **Points** |
+| **Užduotys** 		                                  | **Taškai** |
 +=========================================================+============+
-| Display a welcome message.                              | 	 1     |
+| Rodyti sveikinimo pranešimą.                            | 	 1     |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| You don't need a computer for this part!                |      2     |
-| Use a cipher wheel (ask your teacher) to encrypt a      |            | 
-| message about 10 characters long. 			  |            |
-| **Important:** remember how many characters you shifted |            |
-| the message.                                            |            |
-|                                                         |            |
-+---------------------------------------------------------+------------+
-|                                                         |            |
-| In your program you should store the                    |      1     |
-| encrypted message in a string like this: 		  |            |
-| ``encrypted_message = 'QKKV OZ G YKIXKZ```.             |            |
-|                                                         |            |
+| Tau nereikės kompiuterio šitam etapui!                  |      2     |
+| Naudok šifravimo ratą (paprašyk mokytojo) užšifruoti    |            | 
+| pranešimą, kuris sudarytas iš 10 raidžių.		  |            |
+| **Svarbu:** prisiminti per kiek vietų buvo perkeltas    |            |
+| pranešimas.                                             |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Now display the message a character at a time using a   |      1     |
-| ``for`` loop. Hint: to get each character in the message|            |
-| use ``for c in message:``.				  |	       |
+| Savo programoje turėtum saugoti šifruotą pranešimą      |      1     |
+| teksto eilutėje panašioje kaip ši:	 		  |            |
+| ``encrypted_message = 'QKKV OZ G YKIXKZ'``.             |            |
+|                                                         |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Use the ``ord()`` function to translate each character  |     1      |
-| into an ascii value and subtract the number of          |            |
-| characters that the ciphertext was shifted.             |            |
+| Dabar parodyk pranešimą po vieną raidę vienu metu	  |      1     |
+| naudojantis ``for`` kilpa. Užuomena: tam, kad gauti kiek|            |
+| vieną simbolį iš žinutės naudok ``for c in message:``.  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Make sure you have wrapped the result around.           |     1      |
-| Hint: Check whether the ascii value is less than 'A'.   |            |
+| Naudok ``ord()`` funkciją tam, kad išversti kiek vieną  |     1      |
+| simbolį į „ascii“ skaičių ir atimk skaičių per kiek     |            |
+| vietų šifruotas tekstas buvo pastumtas.                 |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Use ``chr()`` to translate each ascii                   |      2     |
-| character in the message to plain text.                 |            |
-| Hint: Don't decrypt the spaces.                         |            |
+| Įsitikint, kad abėcėlė prasideda nuo pradžių.           |     1      |
+| Užuomena: patikrink ar „ascii“ vertė yra mažiau	  |            |
+| negu 'A'.                                               |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
+| Naudok ``chr()`` tam, kad išversti kiekvieną „ascii“ 	  |      2     |
+| numerį atgal į paprastą tekstą. Užuomena: nešifruok 	  |            |
+| tarpų.		                  	          |            |
 |                                                         |            |
-| Display the plain text on the micro:bit and print       |      1     |
-| the plain text in the REPL using the ``print()`` 	  |            |
-| function.   						  |            |
++---------------------------------------------------------+------------+
+|                                                         |            |
+| Atvaizduok paprastą tekstą „micro:bit“ ir atspausdink   |      1     |
+| paprastą tekstą „REPL“ naudojant ``print()`` funkciją.  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
