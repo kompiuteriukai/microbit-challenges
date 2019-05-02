@@ -1,40 +1,37 @@
 ****************
-Music
+Muzika
 ****************
-This is a quick guide to some of the things you can do with micro:bit music. The idea is that you can use this information to experiment and 
-create something for yourselves.  You can use the micro:bit to play simple tunes, provided that you connect a speaker to your board. 
+Tai yra trumpas gidas, skirtas papasakoti dar keliems dalykams ką galima padaryti su „micro:bit“ muzika. Idėja ta, kad gali naudoti šią informaciją eksmperimentams ir kuriant kažką sau. „Micro:bit“ gali groti paprastas melodijas, jeigu prijungsi garsekalbį.
 
-If you are using a speaker, you can connect your micro:bit using crocodile clips like this: 
+Jeigu naudoji garsekalbį, gali jį prijungti prie „micro:bit“ naudojant krokodilinius segtukus štai taip:
 
 .. figure:: connect_speaker.jpg
    :scale: 150 %
 
-   Image from: <https://www.kitronik.co.uk/blog/microbit-alarm-kitronik-university/>
+   Paveiksliukas iš: <https://www.kitronik.co.uk/blog/microbit-alarm-kitronik-university/>
 
-.. warning:: You cannot control the volume of the sound level from the micro:bit. Please be very careful if you are using headphones. A speaker is a better choice for work with sound.
+.. warning:: Negali valdyti garso lygio apimties iš „micro:bit“. Būk labai atsargus, jei naudosi ausines. Garsiakalbis yra geresnis pasirinkimas darbui su garsu.
 
-If you are using headphones you can use crocodile clips to connect your micro:bit to some headphones like this: 
+Jeigu naudosi ausines, gali jas prijungti krokodiliniais segtukais prie „micro:bit“ taip:
 
 .. image:: connect_headphones.jpg
    :scale: 70 %
 
+Paprastos funkcijos
+===================
 
-
-Basic Functions
-================
-
-Play a tune
------------
-Let's play some music::
+Groti melodiją
+--------------
+Taigi pagrokime ką nors::
 
 	from microbit import *
 	import music
 
 	music.play(music.NYAN)
 
-.. note:: You must import the ``music`` module to play and control sound.
+.. note:: Privalai importuoti modulį ``music`` norėdamas groti ar kontroliuoti garsą.
 
-MicroPython has quite a lot of built-in melodies. Here's some of them, try them out: 
+„Micro:bit“ turi daug integruotų melodijų. Štai keletas iš jų, išbandyk: 
 
  *  ``music.DADADADUM``
  *  ``music.ENTERTAINER``
@@ -44,11 +41,10 @@ MicroPython has quite a lot of built-in melodies. Here's some of them, try them 
  * ``music.RINGTONE``
  
  
-Make your own tune
--------------------
-You can write your own tune, here is a snippet of code showing how to play a sound. The number after the 
-note is the octave and an octave can be a number from 1 to 8. The number after the colon says how long the note will
-last::
+Sukurk savo melodiją
+--------------------
+Gali sukurti savo melodiją, žemiau pateikiama kodo iškarpa rodanti kaip groti garsą. Numeris einantis po natos yra oktava, o oktava gali būti bet koks skaičius nuo 1 iki 8. Skaičius po dvitaškio pasako kaip ilgai nata bus grojama::
+
 	from microbit import *
 	import music
 
@@ -59,9 +55,9 @@ last::
 	music.play('C:4')
 
 	# Play a 'C' in octave number 3 for 4 beats long
-	music.play('C3:4')
+ 	music.play('C3:4')
 
-Playing a series of notes one after the other is easy, you just put the notes you want to play in a list::
+Groti eilę natų vieną po kitos yra paprasta, sudėk natas, kurias nori groti į sąrašą::
 
 	from microbit import *
 	import music
@@ -72,21 +68,19 @@ Playing a series of notes one after the other is easy, you just put the notes yo
 	music.play(tune)
 	
 
-Advanced Functions
-===================
-You can also specify the note you want to play as a ``frequency``. Take a look at this example where we make a police siren. The clever thing here is that the
-frequency or note is controlled by a ``for`` loop::
-
+Išplėstinės funkcijos
+=====================
+Taip pat galite nustatyti natos dažnį ``frequency``. Pažiūrėk į šį pavyzdį, kur sukuriame policijos sirenas. Protingas pasirinkimas čia yra tai, kad dažnis ar nata kontroliuojama ``for`` kilpos::
 
 	while True:
 		for freq in range(880, 1760, 16):
 		        music.pitch(freq, 6)
 		for freq in range(1760, 880, -16):
 			music.pitch(freq, 6)
-	 
-Can you guess what this does? Each time around the loop a new frequency is calculated by adding (or subtracting) 16. 
 
-Ideas for Projects with Music 
+Ar gali atspėti ką tai daro? Kiek vieną kartą kilpoje apskaičiuojamas naujas dažnis pridedant (arba atimant) 16.
+
+Idėjos projektams su muzika 
 ==============================
-* Make up your own tune.
-* Make a musical instrument. Change the pitch of the sound played based on the readings from the accelerometer.  
+* Sukurk savo melodiją.
+* Sukurk muzikinį instrumentą. Pakeisk melodijos skambesį pasinaudojant akselerometro gautais duomenimis. 
