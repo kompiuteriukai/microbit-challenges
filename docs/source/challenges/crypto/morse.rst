@@ -1,93 +1,91 @@
-**********
-Morse Code
-**********
+**************
+Morzės abėcėlė
+**************
 
 .. tabularcolumns:: |L|l|
 
-+--------------------------------+----------------------+
-| **Total points possible**	 | **Uses**	        |
-+================================+======================+
-| 10			 	 | LED display, speaker |
-+--------------------------------+----------------------+
++--------------------------------+------------------------+
+| **Galimi taškai**		 | **Naudoja**	          |
++================================+========================+
+| 10			 	 | LED ekraną, garsekalbį |
++--------------------------------+------------------------+
 	
-Description
+Aprašymas
 ===========
 
-Morse code was invented in 1836 by a group of people including the American artist Samuel F. B. Morse. Using Morse code  a message is  represented as a series of electrical pulses which can be sent along wires to an electromagnet at the receiving end of the system.  The symbols used for each letter are shown in the figure below. 
+Morzės abėcėlę 1836m. sukūrė grupė žmonių įskaitant amerikiečių menininką Samuel F. B. Morse. Naudojant Morzės abėcėlę, pranešimai pateikiami kaip elektrinių impulsų serija, kuri gali keliauti per laidus į elektromagneto sistemą gavėjo pusėje. Simboliai naudojami kiek vienai raidei yra pateikti žemiau.
 
 .. figure:: morse.png
    :scale: 60 %
 
-Source: raspberrypi.org
+Šaltinis: raspberrypi.org
 
-Of course, you aren't limited to electrical pulses, you can transmit a Morse code message using light or even sound.  A Morse code message sent over electrical wires is known as a telegram, a message is 
-translated to Morse code by an operator at the sending end using a a telegraph key like the one pictured here.
+Žinoma, nesi apribotas tik elektriniais impulsais, gali perduoti Morzės abėcėlės pranešimą naudojant šviesą ar garsą. Morzės abėcėlės pranešimas perduodamas elektros laidais yra žinomas kaip telegramas, pranešimas išverčiamas į Morzės abėcėlę operatoriaus ir siunčiamas su tefegrafo raktu, panašiu kaip šiame paveiksliuke.
 
 .. figure:: J38TelegraphKey.jpg 
    :scale: 60 %
 
-Telegraph key, source: Wikipedia 
+Telegrafo raktas, šaltinis:  „Wikipedia“ 
 
-The message is converted back to normal text by another operator at the receiving end. 
+Pranešimą gavėjo pusėje operatorius išverčia į normalų tekstą.
 
-Your goal is to turn your micro:bit into a machine that can encode messages using Morse code. We will call the message to be converted *plain text*.  You will need to store the alphabet with the morse code in your program. You can use a python *dictionary* to do this. Here is part of a python dictionary for morse code::
+Tavo tikslas paversti „micro:bit“ į įrenginį, kuris gali šifruoti pranešimus naudojant Morzės abėcėlę. Konvertuojamą pranešimą vadinsime *paprastu tekstu*. Programoje reikės saugoti abėcėlę kartu su Morzės abėcėle. Tam padaryti gali naudoti „python“ *žodyną*. Žemiau pateikiama dalis žodyno Morzės abėcėlei::
 
     morse_code = { 'A':'.-', 'B':'-...', 'C':'---.', 'D':'-..', 'E':'.', 'F':'..-.', 'G':'..-.', 'H':'--.', ...  }
 
-In English, this means: the character 'A' should be substituted with the string '.-'; the character 'B' should be substituted with the string '-...' and so on. You can print a dictionary using::
+Anglų kalboje tai reiškia: simbolis 'A' turėtų būti pakeistas eilute '.-'; simbolis 'B' turėtų būti pakeistas eilute '-...' ir taip toliau. Gali atspausdinti žodyną naudojant::
 
     print(morse_code)
 
-Try this out, experiment using the REPL. 
+Išbandyk ir eksperimentuok naudodamas „REPL“.
 
                                                                      
-Basic Task
-===========
-Collect points for these stages: 
+Paprasta užduotis
+=================
+Rink taškus už šiuos etapus:
 
 .. tabularcolumns:: |p{14cm}|R|
 
 +---------------------------------------------------------+------------+
-| **Tasks** 		                                  | **Points** |
+| **Užduotys** 		                                  | **Taškai** |
 +=========================================================+============+
-| Display a welcome message.                              | 	 1     |
+| Rodyti sveikinimo pranešimą.                            | 	 1     |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Create a dictionary containing the alphabet and the     |      2     |
-| corresponding morse code. Print the dictionary using    |            |
-| the REPL.                                               |            |
-|                                                         |            |
-+---------------------------------------------------------+------------+
-|                                                         |            |
-| In this version of your program you should store the    |      1     |
-| message to encode in a string like this: 		  |            |
-| ``message = 'KEEP THIS A SECRET```.                     |            |
-|                                                         |            |
+| Sukurk žodyną, sudarytą iš abėcėlės raidžių atitinkamai |      2     |
+| sutanpančiu su Morzės abėcėle. Atspausdink žodyną       |            |
+| naudodamas „REPL“.                                      |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Now display the message a character at a time using a   |      1     |
-| ``for`` loop. Hint: to get each character in the message|            |
-| use ``for c in message:``. 				  |            |
+| Šioje savo programos versijoje turėtum saugoti   	  |      1     |
+| pranešimą, kurį nori šifruoti šitaip: 	   	  |            |
+| ``message = 'KEEP THIS A SECRET'``.                     |            |
+|                                                         |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Use the dictionary you created to translate each        |     3      |
-| character in the message to a corresponding             |            |
-| encrypted character. Hint: ``morse_code['A']`` will     |            |
-| give you the morse code symbol corresponding to the     |            |
-| letter 'A' in your dictionary.                          |            |
+| Dabar parodyk pranešimą po vieną raidę vienu metu	  |      1     |
+| naudojantis ``for`` kilpa. Užuomena: tam, kad gauti kiek|            |
+| vieną simbolį iš žinutės naudok ``for c in message:``.  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Display the morse code on the micro:bit display and     |      1     |
-| print the code in the REPL using the ``print()``        |            |
-| function.   						  |            |
+| Panaudok sukurtą žodyną kiek vieno simbolio išvertimui  |     3      |
+| pranešime į atitinkamą šifruotą simbolį.     	          |            |
+| Užuomena: ``morse_code['A']`` pateiks Morzės abėcėlės   |            |
+| simbolį atitinkantį raidei 'A' tavo žodyne.	  	  |            |
+| 			               	   	          |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Connect a speaker to the micro:bit and play a series of |            |
-| of beeps to represent the morse code message.           |     1      |
+| Atvaizduok Morzės abėcėlę „micro:bit“ ir atspausdink    |      1     |
+| šifruotą tekstą „REPL“ naudojant ``print()`` funkciją.  |            |
+|                                                         |            |
++---------------------------------------------------------+------------+
+|                                                         |            |
+| Prijunk garsiakalbį prie „micro:bit“ ir paleisk seriją  |            |
+| garsų reprezentuojančių pranešimą.       		  |     1      |
 |                                                         |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
