@@ -61,7 +61,7 @@ Rink taškus už šiuos etapus:
 |                                                         |            |
 | Savo programoje turėtum saugoti šifruotą pranešimą      |      1     |
 | teksto eilutėje panašioje kaip ši:	 		  |            |
-| ``encrypted_message = 'QKKV OZ G YKIXKZ```.             |            |
+| ``encrypted_message = 'QKKV OZ G YKIXKZ'``.             |            |
 |                                                         |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
