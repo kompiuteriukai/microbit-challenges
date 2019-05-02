@@ -1,19 +1,19 @@
 ***********************
-The Name for the sensor
+Sensoriaus pavadinimas
 ***********************
-High level description of the sensor and picture if necessary, for example:
+Išsamus sensoriaus aprašymas ir paveiksliukas, pavyzdžiui:
 
 .. image:: compass.jpg
 
 
-Basic Functions
-================
-Describe the basic functions.
+Paprastos funkcijos
+===================
+Aprašyk paprastąsias funkcijas.
 
-Advanced Functions
-================
-Describe the more advanced functions if there are any.
+Išplėstinės funkcijos
+=====================
+Aprašyk išplėtines funkcijas jeigu tokių yra.
 
-Ideas for Projects with the Compass
+Idėjos projektams su sensoriais
 ===================================
-* List projects that students can make with the micro:bit. 
+* Sąrašas projektų, kuriuos mokiniai gali atlikti su „micro:bit“.
