@@ -59,7 +59,7 @@ Rink taškus už šiuos etapus:
 |                                                         |            |
 | Savo programoje turėtum saugoti pranešimą, kurį nori    |      1     |
 | išversti į tekstinę eilutę šai taip:               	  |            |
-| ``message = 'KEEP THIS A SECRET```.                     |            |
+| ``message = 'KEEP THIS A SECRET'``.                     |            |
 |                                                         |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
