@@ -1,76 +1,76 @@
 ********************************
-Decrypting a Substitution Cipher
+Pakaitinio kodo iššifravimas
 ********************************
 
 .. tabularcolumns:: |L|l|
 
 +--------------------------------+----------------------+
-| **Total points possible**	 | **Uses**	        |
+| **Galimi taškai**		 | **Naudoja**	        |
 +================================+======================+
-| 10			 	 | LED display          |
+| 10			 	 | LED ekraną           |
 +--------------------------------+----------------------+
 	
-Description
+Aprašymas
 ===========
 
-The substitution cipher is deceptively easy. Messages are encrypted using a key which is created in advance. 
-You make the key by jumbling up the alphabet like this:
+Pakaitinis kodas yra apgaulingai paprastas. Pranešimai yra šifruojami naudojant iš anksto sukurtą raktą. Raktas sukuriamas kaitaliojant abėcėlę šitaip:
 
 .. figure:: substitution.png
 
-Your goal is to turn your micro:bit into a machine that can decode messages using a substitution cipher. We
-call the message that has been encrypted *cipher text* and the decrypted message *plain text*. You will need to store the alphabet with the substition cipher in your program. You can use a python *dictionary* to do this. A python dictionary for the substitution cipher above looks like this::
+Tavo tikslas paversti „micro:bit“ į įrenginį galintį iššifruoti pakaitinio kodo pranešimus. Pranešimą, kuris buvo užšifruotas vadiname *šifruotu tekstu*, o iššifruotą pranešimą *paprastu tekstu*. Programoje reikės saugoti abėcėlę su pakaitiniu kodu. Tam įgyvendinti gali naudoti „python“ *žodyną*. Pakaitinio kodo „python“ žodynas atrodo šitaip::
+
         cipher_key = { 'A':'V', 'B':'J', 'C':'Z', 'D':'B', 'E':'G', 'F':'N', 'G':'F', 'H':'E', 'I':'P', 'J':'L', 'K':'I','L':'T','M':'M','N':'X','O':'D','P':'W','Q':'K','R':'Q','S':'U','T':'C','U':'R','V':'Y','W':'A','X':'H','Y':'S','Z':'O'}
 
-In English, this means: the character 'A' should be substituted with the character 'V'; the character 'B' should be substituted with the character 'J' and so on. You can print a dictionary using ``print(cipher_key)``.
-Try this out, experiment using the REPL.
+Anglų kalboje tai reiškia: simbolis 'A' turėtų būti pakeistas su simboliu 'V'; simbolis 'B' turėtų būti pakeistas su simboliu 'J' ir taip toliau. Gali atspausdinti žodyną naudojant ``print(cipher_key)``.
+
+Išbandyk ir eksperimentuok naudodamas „REPL“.
                                                                      
-Basic Task
-===========
-Collect points for these stages: 
+Paprasta užduotis
+=================
+
+Rink taškus už šiuos etapus:
 
 .. tabularcolumns:: |p{14cm}|R|
 
 +---------------------------------------------------------+------------+
-| **Tasks** 		                                  | **Points** |
+| **Užduotys** 		                                  | **Taškai** |
 +=========================================================+============+
-| Display a welcome message.                              | 	 1     |
+| Rodyti sveikinimo pranešimą.                            | 	 1     |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Create a dictionary containing the alphabet and the     |      2     |
-| corresponding cipher text. Print the dictionary using   |            |
-| the REPL.                                               |            |
-|                                                         |            |
-+---------------------------------------------------------+------------+
-|                                                         |            |
-| In this version of your program you should store the    |      1     |
-| message to be decrypted in a string like this:   	  |            |
-| ``encrypted_message = 'IGGW PC V UGZQGC```.             |            |
-|                                                         |            |
+| Sukurk žodyną su abėcėle ir atitinkamu šifruotu tekstu. |      2     |
+| Atspausdink žodyną naudojant „REPL“. 			  |            |
+| 			                                  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Now display the message a character at a time using a   |      1     |
-| ``for`` loop. Hint: to get each character in the message|            |
-| use ``for c in encrypted_message:``.			  |            |
+| Šioje savo programos versijoje turėtum saugoti 	  |      1     |
+| pranešimą, kurį nori iššifruoti, eilutėje šitaip:	  |            |
+| ``encrypted_message = 'IGGW PC V UGZQGC'``.             |            |
+|                                                         |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Use the dictionary you created to translate each        |     4      |
-| character in the message to a corresponding             |            |
-| plain text character. Hint:                             |            |
-| ``for key, value in cipher_key.items():``               |            |
-| will go through the dictionary, item by item giving you |            |
-| the ``key`` and ``value`` pairs. So, the first values   |            |
-| returned will be ``key`` of ``A`` and a ``value`` of    |	       |
-| ``V``. You will have to search through the whole        |            |
-| dictionary until you find the value for the ciphertext  |            |
-| character.                                              |            |
+| Dabar parodyk pranešimą po vieną raidę vienu metu	  |      1     |
+| naudojantis ``for`` kilpa. Užuomena: tam, kad gauti kiek|            |
+| vieną simbolį iš žinutės naudok 			  |            |
+| ``for c in encrypted_message:``.                        |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Display the decrypted text on the micro:bit display and |      1     |
-| print the decrypted text in the REPL using the	  |            |
-| ``print()`` function.   				  |            |
+| Panaudok sukurtą žodyną kiek vieno simbolio pranešime   |     4      |
+| vertimui į atitinkamą paprasto teksto simbolį.          |            |
+| Užuomena: ``for key, value in cipher_key.items():``     |            |
+| keliaus per žodyną, raidė po raidės pateikiant ``key``  |            |
+| ir ``value`` poras. Taigi pirma grąžinta reikšmė bus    |            |
+| ``key`` raidės ``A`` ir ``value`` raidės ``V``. Turėsi  |	       |
+| išieškoti visą žodyną iki kol rasi širuoto teskto       |            |
+| reikšmės simbolį.					  |            |
+|                                                         |            |
++---------------------------------------------------------+------------+
+|                                                         |            |
+| Atvaizduok iššifruotą tekstą „micro:bit“ ir atspausdink |      1     |
+| iššifruotą tekstą „REPL“ naudojant ``print()`` funkciją.|            |
+| 							  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
