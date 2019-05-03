@@ -68,7 +68,8 @@ Rink taškus už šiuos etapus:
 |                                                         |            |
 | Dabar parodyk pranešimą po vieną raidę vienu metu	  |      1     |
 | naudojantis ``for`` kilpa. Užuomena: tam, kad gauti kiek|            |
-| vieną simbolį iš žinutės naudok ``for c in message:``.  |            |
+| vieną simbolį iš žinutės naudok 			  |            |
+| ``for c in encrypted_message:``.                        |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
