@@ -1,70 +1,66 @@
-******
-Bop-it
-******
+*********
+„Bop-it“
+*********
 
 .. tabularcolumns:: |L|l|
 
 +--------------------------------+----------------------+
-| **Total points possible**	 | **Uses**	        |
+| **Galimi taškai**		 | **Naudoja**	        |
 +================================+======================+
-| 10			 	 | LED display, buttons |
+| 10			 	 | LED ekraną, mygtukus |
 +--------------------------------+----------------------+
 	
-Description
+Aprašymas
 ===========
 
-In this challenge you will make a reaction game similar to bop-it. The first bop-it game, pictured below, was released in the 1960s and since then there have 
-been many variants which test your reactions with light, sound and action.
-
+Šiame iššūkyje sukursi reakcijos žaidimą panašų į „bop-it“. Pirmasis „bop-it“ žaidimas, pavaizduotas žemiau, buvo išleistas 1960-aisiais ir nuo to laiko buvo daug variantų, kurie išbando tavo reakciją su šviesa, garsu ir veiksmais.
 
 .. figure:: bop_it.jpg
    :scale: 60 %
 
-   The original bop-it design, source: Wikipedia
+Originalus „bop-it“ dizainas, šaltinis: Wikipedia
 
-In the version of the game you create, the player must press the correct button,  ``A`` or ``B``, in under 1 second. If the player
-presses the wrong button, the game ends. If they press the correct button, they get a point and can play again.
+Tavo sukurtoje žaidimo versijoje, žaidėjas turės paspausti teisingą mygtuką ``A`` arba ``B`` per mažiau nei 1 sekundę. Jeigu žaidėjas paspaudžia neteisingą mygtuką, žaidimas pasibaigia. Jeigu paspaudžia teisingą mygtuką, gauna tašką ir gali žaisti toliau.
 
-
-Basic Game
-===========
-Collect points for these stages: 
+Paprastas žaidimas
+==================
+Rink taškus už šiuos etapus:
 
 .. tabularcolumns:: |p{14cm}|R|
 
 +---------------------------------------------------------+------------+
-| **Tasks** 		                                  | **Points** |
+| **Užduotys** 		                                  | **Taškai** |
 +=========================================================+============+
-| Display a welcome message.                              | 	     1 |
+| Rodyti sveikinimo pranešimą.                            | 	 1     |
 +---------------------------------------------------------+------------+
-| Create loop for the game which repeats every second.    |      1     |
-| Prompt the player to press either button ``A``          |            |
-| or button ``B``. Hint: use ``random.randint(0,1)``.     |            |
+| Sukurk žaidimo kilpą, kuri kartojasi kiek vieną sekundę.|      1     |
+| Paprašyk žaidėjo paspausti mygtuką ``A`` arba mygtuką   |            |
+| ``B``. Užuomena: naudok ``random.randint(0,1)``.        |            |
 +---------------------------------------------------------+------------+
-| Test whether the user has pressed the correct button.   |      1     |
-| If the user has pressed the correct button, display     |            |
-| a suitable image or message.                            |            |
+| Patikrink ar žaidėjas paspaudė teisingą mygtuką. Jeigu  |      1     |
+| žaidėjas paspaudė teisingą mygtuką, parodyk atintinkamą |            |
+| paveiksliuką ar žinutę.                                 |            |
 +---------------------------------------------------------+------------+
-| If the user has pressed the wrong                       |      2     |
-| button, finish the game.                                |            |
+| Jeigu žaidėjas paspaudė neteisingą mygtuką,             |      2     |
+| pabaik žaidimą.                             		  |            |
 +---------------------------------------------------------+------------+
-| If the player's answer was correct, add 1 to the        |      1     |
-| player's score.                                         |            |
+| Jeigu žaidėjas paspaudė teisingą mygtuką pridėk 1       |      1     |
+| tašką prie žaidėjo rezultato.                           |            |
 +---------------------------------------------------------+------------+
-| At the end of the game, display the player's score.     |      1     |
+| Žaidimo pabaigoje parodyk žaidėjo rezultatą. 		  |      1     |
 +---------------------------------------------------------+------------+
 	
 	 
-Extra points
-============
+Papildomi taškai
+================
 
 .. tabularcolumns:: |p{14cm}|R|
 
-+---------------------------------------------------------+--------+
-| Tasks 		                                  | Points |
-+=========================================================+========+
-| If the player succeeds, make the time interval for the  | 	 1 |
-| next round shorter.                                     |        |
-+---------------------------------------------------------+--------+
++-----------------------------------------------------+------------+
+| **Užduotys** 		                              | **Taškai** |
++=====================================================+============+
+| Jeigu žaidėjui sekasi, sutrumpink laiko intervalą   | 	 1 |
+| kitame žaidimo etape.                               |            |
++-----------------------------------------------------+------------+
 
  
