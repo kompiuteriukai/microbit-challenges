@@ -1,74 +1,71 @@
-*******************
-Consonant or Vowel?
-*******************
+************************
+Priebalsis arba balsis?
+************************
  
 .. tabularcolumns:: |L|l|
 
 +--------------------------------+----------------------+
-| **Total points possible**      | **Uses**             |
+| **Galimi taškai**    		 | **Naudoja**          |
 +================================+======================+
-| 10                             | LED display, buttons |
+| 10                             | LED ekraną, mygtukus |
 +--------------------------------+----------------------+
 
 	
-Description
+Aprašymas
 ===========
 
-In this challenge you will make a reaction game called Consonant or Vowel.  The micro:bit must show the player  a letter which 
-is either a consonant or a vowel. The player must press button ``A`` if it is a consonant and button ``B`` if it is a vowel. They
-must choose an answer in 1 second.  If the player presses the wrong button, the micro:bit displays a suitable image or message and the game ends. 
-If they press the correct button, the micro:bit displays a message or image and the player gets a point and can play again.
+Šiame iššūkyje sukursi reakcijos žaidimą pavadinimu priebalsis arba balsis. „Micro:bit“ žaidėjui turi parodyti raidę, kuri yra priebalsis arba balsis. Žaidėjas turi paspausti mygtuką ``A`` jeigu tai yra priebalsis arba mygtuką ``B`` jeigu tai yra balsis. Žaidėjas turi pasirinkti atsakymą per 1 sekundę. Jeigu žaidėjas paspaudžia neteisingą mygtuką, „micro:bit“ parodo atitinkamą paveiksliuką ar pranešimą ir žaidimas pasibaigia.Jeigu žaidėjas paspaudė teisingą mygtuką, „micro:bit“ parodo pranešimą arba paveiksliuką, žaidėjas gauna tašką ir gali žaisti toliau.
 
-
-Basic Game
-===========
-Collect points for these stages: 
+Paprastas žaidimas
+==================
+Rink taškus už šiuos etapus: 
 
 .. tabularcolumns:: |p{14cm}|R|
 
 +---------------------------------------------------------+------------+
-| **Tasks**                                               | **Points** |
+| **Užduotys**                                            | **Taškai** |
 +=========================================================+============+
-| Display a welcome messge.                               |      1     |
+| Rodyti sveikinimo pranešimą.                            |      1     |
 +---------------------------------------------------------+------------+
-| Create loop for the game which repeats every second.    |      1     |
+| Sukurk žaidimo kilpą, kuri kartojasi kiek vieną sekundę.|      1     |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Create a list of consonants in your program and a list  |      1     |
-| of vowels. Hint: ``vowels = ['A', 'E', 'I', 'O', 'U']`` |            |
+| Savo programoje sukurk sąrašą su priebalsiais ir 	  |      1     |
+| ir balsiais. 						  |            |
+| Užuomena: ``balsiai = ['A', 'E', 'I', 'O', 'U']``	  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
-| Randomly select either consonants or vowels.            |            |
-| Hint: use ``random.randint(0,1)``.                      |      1     |
-| Randomly select a letter from the list.                 |            |
+| Atsitiktinai pasirink priebalį arba balsį.              |            |
+| Užuomena: naudok ``random.randint(0,1)``.               |      1     |
+| Atsitiktinai pasirink raidę iš sąrašo.                  |            |
 |                                                         |            |
-| Display the letter.                                     |            |
+| Parodyk raidę.                                    	  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
-| Test whether the user has pressed the correct button.   |      1     |
-| If the user has pressed the correct button, display     |            |
-| a suitable image or message.                            |            |
+| Patikrink ar žaidėjas paspaudė teisingą mygtuką. Jeigu  |      1     |
+| žaidėjas paspaudė teisingą mygtuką, parodyk atintinkamą |            |
+| paveiksliuką ar žinutę.                                 |            |
 +---------------------------------------------------------+------------+
-| If the user has pressed the wrong                       |      2     |
-| button, finish the game.                                |            |
+| Jeigu žaidėjas paspaudė neteisingą mygtuką,             |      2     |
+| pabaik žaidimą.                             		  |            |
 +---------------------------------------------------------+------------+
-| If the player's answer was correct, add 1 to the        |      1     |
-| player's score.                                         |            |
+| Jeigu žaidėjas paspaudė teisingą mygtuką pridėk 1       |      1     |
+| tašką prie žaidėjo rezultato.                           |            |
 +---------------------------------------------------------+------------+
-| At the end of the game, display the player's score.     |      1     |
+| Žaidimo pabaigoje parodyk žaidėjo rezultatą. 		  |      1     |
 +---------------------------------------------------------+------------+
 
 
-Extra points
-============
+Papildomi taškai
+================
 
 .. tabularcolumns:: |p{14cm}|R|
 
-+---------------------------------------------------------+--------+
-| Tasks                                                   | Points |
-+=========================================================+========+
-| If the player succeeds, make the time interval for the  |      1 |
-| next round shorter.                                     |        |
-+---------------------------------------------------------+--------+
++-----------------------------------------------------+------------+
+| **Užduotys** 		                              | **Taškai** |
++=====================================================+============+
+| Jeigu žaidėjui sekasi, sutrumpink laiko intervalą   | 	 1 |
+| kitame žaidimo etape.                               |            |
++-----------------------------------------------------+------------+
 
