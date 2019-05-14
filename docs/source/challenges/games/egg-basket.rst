@@ -1,86 +1,84 @@
-**************
-Catch the Eggs
-**************
+******************
+Sugauk kiaušinius
+******************
 
 .. tabularcolumns:: |L|l|
 
 +--------------------------------+----------------------+
-| **Total points possible**	 | **Uses**	        |
+| **Galimi taškai**		 | **Naudoja**	        |
 +================================+======================+
-| 10			 	 | LED display, buttons |
+| 10			 	 | LED ekraną, mygtukus |
 +--------------------------------+----------------------+
 	
-Description
+Aprašymas
 ===========
 
-In this challenge you will test the player's ability to catch an egg in a basket. Imagine there is 
-a chocolate egg dropping from the sky. The player must catch the egg before it hits the ground. The player
-can move either right or left by using the ``A`` and ``B`` buttons on the micro:bit. If the egg hits 
-the floor the game ends. 
+Šiame iššūkyje patikrinsite žaidėjo gabumus sugauti kiaušinius į krepšelį. Įsivaizduok šokoladinius kiaušinius krentančius iš dangaus. Žaidėjas turi juos sugauti ir neleisti nukristi ant žemės. Žaidėjas gali judėti į kairę arba dešinę pusę naudojant ``A`` ir ``B`` mygtukus ant „micro:bit“. Jeigu kiaušinis nukrenta ant žemės žaidimas pasibaigia. 
 
-
-Basic Game
-===========
-Collect points for these stages: 
+Paprastas žaidimas
+==================
+Rink taškus už šiuos etapus: 
 
 .. tabularcolumns:: |p{14cm}|R|
 
 +---------------------------------------------------------+------------+
-| **Tasks** 		                                  | **Points** |
+| **Užduotys**                                            | **Taškai** |
 +=========================================================+============+
-| Display a welcome message.                              | 	     1 |
+| Rodyti sveikinimo pranešimą.                            |      1     |
 +---------------------------------------------------------+------------+
-| Create loop for the game which repeats every second.    |      1     |
-+---------------------------------------------------------+------------+
-|                                                         |            |
-| Create a player sprite in column 0, row 3.              |      1     |
+| Sukurk žaidimo kilpą, kuri kartojasi kiek vieną sekundę.|      1     |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Move the player sprite to the right if button           |            |
-| ``B`` is pressed and left if button ``A`` is pressed.   |      1     |
-| Hint: store the position of the                         |            |
-| player in a list ``player = [0,0]``.                    |            |
+| Sukurk žaidėjo tašką stulpelyje 0, eilutė 3.            |      1     |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Create an egg sprite. The egg will start at             |      1     |
-| the top of the display and move down 1 pixel every time |            |
-| the game loop repeats. Hint: store the position of the  |            |
-| egg in a list ``egg = [0,0]``.                          |            |
+| Pastumk žaidėjo tašką į dešinę jeigu mytukas            |            |
+| ``B`` yra paspaustas ir kairę jeigu paspaustas          |      1     |
+| mygtukas ``A``. Užuomena: saugok žaidėjo poziciją       |            |
+| sąraše ``player = [0,0]``.                 		  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Create the egg sprite in a random column on the         |      1     |
-| display. Hint: use ``random.randint(0,4)``.             |            |
+| Sukurk kiaušinio tašką. Kiaušinis pradės kristi nuo     |      1     |
+| ekrano viršaus po 1 pikselį kas kart pasikartojus       |            |
+| žaidimo kilpai. Užuomena: saugok kiaušinio poziciją     |            |
+| sąraše ``egg = [0,0]``.                                 |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Every time the loop repeats, check whether the player   |      2     |
-| has collided with the egg. If there is a collision,     |            |
-| the player has caught the egg and the game ends.        |            |
-| Display an image or message to congratulate the player. |            |
+| Sukurk kiaušinio tašką atsitiktiniame stulpelyje        |      1     |
+| ekrane. Užuomena: naudok ``random.randint(0,4)``.       |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| If the egg drops to the bottom of the display and there |            |
-| has been no collision then set the position of the egg  |            |
-| to a random column at the top of the display.           |      1     |
+| Kiek vieną kartą pasikartojus kilpai, patikrink ar      |      2     |
+| žaidėjas susidūrė su kiaušiniu. Jeigu susidūrimas įvyko |            |
+| vadinasi žaidėjas sugavo kiaušinį ir žaidimas           |            |
+| pasibaigia. Pasveikink žaidėją parodydamas paveiksliuką |            |
+| arba pranešimą.                                         |            |
+|                                                         |            |
++---------------------------------------------------------+------------+
+|                                                         |            |
+| Jeigu kiaušinis pasiekia ekrano apačią ir nesusiduria su|            |
+| žaidėju perkelk kiaušinį į atsitiktinį stulpelį ekrano  |            |
+| viršuje.						  |      1     |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 	
 	 
-Extra points
-============
+Papildomi taškai
+================
 
 .. tabularcolumns:: |p{14cm}|R|
 
 +---------------------------------------------------------+------------+
-| **Tasks** 		                                  | **Points** |
+| **Užduotys**                                            | **Taškai** |
 +=========================================================+============+
 |                                                         |            |
-| Let the player continue catching eggs until they drop   |      1     |
-| one. When the game ends, display the player's score.    |            |
+| Leisk žaidėjui gaudyti kiaušinius iki kol jis numeta    |      1     |
+| vieną. Žaidimui pasibaigus parodyk galutinį rezultatą.  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 
