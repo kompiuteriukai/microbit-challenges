@@ -1,82 +1,80 @@
 *********
-Obstacles
+Kliūtys
 *********
 
 .. tabularcolumns:: |L|l|
 
 +--------------------------------+----------------------+
-| **Total points possible**	 | **Uses**	        |
+| **Galimi taškai**		 | **Naudoja**	        |
 +================================+======================+
-| 10			 	 | LED display, buttons |
+| 10			 	 | LED ekraną, mygtukus |
 +--------------------------------+----------------------+
 	
-Description
+Aprašymas
 ===========
 
-In this challenge  the player is driving down a road or race track. There are obstacles in the road and  the player 
-must  dodge them using the ``A`` and ``B`` buttons on the micro:bit. If the player hits an obstacle the game ends. 
+Šiame iššūkyje žaidėjas važiuoja gatve arba lenktynių trasoje. Kelyje yra kliūtys ir žaidėjas turi jų išvengti naudodamas ``A`` ir ``B`` mygtukus. Jeigu žaidėjas atsitrenkia į kliūtį žaidimas pasibaigia.
 
-Basic Game
-===========
-Collect points for these stages: 
+Paprastas žaidimas
+==================
+Rink taškus už šiuos etapus:  
 
 .. tabularcolumns:: |p{14cm}|R|
 
 +---------------------------------------------------------+------------+
-| **Tasks** 		                                  | **Points** |
+| **Užduotys**                                            | **Taškai** |
 +=========================================================+============+
-| Display a welcome message.                              | 	     1 |
+| Rodyti sveikinimo pranešimą.                            |      1     |
 +---------------------------------------------------------+------------+
-| Create loop for the game which repeats every second.    |      1     |
+| Sukurk žaidimo kilpą, kuri kartojasi kiek vieną sekundę.|      1     |
 +---------------------------------------------------------+------------+
-| Create a player sprite in any column in the bottom row. |            |
-| Display the pixel at maximum brightness.                |            |
+| Sukurk žaidėjo tašką bet kuriame stulpelyje apatinėje   |            |
+| eilutėje. Rodyk tašką maksimaliu ryškumu.               |            |
 +---------------------------------------------------------+------------+
-| Move the player sprite 1 pixel upwards each time the    |      1     |
-| loop repeats. If the player sprite is in row 0, move    |            |
-| the player sprite back to row 4.                        |            |
-| Hint: store the position of the                         |            |
-| player in a list: ``player = [0,0]``.                   |            |
-+---------------------------------------------------------+------------+
-|                                                         |            |
-| Move the player sprite to the right if button           |            |
-| ``B`` is pressed and left if button ``A`` is pressed.   |      1     |
-|                                                         |            |
+| Pastumk žaidėjo tašką vienu pikseliu aukštyn kas kart   |      1     |
+| kilpai pasikartojus. Jeigu žaidėjo taškas eilutėje 0,   |            |
+| perkelk žaidėjo tašką atgal į eilutę 4.                 |            |
+| Užuomena: saugok žaidėjo poziciją sąraše:               |            |
+| ``player = [0,0]``.                   		  |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Create an obstacle sprite in any column in the top row. |      2     |
-| Display the pixel at a low brightness.                  |            |
-| The obstacle should move down 1 pixel every time        |            |
-| the game loop repeats. Hint: store the position of the  |            |
-| obstacle in a list ``obstacle = [0,0]``.                |            |
+| Pastumk žaidėjo tašką į dešinę jeigu paspaustas mygtukas|     1      |
+| ``B`` ir į kairę jeigu paspaustas ``A``.		  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Now when you create the obstacle sprite, place it in a  |            |
-| random column on the display.                           |      1     |
-| Hint: use ``random.randint(0,4)``.                      |            |
+| Sukurk kliūties tašką bet kuriame stulpelyje ekrano     |      2     |
+| viršuje. Rodyk tašką minimaliu ryškumu.                 |            |
+| Kliūties taškas turėtų pajudėti vienu pikseliu žemyn    |            |
+| žaidimo kilpai pasikarotjus. Užuomena: saugok kliūties  |            |
+| poziciją sąraše ``obstacle = [0,0]``.                   |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Every time the loop repeats, check whether the player   |      2     |
-| has collided with the obstacle. If there is a collision,|            |
-| the game ends.                                          |            |
+| Padėk sukurtą kliūties tašką į atsitiktinį stuleplį.    |      1     |
+| Užuomena: naudok ``random.randint(0,4)``.               |            |
+|                                                         |            |
++---------------------------------------------------------+------------+
+|                                                         |            |
+| Kas kart kilpai pasikartojus patikrink ar žaidėjas      |      2     |
+| atsitrenkė į kliūtį. Jeigu susidūrimas įvyko, žaidimas  |            |
+| baigiasi.	                                          |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 	
 	 
-Extra points
-============
+Papildomi taškai
+================
 
 .. tabularcolumns:: |p{14cm}|R|
 
 +---------------------------------------------------------+------------+
-| **Tasks** 		                                  | **Points** |
+| **Užduotys**                                            | **Taškai** |
 +=========================================================+============+
 |                                                         |            |
-| At the start of the game, give the player 3 lives.      |      1     |
-| Subtract a life every time there is a collision. End    |            |
-| game when the player has no lives left.                 |            |
+| Pradžioje žaidimo duok žaidėjui 3 gyvybes. Atimk gyvybę |      1     |
+| kiek vieną kartą įvykus susidūrimuis. Pabaik žaidimą    |            |
+| kai žaidėjas nebeturi gyvybių.		          |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 
