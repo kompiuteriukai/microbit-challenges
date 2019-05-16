@@ -1,92 +1,88 @@
 *******************
-Where's the Cheese?
+Kur yra sūris?
 *******************
 
 .. tabularcolumns:: |L|l|
 
-+--------------------------------+----------------------+
-| **Total points possible**	 | **Uses**	        |
-+================================+======================+
-| 10			 	 | LED display, buttons |
-+--------------------------------+----------------------+
-	
-Description
++--------------------------------+----------------------------+
+| **Galimi taškai**    		 | **Naudoja**       	      |
++================================+============================+
+| 10                             | LED ekraną, akcelerometrą  |
++--------------------------------+----------------------------+
+
+Aprašymas
 ===========
 
-In this challenge the player is a mouse and the mouse must eat the cheese before the time is up. The player can 
-move around the display by tilting the micro:bit to the left or right, up or down.
-When the player lands on the cheese, call function: ``love.badaboom()`` and see what happens. The player must eat  the cheese within  a time 
-limit or the game ends.  
+Šiame iššūkyje žaidėjas yra pelė ir pelė privalo suvalgyti sūri iki kol pasibaigia laikas. Žaidėjas gali judėti aplink palenkdamas „micro:bit“ į kairę arba dešinę, viršų arba apačią. Kai žaidėjas pagauna sūrį iškviesk funkciją: ``love.badaboom()`` ir pažiūrėk kas nutinka. Žaidėjas turi suvalgyti sūrį per tam tikrą laiko tarpą arba žaidimas pasibaigia.
 
-Basic Game
-===========
-Collect points for these stages: 
+Paprastas žaidimas
+==================
+Rink taškus už šiuos etapus:
 
 .. tabularcolumns:: |p{14cm}|R|
 
 +---------------------------------------------------------+------------+
-| **Tasks** 		                                  | **Points** |
+| **Užduotys**                                            | **Taškai** |
 +=========================================================+============+
-| Display a welcome messge.                               | 	     1 |
+| Rodyti sveikinimo pranešimą.                            |      1     |
 +---------------------------------------------------------+------------+
-| Create loop for the game which repeats every second.    |      1     |
-+---------------------------------------------------------+------------+
-|                                                         |            |
-| Create a player sprite. Display the player sprite in    |      1     |
-| top left hand corner of the display.                    |            |
-| Hint: store the position of the                         |            |
-| player in a list ``player = [0,0]``.                    |            |
-|                                                         |            |
+| Sukurk žaidimo kilpą, kuri kartojasi kiek vieną sekundę.|      1     |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Move the player sprite to the right if the micro:bit    |            |
-| is tilted right and left if the micro:bit is tilted     |      2     |
-| left. Hint: Use the values from                         |            |  
+| Sukurk žaidėjo tašką. Rodyk žaidėjo tašką kairėje       |      1     |
+| viršutinėje ekrano pusėje. Užuomena: saugok žaidėjo     |            |
+| poziciją sąraše ``player = [0,0]``.                     |            |
+|                                                         |            |
++---------------------------------------------------------+------------+
+|                                                         |            |
+| Pajudink žaidėjo tašką į dešinę jeigu „micro:bit“       |            |
+| palenktas į dešinę ir kairę jeigu „micro:bit“ palenktas |      2     |
+| į kairę. Užuomena: naudok reikšmes iš                   |            |  
 | ``accelerometer.get_x()``                               |            |
-| to determine the tilt of the board.  			  |            |
+| tam, kad nustatyti palenkimą.				  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Move the player sprite upwards if the micro:bit is      |            |
-| tipped up. Move the player sprite downwards if the      |      2     |
-| micro:bit tipped downward. Hint: use                    |            |
-| `accelerometer.get_y()`` to determine the tilt of the   |            |
-| board.                                                  |            |
+| Pajudink žaidėjo tašką į viršų jeigu „micro:bit“ yra    |            |
+| palenktas į viršų. Pajudink žemyn jeigu „micro:bit“     |      2     |
+| palenktas žemyn. Užuomena: naudok                       |            |
+| `accelerometer.get_y()`` tam, kad nustatyti palenkimą.  |            |
+| 		                                          |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Create a cheese sprite. Assign a random position to the |      1     |
-| cheese sprite. Hint: store the position of the          |            |
-| cheese in a list ``cheese = [0,0]``.                    |            |
-|                                                         |            |
-+---------------------------------------------------------+------------+
-|                                                         |            |
-| When the player moves, check whether the	          |      1     | 
-| mouse is in the same position as the cheese. If it is   |            |
-| then the player has won. call function                  |            |
-| ``love.badaboom()`` and see what happens.               |            |
+| Sukurk sūrio tašką. Paskirk atsitiktinę vietą sūrio     |      1     |
+| taškui. Užuomena: saugok sūrio poziciją sąraše          |            |
+| ``cheese = [0,0]``.	                     |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Create a timer, if the mouse does not find the cheese   |      1     |
-| before the timer expires, the game ends. Hint: at the   |            |
-| start of the game get the start time by using function  |            |
-| ``microbit.running_time()``.                            |            |
+| Kai žaidėjas juda, patikrink ar žaidėjas yra toje       |      1     | 
+| pačioje vietoje kaip ir sūris. Jeigu yra, vadinasi      |            |
+| žaidėjas laimėjo. Iškviesk funkciją                     |            |
+| ``love.badaboom()`` ir pažiūrėk kas nutiks.             |            |
+|                                                         |            |
++---------------------------------------------------------+------------+
+|                                                         |            |
+| Sukurk laikmatį, jeigu pelė nesuranda sūrio iki kol     |      1     |
+| pasibaigia laikas, žaidimas pasibaigia. Užuomena:       |            |
+| žaidimo pradžioje gauk žaidimo pradžios laiką naudojant |            |
+| funkciją ``microbit.running_time()``.                   |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 	
 	 
-Extra points
-============
+Papildomi taškai
+================
 
 .. tabularcolumns:: |p{14cm}|R|
 
 +---------------------------------------------------------+------------+
-| **Tasks** 		                                  | **Points** |
+| **Užduotys**                                            | **Taškai** |
 +=========================================================+============+
 |                                                         |            |
-| Repeat the game when the mouse reaches the cheese.      |      1     |
-| Reduce the amount of time the player has to find the    |            |
-| cheese.                                                 |            |
+|                                                         |            |
+| Pakartok žaidimą kai pelė pasiima sūrį. Sumažink laiko  |      1     |
+| intervalą per kurį žaidėjas privalo surasti sūri.       |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 
