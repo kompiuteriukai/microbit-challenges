@@ -12,7 +12,7 @@
 	
 Aprašymas
 ===========
-Šiame projekte, naudosime „micro:bit“ radiją pranešimų siūntimui iš vieno „micro:bit“ į kitą. Įjungsi LED lemputes kai yra gautas pranešimas, tokiu būdu atrodys, kad žmonės laikantys „micro:bit“ žaidžia „ping pong“.
+Šiame projekte, naudosime „micro:bit“ radiją pranešimų siųntimui iš vieno „micro:bit“ į kitą. Įjungsi LED lemputes kai yra gautas pranešimas, tokiu būdu atrodys, kad žmonės laikantys „micro:bit“ žaidžia „ping pong“.
 
 Paprasta užduotis
 ==================
@@ -25,7 +25,7 @@ Rink taškus už šiuos etapus:
 +=========================================================+============+
 |                                                         |            |
 | Perskaityk radijo pamokos lapą.                         |            |
-| Parašyk pranešimų siuntimo ir gavimo programą.          |    2       |
+| Parašyk pranešimų siųntimo ir gavimo programą.          |    2       |
 | Atspausdink pranešimą „REPL“.                           |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
