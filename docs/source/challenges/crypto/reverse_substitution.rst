@@ -60,10 +60,10 @@ Rinkite taškus už šiuos etapus:
 |                                                         |            |
 | Panaudokite sukurtą žodyną kiekvieno simbolio           |     4      |
 | vertimui į atitinkamą paprasto teksto simbolį.          |            |
-| Užuomina: "for key, value in cipher_key.items():"       |            |
-| keliaus per žodyną, raidė po raidės pateikiant "key"    |            |
-| ir "value" poras. Taigi pirma grąžinta reikšmė bus      |            |
-| "key" raidės "A" ir "value" raidės "V".                 |	       |
+| Užuomina: ``for key, value in cipher_key.items():``     |            |
+| keliaus per žodyną, raidė po raidės pateikiant ``key``  |            |
+| ir ``value`` poras. Taigi pirma grąžinta reikšmė bus    |            |
+| ``key`` raidės ``A`` ir "value" raidės ``V``.           |	       |
 | Turėsite išieškoti visą žodyną kol rasite širuoto       |            |
 | teksto reikšmės simbolį.				  |            |
 |                                                         |            |
@@ -71,6 +71,6 @@ Rinkite taškus už šiuos etapus:
 |                                                         |            |
 | Atvaizduokite iššifruotą tekstą „micro:bit“ ir          |      1     |
 | atspausdinkite iššifruotą tekstą „REPL“ naudojant       |            |
-| "print()" funkciją.	              			  |            |
+| ``print()`` funkciją.	              			  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
