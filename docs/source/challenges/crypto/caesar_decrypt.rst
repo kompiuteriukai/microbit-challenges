@@ -67,13 +67,13 @@ Rinkite taškus už šiuos etapus:
 +---------------------------------------------------------+------------+
 |                                                         |            |
 | Dabar parodykite pranešime po vieną raidę vienu metu	  |      1     |
-| naudojantis"for" kilpa. Užuomina: tam, kad gautumėte    |            |
+| naudojantis ``for`` kilpa. Užuomina: tam, kad gautumėte |            |
 | kiekvieną simbolį iš žinutės naudokite                  |            |
 | ``for c in encrypted_message:``.                        |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Naudokite "ord()" funkciją tam, kad išverstumėte        |     1      |
+| Naudokite ``ord()`` funkciją tam, kad išverstumėte      |     1      |
 |kiekvieną simbolį į ASCII skaičių ir atimkite skaičių    |            |
 |simbolių, kuriuos norite pastumti.                       |            |
 |                                                         |            |
@@ -85,7 +85,7 @@ Rinkite taškus už šiuos etapus:
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Naudokite "chr()", kad išverstumėte kiekvieną ASCII 	  |      2     |
+| Naudokite ``chr()``, kad išverstumėte kiekvieną ASCII   |      2     |
 | numerį atgal į paprastą tekstą. Užuomina:               |            |
 |nešifruokite tarpų.		                  	  |            |
 |                                                         |            |
