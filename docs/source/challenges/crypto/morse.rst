@@ -29,7 +29,7 @@ Telegrafo raktas, šaltinis:  „Wikipedia“
 
 Pranešimą gavėjo pusėje operatorius išverčia į įprastą tekstą.
 
-Jūsų tikslas paversti „micro:bit“ į įrenginį, kuris gali šifruoti pranešimus naudojant Morzės abėcėlę. Konvertuojamą pranešimą vadinsime *paprastu tekstu*. Programoje reikės saugoti abėcėlę kartu su Morzės abėcėle. Tam padaryti gali naudoti „python“ *žodyną*. Žemiau pateikiama dalis žodyno Morzės abėcėlei::
+Jūsų tikslas paversti „micro:bit“ į įrenginį, kuris gali šifruoti pranešimus naudojant Morzės abėcėlę. Konvertuojamą pranešimą vadinsime *paprastu tekstu*. Programoje reikės saugoti abėcėlę kartu su Morzės abėcėle. Tam padaryti gali naudoti Phyton *žodyną*. Žemiau pateikiama dalis žodyno Morzės abėcėlei::
 
     morse_code = { 'A':'.-', 'B':'-...', 'C':'---.', 'D':'-..', 'E':'.', 'F':'..-.', 'G':'..-.', 'H':'--.', ...  }
 
@@ -68,7 +68,7 @@ Rinkite taškus už šiuos etapus:
 | Dabar parodykite pranešimą po vieną raidę vienu metu	  |      1     |
 | naudojantis ``for`` kilpa. Užuomina: tam, kad gautumėte |            |
 | kiekvieną simbolį iš žinutės naudokite                  |            |
-| "for c in message:".                                    |            |
+| ``for c in message:``.                                  |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
 | Panaudokite sukurtą žodyną kiekvieno simbolio           |     3      |
@@ -81,7 +81,7 @@ Rinkite taškus už šiuos etapus:
 |                                                         |            |
 | Atvaizduokite Morzės abėcėlę „micro:bit“ ir             |      1     |
 | atspausdinkite šifruotą tekstą „REPL“ naudojant         |            |
-| "print()" funkciją.                                     |            |
+| ``print()`` funkciją.                                   |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
 | Prijunkite garsiakalbį prie „micro:bit“ ir paleiskite   |            |
