@@ -32,7 +32,7 @@ Rinkite taškus už šiuos etapus:
 | eilutėje. Rodykite tašką maksimaliu ryškumu.            |            |
 +---------------------------------------------------------+------------+
 | Pastumkite žaidėjo tašką vienu pikseliu aukštyn kaskart |      1     |
-| pasikartojus kilapi. Jeigu žaidėjo taškas eilutėje 0,   |            |
+| pasikartojus kilpai. Jeigu žaidėjo taškas eilutėje 0,   |            |
 | perkelkite žaidėjo tašką atgal į eilutę 4.              |            |
 | Užuomina: saugokite žaidėjo poziciją sąraše:            |            |
 | ``player = [0,0]``.                   		  |            |
