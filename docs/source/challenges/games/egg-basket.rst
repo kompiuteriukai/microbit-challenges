@@ -35,22 +35,22 @@ Rinkite taškus už šiuos etapus:
 +---------------------------------------------------------+------------+
 |                                                         |            |
 | Pastumkite žaidėjo tašką į dešinę, jeigu yra paspaustas |            |
-| mygtukas "B", ir kairę, jeigu paspaustas mygtukas "A".  |      1     |
-| Užuomina: saugokite žaidėjo poziciją sąraše 	          |            |
-| "player = [0,0]".	                		  |            |
+| mygtukas ``B``, ir kairę, jeigu paspaustas mygtukas 	  |      1     |
+| ``A``. Užuomina: saugokite žaidėjo poziciją sąraše 	  |            |
+| ``player = [0,0]``.	                		  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
 | Sukurkite krentančio kiaušinio tašką. Kiaušinis pradės  |      1     |
 | kristi nuo ekrano viršaus po 1 pikselį kaskart          |            |
 | pasikartojus žaidimo kilpai. Užuoina: saugok kiaušinio  |            |
-| poziciją sąraše "egg = [0,0]".                  	  |            |
+| poziciją sąraše ``egg = [0,0]``.                  	  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
 | Sukurkite krentančio kiaušinio tašką atsitiktiniame     |      1     |
 | stulpelyje ekrane. Užuomina: naudokite 	          |            |
-| "random.randint(0,4)".                                  |            |
+| ``random.randint(0,4)``.                                |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
 | Kiekvieną kartą pasikartojus kilpai, patikrinkite ar    |      2     |
