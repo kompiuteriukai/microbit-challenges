@@ -33,9 +33,9 @@ Rinkite taškus už šiuos etapus:
 +=========================================================+============+
 | Rodyti sveikinimo pranešimą.                            | 	 1     |
 +---------------------------------------------------------+------------+
-| Sukurkite žaidimo kilpą, kuri pasikartoja kiekvieną 	  |      1     |
-| sekundę. Paprašykite žaidėjo paspausti mygtuką "A" arba |            |
-| mygtuką "B". Užuomina: naudok "random.randint(0,1)".    |            |
+| Sukurkite žaidimo kilpą, kuri pasikartoja kas sekundę.  |      1     |
+| Paprašykite žaidėjo paspausti mygtuką ``A`` arba	  |            |
+| mygtuką ``B``. Užuomina: naudok ``random.randint(0,1)``.|            |
 +---------------------------------------------------------+------------+
 | Patikrinkite ar žaidėjas paspaudė teisingą mygtuką.     |      1     |
 | Jeigu žaidėjas paspaudė teisingą mygtuką, parodykite    |            |
@@ -59,7 +59,7 @@ Papildomi taškai
 +-----------------------------------------------------+------------+
 | **Užduotys** 		                              | **Taškai** |
 +=====================================================+============+
-| Jeigu žaidėjui sekasi, sutrumpinkite laiko          | 	 1 |
+| Jeigu žaidėjui sekasi, sutrumpinkite laiko          |	    1	   |
 | intervalą kitame žaidimo etape.                     |            |
 +-----------------------------------------------------+------------+
 
