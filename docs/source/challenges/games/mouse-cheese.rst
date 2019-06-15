@@ -38,7 +38,7 @@ Rinkite taškus už šiuos etapus:
 | Pajudinkite žaidėjo tašką į dešinę, jeigu „micro:bit“   |            |
 | palenktas į dešinę, ir kairę, jeigu „micro:bit“ 	  |      2     |
 | palenktas į kairę. Užuomina: naudokite reikšmes iš      |            |  
-| "accelerometer.get_x()" tam, kad nustatytumėte          |            |
+| ``accelerometer.get_x()`` tam, kad nustatytumėte        |            |
 | palenkimą.						  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
@@ -46,8 +46,8 @@ Rinkite taškus už šiuos etapus:
 | Pajudinkite žaidėjo tašką į viršų, jeigu „micro:bit“ yra|            |
 | palenktas į viršų. Pajudink žemyn, jeigu „micro:bit“    |      2     |
 | palenktas žemyn. Užuomina: naudokite                    |            |
-| "accelerometer.get_y()"tam, kad nustatytumėte palenkimą.|            |
-| 		                                          |            |
+| ``accelerometer.get_y()`` tam, kad nustatytumėte 	  |            |
+| palenkimą.		                                  |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
 | Sukurkite "sūrio" tašką. Paskirkite atsitiktinę vietą   |      1     |
