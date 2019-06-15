@@ -13,7 +13,7 @@
 Aprašymas
 ===========
 
-Šiame iššūkyje žaidėjas važiuoja gatve arba lenktynių trasoje. Kelyje yra kliūtys ir žaidėjas turi jų išvengti naudodamas "A" ir "B" mygtukus. Jeigu žaidėjas atsitrenkia į kliūtį, žaidimas pasibaigia.
+Šiame iššūkyje žaidėjas važiuoja gatve arba lenktynių trasoje. Kelyje yra kliūtys ir žaidėjas turi jų išvengti naudodamas``A`` ir ``B`` mygtukus. Jeigu žaidėjas atsitrenkia į kliūtį, žaidimas pasibaigia.
 
 Paprastas žaidimas
 ==================
@@ -35,11 +35,11 @@ Rinkite taškus už šiuos etapus:
 | pasikartojus kilapi. Jeigu žaidėjo taškas eilutėje 0,   |            |
 | perkelkite žaidėjo tašką atgal į eilutę 4.              |            |
 | Užuomina: saugokite žaidėjo poziciją sąraše:            |            |
-| "player = [0,0]".                   			  |            |
+| ``player = [0,0]``.                   		  |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
 | Pastumkite žaidėjo tašką į dešinę, jeigu paspaustas 	  |     1      |
-| mygtukas "B", ir į kairę, jeigu paspaustas "A".	  |            |
+| mygtukas ``B``, ir į kairę, jeigu paspaustas ``A``.	  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
@@ -47,12 +47,12 @@ Rinkite taškus už šiuos etapus:
 | viršuje. Rodykite tašką minimaliu ryškumu.              |            |
 | Kliūties taškas turėtų pajudėti vienu pikseliu žemyn    |            |
 | žaidimo kilpai pasikartojus. Užuomina: saugokite 	  |            |
-| kliūties poziciją sąraše "obstacle = [0,0]".            |            |
+| kliūties poziciją sąraše ``obstacle = [0,0]``.          |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
 | Padėkite sukurtą kliūties tašką į atsitiktinį stulpelį. |      1     |
-| Užuomina: naudokite "random.randint(0,4)".              |            |
+| Užuomina: naudokite ``random.randint(0,4)``.            |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
