@@ -33,11 +33,11 @@ Rinkite taškus už šiuos etapus:
 |                                                         |            |
 | Savo programoje sukurkite sąrašą su priebalsiais ir 	  |      1     |
 | ir balsiais. 						  |            |
-| Užuomina: "balsiai = ['A', 'E', 'I', 'O', 'U']"	  |            |
+| Užuomina: ``balsiai = ['A', 'E', 'I', 'O', 'U']``	  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 | Atsitiktinai pasirinkite priebalį arba balsį.           |            |
-| Užuomina: naudokite "random.randint(0,1)".              |      1     |
+| Užuomina: naudokite ``random.randint(0,1)``.            |      1     |
 | Atsitiktinai pasirinkte raidę iš sąrašo.                |            |
 |                                                         |            |
 | Parodykite raidę.                                    	  |            |
