@@ -1,5 +1,5 @@
 *******************
-Kur yra sūris?
+Žaidimas "Kur yra sūris?"
 *******************
 
 .. tabularcolumns:: |L|l|
@@ -13,11 +13,11 @@ Kur yra sūris?
 Aprašymas
 ===========
 
-Šiame iššūkyje žaidėjas yra pelė ir pelė privalo suvalgyti sūri iki kol pasibaigia laikas. Žaidėjas gali judėti aplink palenkdamas „micro:bit“ į kairę arba dešinę, viršų arba apačią. Kai žaidėjas pagauna sūrį iškviesk funkciją: ``love.badaboom()`` ir pažiūrėk kas nutinka. Žaidėjas turi suvalgyti sūrį per tam tikrą laiko tarpą arba žaidimas pasibaigia.
+Šiame iššūkyje žaidėjas yra pelė ir pelė privalo suvalgyti sūrį per duotą laiko tarpą. Žaidėjas gali judėti aplink palenkdamas „micro:bit“ į kairę arba dešinę, viršų arba apačią. Kai žaidėjas pagauna sūrį, iškvieskite funkciją: ``love.badaboom()`` ir pažiūrėkite kas nutinka. Pėlė turi suvalgyti sūrį per tam tikrą laiko tarpą arba žaidimas pasibaigia.
 
 Paprastas žaidimas
 ==================
-Rink taškus už šiuos etapus:
+Rinkite taškus už šiuos etapus:
 
 .. tabularcolumns:: |p{14cm}|R|
 
@@ -26,46 +26,46 @@ Rink taškus už šiuos etapus:
 +=========================================================+============+
 | Rodyti sveikinimo pranešimą.                            |      1     |
 +---------------------------------------------------------+------------+
-| Sukurk žaidimo kilpą, kuri kartojasi kiek vieną sekundę.|      1     |
+| Sukurkite žaidimo kilpą, kuri pasikartoja kas sekundę.  |      1     |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Sukurk žaidėjo tašką. Rodyk žaidėjo tašką kairėje       |      1     |
-| viršutinėje ekrano pusėje. Užuomena: saugok žaidėjo     |            |
-| poziciją sąraše ``player = [0,0]``.                     |            |
-|                                                         |            |
-+---------------------------------------------------------+------------+
-|                                                         |            |
-| Pajudink žaidėjo tašką į dešinę jeigu „micro:bit“       |            |
-| palenktas į dešinę ir kairę jeigu „micro:bit“ palenktas |      2     |
-| į kairę. Užuomena: naudok reikšmes iš                   |            |  
-| ``accelerometer.get_x()``                               |            |
-| tam, kad nustatyti palenkimą.				  |            |
+| Sukurkite žaidėjo tašką. Rodykite žaidėjo tašką         |      1     |
+| kairėje viršutinėje ekrano pusėje. Užuomina: saugokite  |            |
+| žaidėjo poziciją sąraše ``player = [0,0]``.             |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Pajudink žaidėjo tašką į viršų jeigu „micro:bit“ yra    |            |
-| palenktas į viršų. Pajudink žemyn jeigu „micro:bit“     |      2     |
-| palenktas žemyn. Užuomena: naudok                       |            |
-| `accelerometer.get_y()`` tam, kad nustatyti palenkimą.  |            |
-| 		                                          |            |
-+---------------------------------------------------------+------------+
-|                                                         |            |
-| Sukurk sūrio tašką. Paskirk atsitiktinę vietą sūrio     |      1     |
-| taškui. Užuomena: saugok sūrio poziciją sąraše          |            |
-| ``cheese = [0,0]``.	                     |            |
+| Pajudinkite žaidėjo tašką į dešinę, jeigu „micro:bit“   |            |
+| palenktas į dešinę, ir kairę, jeigu „micro:bit“ 	  |      2     |
+| palenktas į kairę. Užuomina: naudokite reikšmes iš      |            |  
+| ``accelerometer.get_x()`` tam, kad nustatytumėte        |            |
+| palenkimą.						  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Kai žaidėjas juda, patikrink ar žaidėjas yra toje       |      1     | 
+| Pajudinkite žaidėjo tašką į viršų, jeigu „micro:bit“ yra|            |
+| palenktas į viršų. Pajudink žemyn, jeigu „micro:bit“    |      2     |
+| palenktas žemyn. Užuomina: naudokite                    |            |
+| ``accelerometer.get_y()`` tam, kad nustatytumėte 	  |            |
+| palenkimą.		                                  |            |
++---------------------------------------------------------+------------+
+|                                                         |            |
+| Sukurkite "sūrio" tašką. Paskirkite atsitiktinę vietą   |      1     |
+| sūrio taškui. Užuomina: saugok sūrio poziciją sąraše    |            |
+| ``cheese = [0,0]``.	                     		  |            |
+|                                                         |            |
++---------------------------------------------------------+------------+
+|                                                         |            |
+| Kai žaidėjas juda, patikrinkite ar žaidėjas yra toje    |      1     | 
 | pačioje vietoje kaip ir sūris. Jeigu yra, vadinasi      |            |
-| žaidėjas laimėjo. Iškviesk funkciją                     |            |
-| ``love.badaboom()`` ir pažiūrėk kas nutiks.             |            |
+| žaidėjas laimėjo. Iškvieskite funkciją                  |            |
+| ``love.badaboom()`` ir pažiūrėkite kas nutiks.          |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Sukurk laikmatį, jeigu pelė nesuranda sūrio iki kol     |      1     |
-| pasibaigia laikas, žaidimas pasibaigia. Užuomena:       |            |
-| žaidimo pradžioje gauk žaidimo pradžios laiką naudojant |            |
+| Sukurk laikmatį. Jeigu pelė nesuranda sūrio per duotą   |      1     |
+| laiko tarpą, žaidimas pasibaigia. Užuomina: žaidimo     |            |
+| pradžioje gaukite žaidimo pradžios laiką naudojant 	  |            |
 | funkciją ``microbit.running_time()``.                   |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
@@ -81,8 +81,8 @@ Papildomi taškai
 +=========================================================+============+
 |                                                         |            |
 |                                                         |            |
-| Pakartok žaidimą kai pelė pasiima sūrį. Sumažink laiko  |      1     |
-| intervalą per kurį žaidėjas privalo surasti sūri.       |            |
+| Pakartokite žaidimą kai pelė pasiima sūrį. Sumažinkite  |      1     |
+| laiko intervalą per kurį žaidėjas privalo surasti sūrį. |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 
