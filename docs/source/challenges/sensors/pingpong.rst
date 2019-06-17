@@ -1,59 +1,58 @@
-*********
-Ping Pong
-*********
+************
+„Ping Pong“
+************
 
 .. tabularcolumns:: |L|l|
 
 +--------------------------------+-----------------------------------------------------------------------+
-| **Total points possible**	 | **Uses**	                                                         |
+| **Galimi taškai**		 | **Naudoja**	                                                         |
 +================================+=======================================================================+
-| 10			 	 | Two Micro:bits, Battery pack with 2 AAA batteries, Radio, LED Display |
+| 10			 	 | Du „micro:bit“, dvi AAA baterijas, radiją, LED ekraną		 |
 +--------------------------------+-----------------------------------------------------------------------+
 	
-Description
+Aprašymas
 ===========
-In this project, we will use the radio on the micro:bit to send messages from one microbit to another. You will
-light up an LED when a message is received so that it looks like the people holding the micro:bits are playing ping pong.
+Šiame projekte, naudosime „micro:bit“ radiją pranešimų siųntimui iš vieno „micro:bit“ į kitą. Įjungsi LED lemputes kai yra gautas pranešimas, tokiu būdu atrodys, kad žmonės laikantys „micro:bit“ žaidžia „ping pong“.
 
-Basic Task
-===========
-Collect points for these stages: 
+Paprasta užduotis
+==================
+Rink taškus už šiuos etapus:
 
 .. tabularcolumns:: |p{14cm}|R|
 
 +---------------------------------------------------------+------------+
-| **Tasks** 		                                  | **Points** |
+| **Užduotys** 		                                  | **Taškai** |
 +=========================================================+============+
-| Read the radio tutorial sheet.                          |            |
-| Write code to transmit and receive messages.            |    2       |
-| Print the message sent on the REPL.                     |            |
+|                                                         |            |
+| Perskaityk radijo pamokos lapą.                         |            |
+| Parašyk pranešimų siųntimo ir gavimo programą.          |    2       |
+| Atspausdink pranešimą „REPL“.                           |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Add some code so that the message is sent when button   |    1       |
-| ``A`` is pressed.                                       |            |
+| Pridėk dalį kodo, kuris išsiųstų pranešimą		  |    1       |
+| paspaudus mygtuką ``A``.                                |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Connect the battery pack to the second micro:bit.       |     2      |
-| Upload the same code the second micro:bit.              |            |
+| Prijunk baterijas prie antro „micro:bit“.               |     2      |
+| Įkelk tą patčią programą į antrą „micro:bit“.           |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
-| Test the pair of micro:bits. You should be able to      |            |
-| send and receive messages.                              |     2      |
-|                                                         |            |
-+---------------------------------------------------------+------------+
-| When a message is received, light up an LED for a       |     1      |
-| second.                                                 |            |
+| Išbandyk porą „micro:bit“. Turėtum galėti siųsti ir     |            |
+| gauti pranešimus.			                  |     2      |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Keep the score on each device. Count the number of      |            |
-| messages received.                                      |     1      |
+| Gavus pranešimą, įjunk LED lemputę sekundei. 		  |     1      |
+| 		                                          |            |
++---------------------------------------------------------+------------+
 |                                                         |            |
+| Saugok taškus kiek vienam įrenginyje. Suskaičiuok       |            |
+| kiekį gautų pranešimų.                                  |     1      |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| If button ``B`` is pressed, display the score.          |     1      |
+| Jeigu paspaustas mygtukas ``B``, parodyk taškus.        |     1      |
 |                                                         |            |
 +---------------------------------------------------------+------------+
