@@ -1,14 +1,14 @@
 Duomenų tipai
 =============
 
-„Micro:bit” programose naudosime įvairių tipų vertes, pavyzdžiui: galime gauti pagreičio reikšmes iš akselerometro. Kita vertus, galbūt norime suskaičiuoti, kiek mygtukų paspaudžia vartotojas, arba parodyti vartotojui pranešimą, nurodantį kambario temperatūrą. Norėdami visą tai padaryti, turime sugebėti apibūdinti visus duomenis, kurios norime naudoti. „Python“ ir dauguma kitų programavimo kalbų atpažįsta kelis duomenų tipus, įskaitant:
+„Micro:bit” programose naudosite įvairių tipų vertes, pavyzdžiui: galitee gauti pagreičio reikšmes iš akselerometro. Kita vertus, galbūt norite suskaičiuoti kiek mygtukų paspaudžia vartotojas arba parodyti vartotojui pranešimą, nurodantį kambario temperatūrą. Norėdami visą tai padaryti, turite sugebėti apibūdinti visus duomenis, kurios norite naudoti. Python ir dauguma kitų programavimo kalbų atpažįsta kelis duomenų tipus, įskaitant:
 
 * Sveikuosius skaičius - tai yra sveikieji skaičiai.
 * Realiuosius skaičius - tai yra skaičiai su kableliu ir liekana po kablelio.
 * Eilutes - juose gali būti simbolių, kurios norime traktuoti kaip tekstą, pavyzdžiui: raidžių, skaičių ir simbolių derinys.  
-* Būlius - tai yra loginės sistemos dalis, kuri turi dvi reikšmes, teigiamą ir neigiamą.
+* Loginius kintamuosius bool - tai yra loginės sistemos dalis, kuri turi dvi reikšmes, teigiamą ir neigiamą.
 
-Paprastoje programoje galėtume juos visus panaudoti. Čia pateikiami duomenų tipai, kuriuos galėtume naudoti programoje, kurioje saugoma informacija apie mėgstamus „micro:bit” žaidimus:
+Paprastoje programoje galėtumete juos visus panaudoti. Čia pateikiami duomenų tipai, kuriuos galėtumėte naudoti programoje, kurioje saugoma informacija apie mėgstamus „micro:bit” žaidimus:
 
 .. figure:: dataTypes.png
 
@@ -17,7 +17,7 @@ Paprastoje programoje galėtume juos visus panaudoti. Čia pateikiami duomenų t
 Kintamieji
 ----------
 
-Galime įsivaizduoti kintamajį kaip dėžutę, kurioje kompiuteris gali laikyti reikšmę. Reikšmė toje dėžutėje gali pasikeisti ar kisti. Visi kintamieji yra sudaryti iš trijų dalių: pavadinimo, tipo ir reikšmės. Žemiau pavaizduoti trijų tipų kintamieji::
+Galite įsivaizduoti kintamajį kaip dėžutę, kurioje kompiuteris gali laikyti reikšmę. Reikšmė toje dėžutėje gali kisti. Visi kintamieji yra sudaryti iš trijų dalių: pavadinimo, tipo ir reikšmės. Žemiau pavaizduoti trijų tipų kintamieji::
 
 .. figure:: variable.jpg
    :scale: 60 %
@@ -26,7 +26,7 @@ Galime įsivaizduoti kintamajį kaip dėžutę, kurioje kompiuteris gali laikyti
 
 Kintamasis ``name`` turi eilutę ``Bob``, kintamasis ``winner`` turi eilutę ``True`` ir kintamasis ``score`` turi eilutę ``35``.
 
-„Python” programavimo kalboje, mes privalome duoti pavadinimus kintamiesiems ir kai tai padarome, galime pradėti juos naudoti, paskirti ir manipuliuoti jų reikšmėmis::
+Python programavimo kalboje mes privalome duoti pavadinimus kintamiesiems. Kai tai padarome, galime pradėti juos naudoti, paskirti ir manipuliuoti jų reikšmėmis::
 
 	from microbit import *
 
@@ -38,20 +38,20 @@ Kintamasis ``name`` turi eilutę ``Bob``, kintamasis ``winner`` turi eilutę ``T
 	   sleep(2000)
 	   print("Number of presses: " + str(count))
 
-Čia panaudojome kintamąjį ``myCount`` tam, kad suskaičiuoti kiek kartų buvo paspaustas mygtukas ``A``. Ar gali pasakyti ką dar šis programos fragmentas daro?
+Čia panaudojome kintamąjį ``myCount`` tam, kad suskaičiuotume kiek kartų buvo paspaustas mygtukas ``A``. Ar galite pasakyti ką dar šis programos fragmentas daro?
 
 Operacijos
 ----------
 
-Numeriai
+Skaičiai
 ^^^^^^^^
-Skaitmenines reikšmes galime naudoti su pagrindiniais aritmetiniais operatoriais: `` +, -, *, / `` tokiu pat būdu, kaip ir su skaičiuokle.
-Pažvelkime į aritmetinių operatorių pavyzdį. Įsivaizduokite, kad norite konvertuoti temperatūrą, kurią „micro:bit” pateikia Celsijaus formatu, į Farenheitą, galite naudoti tokį kodą::
+Skaitmenines reikšmes galite naudoti su pagrindiniais aritmetiniais operatoriais: `` +, -, *, / `` tokiu pat būdu, kaip ir su skaičiuokle.
+Pažvelkite į aritmetinių operatorių pavyzdį. Įsivaizduokite, kad norite konvertuoti temperatūrą, kurią „micro:bit” pateikia Celsijaus formatu, į Farenheitą. Galite naudoti tokį kodą::
 
 	celsiusTemp = temperature()
 	fahrenheitTemp = celsiusTemp * 9 / 5 + 32  
 
-Likusiam skaičiui apskaičiuoti naudojamas specialus operatorius „%”, vadinamas „mod”. Pavyzdžiui: galbūt norėtumėte žinoti, ar numeris yra lyginis, ar nelyginis, galite pabandyti jį padalinti iš 2, jei jis yra lyginis tada nebus jokio likučio::
+Likusiam skaičiui apskaičiuoti naudojamas specialus operatorius „%”, vadinamas „mod”. Pavyzdžiui: norite sužinoti, ar numeris yra lyginis, ar nelyginis. Galite pabandyti jį padalinti iš 2, jei jis yra lyginis, tada nebus jokio likučio::
 
 	theNumber = 3
 	if theNumber % 2 == 1:
@@ -59,7 +59,7 @@ Likusiam skaičiui apskaičiuoti naudojamas specialus operatorius „%”, vadin
 	else:
 	   print("The number is even")
 
-Jei likutis lygus 1, ši programa išspausdins pranešimą „The number is odd“, kitaip, programa spausdins pranešimą „The number is even“. Galite parašyti šią programą kitaip, tai rodo, kad žmonės galvoja apie problemas skirtingais būdais, o dvi programos nėra tokios pačios. 
+Jei likutis lygus 1, ši programa išspausdins pranešimą „The number is odd“, kitu atveju programa spausdins pranešimą „The number is even“. Galite parašyti šią programą ir kitu būdu. Tai rodo, kad žmonės galvoja apie problemas skirtingais būdais, o dvi programos nėra tokios pačios. 
 
 Eilutės
 ^^^^^^^
@@ -71,7 +71,7 @@ Svarbiausias dalykas apie eilutes, į kurį reikia atreikti dėmesį, yra tai, k
 
 Sujungs elementus dešinėje pusėje `` = `` ir įterps rezultatą į kintamąjį, vadinamą ``message``.
 
-Negalite sujungti skaičių su eilutėmis; norint tą padaryti pirmiausia turite konvertuoti skaičių į eilutę pasinaudojant funkcija ``str()``::
+Negalite sujungti skaičių su eilutėmis; norint tai padaryti, pirmiausia turite konvertuoti skaičių į eilutę pasinaudojant funkcija ``str()``::
 
 	x = temperature
 	if temperature < 6:
@@ -86,13 +86,13 @@ Palyginimai
 
    Paveiksliukas iš: <http://www.bbc.co.uk/education/guides/zy9thyc/revision>
 
-Dažnai programuojant mes norime palyginti vieną vertę su kita, patestuoti. Šiuos testus arba palyginimus naudojame atrankoje arba kilpose. Štai keletas anglų kalba parašytų palyginimų pavyzdžių::
+Dažnai programuojant mes norime palyginti vieną vertę su kita, patestuoti. Šiuos testus arba palyginimus naudojame atrankoje arba cikluose. Štai keletas anglų kalba parašytų palyginimų pavyzdžių::
 
 	score is greater than 100
 	name equals "Harry"
  	x acceleration is not equal to 0
 
-„Python” programavimo kalba turi palyginimo operatorių rinkinį, kuris leidžia mums lengvai atlikti palyginimus:
+Python programavimo kalba turi palyginimo operatorių rinkinį, kuris leidžia mums lengvai atlikti palyginimus:
 
 .. tabularcolumns:: |L|l|
 
@@ -103,22 +103,22 @@ Dažnai programuojant mes norime palyginti vieną vertę su kita, patestuoti. Š
 +--------------------------------+----------------------------------------+
 | <, <=                          | Mažiau, mažiau arba lygu               |
 +--------------------------------+----------------------------------------+
-| >, >=                          | Daugiau, diaugiau arba lygu            |
+| >, >=                          | Daugiau, daugiau arba lygu            |
 +--------------------------------+----------------------------------------+
 | !=                             | Nelygu                                 |
 +--------------------------------+----------------------------------------+
 
-Perašius palyginimus viršuje į „Python“ programavimo kalbą, tai atrodytų taip::
+Perrašius palyginimus viršuje į Python programavimo kalbą, tai atrodytų taip::
 
 	score > 100
 	name ==  "Harry"
  	acceleration  != 0
 
 
-Naudojant palyginimus
+Palyginimų naudojimas
 ^^^^^^^^^^^^^^^^^^^^^
 
-Palyginimo rezultatas yra teigiamas arba neigiamas. ``True`` ir ``False`` yra specialios vertės, žinomos kaip ** būlio vertės **, ir mes galime jas naudoti, kad nustatytume, ką atliks mūsų programos. Galbūt jau naudojote tai kituose pavyzdžiuose. Šiame pavyzdyje „micro:bit” rodys rodyklę, nukreiptą į x ašies pasvirimo taško kryptį::
+Palyginimo rezultatas yra teigiamas arba neigiamas. ``True`` ir ``False`` yra specialios vertės, žinomos kaip ** loginio kintamojo bool vertės **. Galite jas naudoti, kad nustatytumėte, ką atliks jūsų programos. Galbūt jau naudojote tai kituose pavyzdžiuose. Šiame pavyzdyje „micro:bit” rodys rodyklę, nukreiptą į x ašies pasvirimo taško kryptį::
 
 	from microbit import *
 	
@@ -139,9 +139,9 @@ Sąrašai
  
    Paveiksliukas iš: <http://www.bbc.co.uk/education/guides/zy9thyc/revision>
 
-Sąrašai yra naudingi saugant kelias vertes kartu. Tarkime, mes norime išsaugoti žaidėjo balus, galėtume naudoti tokį sąrašą, koks yra pavaizduotas aukščiau. Sąrašas turi vieną langelį kiekvienai vertei. Langeliai arba dėžutės yra žinomos kaip „elementai”.
+Sąrašai yra naudingi saugant kelias vertes kartu. Tarkime, jūs norite išsaugoti žaidėjo balus. Galite naudoti aukščiau pavaizduotą sąrašą. Sąrašas turi vieną langelį kiekvienai vertei. Langeliai, arba dėžutės, yra žinomos kaip „elementai”.
 
-Pažiūrėkime kaip sudaryti sąrašus „Python” programavimo kalboje. Norėdami sukurti sąrašą „Python” turime sugalvoti sąrašo pavadinimą ir kas jame bus:: 
+Pažiūrėkite kaip sudaryti sąrašus Python programavimo kalboje. Norėdami sukurti sąrašą Python, turite sugalvoti sąrašo pavadinimą ir kas jame bus:: 
 
 	from microbit import *
 
@@ -149,9 +149,9 @@ Pažiūrėkime kaip sudaryti sąrašus „Python” programavimo kalboje. Norėd
 	print(highScores[0])			# Print 25
 	print(highScores[3])			# Print 15
 
-Sąrašo elemento vertės nustatymas yra paprastas, tereikia prisiminti, kad „Python” skaičiuoja elementus pradedant nuo „0”. Mūsų sąrašo ``highScores``, kuris yra viršuje, ``highScores[0]`` yra 25 ir ``highScores[3]`` yra 15.
+Sąrašo elemento vertės nustatymas yra paprastas, tereikia prisiminti, kad Python skaičiuoja elementus pradedant nuo „0”. Mūsų sąrašo ``highScores``, kuris yra viršuje, ``highScores[0]`` yra 25 ir ``highScores[3]`` yra 15.
 
-Nenuostabu, kad „Python” turi tam tikrų funkcijų, padedančių mums daryti sąrašus. Toliau pateiktame kodo fragmente bus peržiūrėtas masyvas elementais, kad galėtume juos apibendrinti ir apskaičiuoti vidutinį aukštą rezultatą::
+Nenuostabu, kad „Python” turi funkcijų, padedančių apdoroti sąrašus. Žemiau pateiktas kodas patikrina kiekvieną masyvo (array) elementą atskirai, kad galėtumėte juos apibendrinti ir apskaičiuoti vidutinį aukštą rezultatą::
 
 	print("Average High Score: ") 		
 
@@ -164,7 +164,7 @@ Nenuostabu, kad „Python” turi tam tikrų funkcijų, padedančių mums daryti
 
 Pridėti į sąrašą
 ^^^^^^^^^^^^^^^^
-Bus laikas, kai mes iš anksto nežinome, kokio dydžio turi būti masyvas arba kokios bus sąraše esančios vertės. Galite užpildyti sąrašą su temperatūros rodmenimis arba pagreičio matuoklio reikšmėmis. Šis kodas parodo, kaip tai padaryti::
+Tais atvejais, kai nėra žinoma, kokio dydžio turi būti masyvas arba kokios bus sąraše esančios vertės, galite užpildyti sąrašą su temperatūros rodmenimis arba pagreičio matuoklio reikšmėmis. Šis kodas parodo kaip tai padaryti::
 
 	from microbit import *
 
@@ -173,20 +173,20 @@ Bus laikas, kai mes iš anksto nežinome, kokio dydžio turi būti masyvas arba 
 		recordedTemperature.append(temperature())
 		sleep(1000)			 
 
-``For`` kylpa įvykdoma 100 kartų ir ``i`` turės reikšmes nuo 0 iki 99. Tai pamatuos temperatūrą kas sekundę šimtą kartų ir įkels gautas vertes į sąrašo galą.
+``For`` ciklas įvykdomas 100 kartų ir ``i`` turės reikšmes nuo 0 iki 99. Tai pamatuos temperatūrą kas sekundę šimtą kartų ir įkels gautas vertes į sąrašo galą.
 
 Ištrinti iš sąrašo
 ^^^^^^^^^^^^^^^^^^
-Yra du būdai, kaip ištrinti elementus iš sąrašų, kurie yra naudingi, galbūt norėsite iš sąrašo ištrinti tam tikros vertės elementą::
+Yra du būdai skirti elementų ištrynimui iš sąrašo::
 
 	highScores.delete(24)
 
-Tai ištrins pirmą elementą, kurio vertė yra 24.
-Arba, galbūt norėsite ištrinti elementą tam tikroje vietoje, jei žinote tikslią jo vietą::
+Tai ištrins pirmąjį elementą, kurio vertė yra 24.
+Norint ištrinti elementą tam tikroje vietoje, kai žinoma tiksli jo vietą::
  
 	highScores.pop(3)
 
-Tai ištrins arba arba 'pokštels' elementą tam tikroje sąrašo vietoje. Prisimink tai::
+Tai ištrins arba išstums elementą esantį tam tikroje sąrašo vietoje. Prisiminkite tai::
 
 	highScores.pop() 
 	
