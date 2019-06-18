@@ -1,7 +1,7 @@
 Duomenų tipai
 =============
 
-„Micro:bit” programose naudositee įvairių tipų vertes, pavyzdžiui: galitee gauti pagreičio reikšmes iš akselerometro. Kita vertus, galbūt norite suskaičiuoti kiek mygtukų paspaudžia vartotojas arba parodyti vartotojui pranešimą, nurodantį kambario temperatūrą. Norėdami visą tai padaryti, turite sugebėti apibūdinti visus duomenis, kurios norite naudoti. Python ir dauguma kitų programavimo kalbų atpažįsta kelis duomenų tipus, įskaitant:
+„Micro:bit” programose naudosite įvairių tipų vertes, pavyzdžiui: galitee gauti pagreičio reikšmes iš akselerometro. Kita vertus, galbūt norite suskaičiuoti kiek mygtukų paspaudžia vartotojas arba parodyti vartotojui pranešimą, nurodantį kambario temperatūrą. Norėdami visą tai padaryti, turite sugebėti apibūdinti visus duomenis, kurios norite naudoti. Python ir dauguma kitų programavimo kalbų atpažįsta kelis duomenų tipus, įskaitant:
 
 * Sveikuosius skaičius - tai yra sveikieji skaičiai.
 * Realiuosius skaičius - tai yra skaičiai su kableliu ir liekana po kablelio.
