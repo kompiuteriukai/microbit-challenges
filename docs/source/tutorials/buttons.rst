@@ -9,8 +9,8 @@ Mygtukai
 .. image:: microbit_button.jpg
    :scale: 50 %
 
-Gali naudoti mygtukus įvesties duomenims iš vartotojo gauti. Galbūt norėtum pradėti arba sustabdyti savo programą
-mygtuko paspaudimu arba norėtum žinoti kiek kartų mygtukas buvo paspaustas.
+Galite naudoti mygtukus įvesties duomenims iš vartotojo gauti. Galbūt norėtumėte pradėti arba sustabdyti savo programą
+mygtuko paspaudimu arba norėtumėte žinoti kiek kartų mygtukas buvo paspaustas.
 
 Paprastos funkcijos
 ===================
@@ -18,8 +18,8 @@ Paprastos funkcijos
 Patikrinti ar mygtukas buvo paspaustas
 --------------------------------------
 
-Kartais mes norime, kad programa palauktų kol, kas nors nutiks, pavyzdžiui: norėtume, kad „micro:bit“ palauktų iki kol
-mygtukas ``A`` yra paspautas ir tada atspausdintų žinutę. Galime tai padaryti taip::
+Kartais mes norime, kad programa palauktų kol kas nors nutiks, pavyzdžiui: norėtume, kad „micro:bit“ palauktų iki kol
+mygtukas ``A`` yra paspautas ir tik tada atspausdintų žinutę. Galime tai padaryti taip:
 
 	from microbit import *
 
@@ -27,21 +27,20 @@ mygtukas ``A`` yra paspautas ir tada atspausdintų žinutę. Galime tai padaryti
             if button_a.is_pressed():
                 display.scroll("A")
 
-Pasiaiškinkime tai dalimis. Pirma eilutė::
+Pasiaiškinkime tai dalimis. Pirma eilutė:
 
 	while True:
 
-Tai yra standartinis būdas „micro:bit“ kompiuteriukui pasakyti, kad kol reikšmė yra teigiama, vykdyti programą amžinai.
-Sekanti eilutę atrodo kaip normalus anglų kalbos tekstas::
+Tai yra standartinis būdas „micro:bit“ kompiuteriukui pasakyti, kad kol reikšmė yra teigiama, jis turi vykdyti programą amžinai. Sekanti eilutę atrodo kaip įprastas anglų kalbos tekstas:
 
         while True:
             if button_a.is_pressed():
                 display.scroll("A")
 
-Tai reiškia, jeigu mygtukas ``A`` yra paspaustas tuomet rodyti ``A`` raidę LED ekrane.
+Tai reiškia: jeigu mygtukas ``A`` yra paspaustas tuomet rodyti ``A`` raidę LED ekrane.
 
-Žinoma, dažniausiai mes norime atlikti sudėtingesnius veiksmus. Yra būdas kaip patikrinti du dalykus, mes galime
-naudoti ``if`` ir ``else`` štai taip::
+Žinoma, dažniausiai mes norime atlikti sudėtingesnius veiksmus. Tarkime, norime palyginti du įvykius. Tam galime
+naudoti ``if`` ir ``else`` štai taip:
 
         while True:
             if button_a.is_pressed():
@@ -49,11 +48,11 @@ naudoti ``if`` ir ``else`` štai taip::
 	    else:
 		display.scroll(Image.ASLEEP)
 
-Tai reiškia, jeigu mygtukas ``A`` yra paspaustas rodyti raidę ``A`` LED ekrane, kitu atvėju, rodyti ``Image.ASLEEP``.
+Tai reiškia: jeigu yra paspaustas mygtukas ``A`` - LED ekrane rodyti raidę ``A``, kitu atveju - rodyti ``Image.ASLEEP``.
 
 Skaičiuoti procesų skaičių
 ------------------------------
-Kartais gali prireikti suskaičiuoti kiek kartų mygtukas buvo paspaustas per tam tikrą laiką. Gali tai padaryti
+Kartais gali prireikti suskaičiuoti kiek kartų mygtukas buvo paspaustas per tam tikrą laiką. Galite tai padaryti
 pasinaudojant ``get_presses()`` metodu. Štai pavyzdys::
 
     from microbit import *
@@ -63,14 +62,14 @@ pasinaudojant ``get_presses()`` metodu. Štai pavyzdys::
             count = button_a.get_presses()
             display.scroll(str(count))
 
-„Micro:bit“ užmigs 3 sekundėms, po to pabus ir patikrins kiek kartų buvo paspaustas mygtukas ``A``. Paspaudimų skaičius bus išsaugotas kintamąjame kuris vadinasi ``count``. Mes negalime tiesiogiai atvaizduoti skaičiaus LED ekrane, todėl konvertuojame kintamajį ``count`` į eilutę ir tada atvaizduojame ekrane. Ar gali sugalvoti kitą būdą kaip tai padaryti? (Užuomena: patikrink ar mygtukas buvo paspaustas ir pridėk 1 prie kintamojo jeigu tai buvo padaryta).
+„Micro:bit“ užmigs 3 sekundėms, po to pabus ir patikrins kiek kartų buvo paspaustas mygtukas ``A``. Paspaudimų skaičius bus išsaugotas kintamąjame kuris vadinasi ``count``. Mes negalime tiesiogiai atvaizduoti skaičiaus LED ekrane, todėl konvertuojame kintamajį ``count`` į eilutę ir tik tada atvaizduojame ekrane. Ar galite sugalvoti kitą būdą kaip tai padaryti? (Užuomina: patikrinkite ar mygtukas buvo paspaustas ir pridėkite 1 prie kintamojo jeigu tai buvo padaryta).
 
 Išplėstinės funkcijos
 ======================
 
 Patikrinti abu mygtukus
 -------------------------
-Yra įmanoma patikrinti ir daugiau įvykių pasinaudojant ``if``, ``elif`` ir ``else``. Tarkim norėtum patikrinti kuris mygtukas buvo paspaustas ``A``, ``B`` ar abu vienu metu. Galime tai padaryti šitaip::
+Yra įmanoma patikrinti ir daugiau įvykių pasinaudojant ``if``, ``elif`` ir ``else``. Tarkime, norėtumėte patikrinti, kuris mygtukas buvo paspaustas - ``A``, ``B`` ar abu vienu metu. Galite tai padaryti šitaip:
 
 	from microbit import *
 
@@ -84,22 +83,21 @@ Yra įmanoma patikrinti ir daugiau įvykių pasinaudojant ``if``, ``elif`` ir ``
 	        display.scroll("B")
 	    sleep(100)
 
-.. pastaba:: Raktažodis ``elif`` reiškia tą patį ką ir ``else if``. Gali naudoti ir pilną variantą ``else if`` jeigu nori.
+.. pastaba:: Raktažodis ``elif`` reiškia tą patį ką ir ``else if``. Jeigu norite, galite naudoti ir pilną variantą ``else if``.
 
-Programa parašyta viršuje parodo raides pagal mygtuko paspaudimą. Jeigu abu mygtukai yra paspaudžiami vienu metu tai ekrane bus rodoma ``AB``.
+Viršuje parašyta programa parodo raides pagal mygtuko paspaudimą. Jeigu abu mygtukai yra paspaudžiami vienu metu, ekrane bus rodoma ``AB``.
 
 Ar mygtukas buvo paspaustas?
 ----------------------------
-Problema naudojant ``is_pressed()`` yra tai, kad jeigu nepaspausi mygtuko tam tikru tiksliu momentu, tai programa neaptiks
-ar mygtukas kadanors buvo paspaustas ar ne.
+Problema naudojant ``is_pressed()`` yra tai, kad nepaspaudus mygtuko tiksliu momentu, programa neaptiks ar mygtukas buvo paspaustas ar ne.
 
-Funkcija ``was_pressed()`` yra naudinga kai nori parašyti programą kuri
-retkarčiais patikrina ar mygtukas buvo paspaustas ir toliau vykdo kitus nurodymus.
-Kol programa vykdo kitus nurodymus gali atsitikti taip, kad vartotojas paspaudžia
-mygtuką ir jį atleidžia, bet programa tuo metu nepatikrina ir to nepamato.
+Funkcija ``was_pressed()`` yra naudinga, kai norite parašyti programą, kuri
+retkarčiais patikrina ar mygtukas buvo paspaustas ir ar toliau vykdo kitus nurodymus.
+Kol programa vykdo kitus nurodymus, gali atsitikti taip, kad vartotojas paspaudžia
+mygtuką ir jį atleidžia, bet programa tuo metu to nepatikrina ir nepamato.
 Sekanti funkcija pasakys ar mygtukas buvo paspaustas ir atleistas nuo
-paskutinio karto kai ta funkcija buvo įvykdyta kol programa darė kažką kitą.
-Tokiu atvėju niekada nepraleisi mygtuko paspaudimo::
+paskutinio karto, kai ta funkcija buvo įvykdyta, kol programa vykdė kitus nurodymus.
+Tokiu atveju niekada nepraleisite mygtuko paspaudimo::
 
 	from microbit import *
 
@@ -110,15 +108,14 @@ Tokiu atvėju niekada nepraleisi mygtuko paspaudimo::
 		display.scroll(Image.ASLEEP)
 	    sleep(1000)
 
-Paspaudus mygtuką trumpam pamatysi raidę ``A`` ir tada bus rodoma ``Image.ASLEEP``.
-Jeigu paspausi mygtuką kol programa miega, tai raidė ``A`` iškart nepasirodys,
-bet ji pasirodys kai funcija sekantį kartą patikrins ar mygtukas buvo paspaustas.
-Tai gali pamatyti aiškiau jeigu nustatysi ilgesnį miego laiką.
+Paspaudus mygtuką trumpam pamatysite raidę ``A`` ir tada bus rodoma ``Image.ASLEEP``.
+Jeigu paspausite mygtuką kol programa miega, raidė ``A`` iškart nepasirodys. Ji pasirodys kai funcija sekantį kartą patikrins ar mygtukas buvo paspaustas.
+Tai galite pamatyti aiškiau, jeigu nustatysite ilgesnį miego laiką.
 
-Dabar pabandyk panaudoti funkciją ``button_a.isPressed()`` vietoj ``button_a.was_pressed()``.
-Tokiu atvėju jeigu programa tuo metu miegojo ji niekada nesupras, kad mygtukas buvo paspaustas.
+Pabandykte panaudoti funkciją ``button_a.isPressed()`` vietoj funkcijos ``button_a.was_pressed()``.
+Tokiu atveju, kai programa miegojo, ji niekada nesupras, kad mygtukas buvo paspaustas.
  
 Keletas idėjų projektams su mygtukais
 ======================================
-* Pakeisk kas yra rodoma paspaudus mygtuką
-* Žaidimai reikalaujantys vartotojo komandų... gal gali sugalvoti vieną?
+* Pakeiskite kas yra rodoma paspaudus mygtuką
+* Žaidimai reikalaujantys vartotojo komandų... gal galite sugalvoti vieną?
