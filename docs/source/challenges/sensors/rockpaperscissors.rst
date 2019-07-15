@@ -12,11 +12,11 @@ Akmuo, Popierius, Žirklės
 	
 Aprašymas
 ===========
-Šiame projekte, sukursi žaidimą akmuo, popierius, žirklės naudojant „micro:bit“ radiją pranešimų siųntimui iš vieno „micro:bit“ į kitą.
+Šiame projekte, sukursite žaidimą "Akmuo, popierius, žirklės" naudodami „micro:bit“ radiją pranešimų siųntimui iš vieno „micro:bit“ į kitą.
 
 Paprasta užduotis
 ==================
-Rink taškus už šiuos etapus:
+Rinkite taškus už šiuos etapus:
 
 .. tabularcolumns:: |p{14cm}|R|
 
@@ -24,21 +24,21 @@ Rink taškus už šiuos etapus:
 | **Užduotys** 		                                  | **Taškai** |
 +=========================================================+============+
 |                                                         |            |
-| Perskaityk radijo pamokos lapą.                         |    2       |
-| Parašyk pranešimų siuntimo ir gavimo programą.          |            |
-| Atspausdink pranešimą „REPL“.                           |            |
+| Perskaitykite radijo pamokos lapą.                      |    2       |
+| Parašykite pranešimų siuntimo ir gavimo programą.	  |            |
+| Atspausdinkite pranešimą „REPL“.                        |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Pasirink kuris „micro:bit“ bus naudojamas žaidimo A,P,Ž |    1       |
-| laikymui ir kuris „micro:bit“ bus naudojamas žaidėjo.   |            |
-| Parodyk pasisveikinimo pranešimą ant „micro:bit“, kuris |            |
-| laiko žaidimą.                                          |            |
+| Pasirinkite, kuris „micro:bit“ bus naudojamas žaidimo	  |    1       |
+| A,P,Ž laikymui ir kuris „micro:bit“ bus naudojamas	  |            |
+| žaidėjo. Parodykite pasisveikinimo pranešimą		  |            |
+| „micro:bit“, kuriame laikomas žaidimas.                 |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Kiek vienas turėtų žinoti kaip žaisti akmuo, popierius, |    7       |
-| žirklės. Žaisk šį žaidimą nenaudojant kompiuteriuko ir  |            |
-| sukurk savo taisykles šiam iššūkiui.			  |            |
+| Kiekvienas turėtų žinoti kaip žaisti "akmuo, popierius, |    7       |
+| žirklės". Žaiskite žaidimą nenaudojant kompiuteriuko ir |            |
+| sukurkite savo taisykles šiam iššūkiui.		  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
