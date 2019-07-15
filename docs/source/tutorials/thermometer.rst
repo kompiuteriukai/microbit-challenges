@@ -3,7 +3,7 @@ Termometras
 ***************
 .. py:module:: microbit
 
-Termometras „micro:bit” kompiuteriuke yra integruotas viename iš lustų ir lustai įšyla įjungus kompiuteriuką. Todėl kambario temperatūra matuojama nevisai tiksliai. Lustas matuojantis temperatūrą gali būti surastas galinėje kairėje „micro:bit” kompiuteriuko pusėje:
+Termometras „micro:bit” kompiuteriuke yra integruotas viename iš lustų. Lustai įšyla įjungus kompiuteriuką, todėl kambario temperatūra matuojama nevisiškai tiksliai. Lusta,s matuojantis temperatūrą, gali būti surastas galinėje kairėje „micro:bit” kompiuteriuko pusėje:
 
 .. image:: thermometer.jpg
    :scale: 80 %
@@ -11,7 +11,7 @@ Termometras „micro:bit” kompiuteriuke yra integruotas viename iš lustų ir 
 
 Paprastos funkcijos
 ===================
-Termometras turi vieną paprastą funkciją - gauti temperatūros rodmenis sveikojo skaičiaus pavidalu celsijaus formate::
+Termometras turi vieną paprastą funkciją - gauti temperatūros rodmenis sveikojo skaičiaus pavidalu Celsijaus formate::
 
    from microbit import *
    
@@ -23,7 +23,7 @@ Termometras turi vieną paprastą funkciją - gauti temperatūros rodmenis sveik
 Sukompiliuokite, paleiskite programą ir pažiūrėkite kas bus.
 
 Pamatysite, kad temperatūra, kurią matuoja termometras, dažniausiai bus aukštesnė negu tikra kambario temperatūra, nes termometras yra šildomas tiek kambario, tiek elektronikos.
-Jeigu žinome, kad temperatūra yra 27°C ir „micro:bit” pastoviai rodo temperatūrą 3 laipsniais aukštesnę, mes galime tai pakoreguoti. Norėdami padaryti tai tiksliai turite sužinoti tikrąją temperatūrą nenaudojant „micro:bit”. Gali sugalvoti kaip tai padaryti?
+Jeigu žinote, kad temperatūra yra 27°C ir „micro:bit” nuolat rodo 3 laipsniais aukštesnę temperatūrą, galite tai pakoreguoti. Norėdami tai padaryti tiksliai, turite sužinoti tikrąją temperatūrą nenaudojant „micro:bit”. Galite sugalvoti kaip tai padaryti?
 
 Idėjos projektams su termometru
 =================================
