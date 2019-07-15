@@ -8,11 +8,11 @@ Išsamus sensoriaus aprašymas ir paveiksliukas, pavyzdžiui:
 
 Paprastos funkcijos
 ===================
-Aprašyk paprastąsias funkcijas.
+Aprašykite paprastąsias funkcijas.
 
 Išplėstinės funkcijos
 =====================
-Aprašyk išplėtines funkcijas jeigu tokių yra.
+Aprašykite išplėtines funkcijas, jeigu tokių yra.
 
 Idėjos projektams su sensoriais
 ===================================
