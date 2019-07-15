@@ -12,11 +12,11 @@ Siųsk pranešimą
 	
 Aprašymas
 ===========
-Šiame projekte, naudosime „micro:bit“ radiją pranešimų siųntimui iš vieno „micro:bit“ į kitą. Parodysi LED ekrane išsiųstą pranešimų kiekį tarp poros „micro:bit“.
+Šiame projekte, naudositee „micro:bit“ radiją pranešimų siųntimui iš vieno „micro:bit“ į kitą. Parodysite LED ekrane išsiųstą pranešimų kiekį tarp dviejų „micro:bit“.
 
 Paprasta užduotis
 ==================
-Rink taškus už šiuos etapus:
+Rinkite taškus už šiuos etapus:
 
 .. tabularcolumns:: |p{14cm}|R|
 
@@ -24,37 +24,37 @@ Rink taškus už šiuos etapus:
 | **Užduotys** 		                                  | **Taškai** |
 +=========================================================+============+
 |                                                         |            |
-| Perskaityk radijo pamokos lapą.                         |            |
-| Parašyk pranešimų siuntimo ir gavimo programą.          |    2       |
-| Atspausdink pranešimą „REPL“.                           |            |
+| Perskaitykite radijo pamokos puslapų.                   |            |
+| Parašykite pranešimų siuntimo ir gavimo programą.       |    2       |
+| Atspausdinkite pranešimą „REPL“.                        |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Pridėk dalį kodo, kuris išsiųstų pranešimą		  |    1       |
+| Pridėkite dalį kodo, kuris išsiųstų pranešimą		  |    1       |
 | paspaudus mygtuką ``A``.                                |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Prijunk baterijas prie antro „micro:bit“.               |     2      |
-| Įkelk tą patčią programą į antrą „micro:bit“.           |            |
+| Prijunkite baterijas prie antrojo „micro:bit“.          |     2      |
+| Įkelkite tą pačią programą į antrąjį „micro:bit“.       |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Išbandyk porą „micro:bit“. Turėtum galėti siųsti ir     |     2      |
-| gauti pranešimus.			                  |            |
+| Išbandykite du „micro:bit“ kompiuteriukus. Siųskite ir  |     2      |
+| gaukite pranešimus.			                  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Dabar turi sugalvoti būdą kaip skaičiuoti pranešimus.   |     1      |
-| Galėtum pridėti 1 prie skaitiklio kas kart išsiuntus    |            |
-| pranešimą.                                              |            |
+| Sugalvokite būdą kaip skaičiuoti pranešimus. Galėtumete |     1      |
+| pridėti 1 prie skaitiklio kaskart išsiuntus pranešimą.  |            |
+|                                               	  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Turi padaryti kai ką įpatingo norėdamas siųsti ir gauti |     2      |
-| skaičius - turi paversti skaičius į tekstinę eilutę     |            |
-| naudojant ``str()`` funkciją prieš siunčiant pranešimą. |            |
-| Gavėjo pusėje turi paversti tekstinę eilutę atgal į     |            |
+| Norėdami siųsti ir gauti skačius turite juos paversti	  |     2      |
+| į tekstinę eilutę     				  |            |
+| naudodami ``str()`` funkciją prieš siunčiant pranešimą. |            |
+| Gavėjo pusėje turite paversti tekstinę eilutę atgal į   |            |
 | skaičių naudojant ``int()`` funkciją.			  |            |
 | 			                                  |            |
 |                                                         |            |
