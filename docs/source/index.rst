@@ -14,7 +14,7 @@ Mokyti mokinius programuoti naudojantis mikro precesoriumi su įmontuotais senso
 
 Puslapiai su iššūkiais gali būti naudojami komandų varžymuisi arba šiaip pasimėgavimui. Kai kurie pratimai buvo paimti ir pritaikyti iš M. Atkinson'o puslapio „Multiwingspan“, http://multiwingspan.co.uk/micro.php.
 
-Norėdami parsisiūsti šiuos dokumentus „pdf“, „epub“ ar „html“ formatuose, paspauskite ant nuorodos šoninės juostos apačioje kairėje pusėje:
+Norėdami parsisiųsti šiuos dokumentus „pdf“, „epub“ ar „html“ formatuose, paspauskite ant nuorodos šoninės juostos apačioje kairėje pusėje:
 
 .. image:: sidebar.jpg
 
