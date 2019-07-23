@@ -17,7 +17,7 @@ Pakaitinis kodas yra apgaulingai paprastas. Pranešimai yra šifruojami naudojan
 
 .. figure:: substitution.png
 
-Jūsų tikslas paversti „micro:bit“ į įrenginį galintį šifruoti pranešimus naudojant pakaitinį kodą. Pranešimą, kurį norime užšifruoti vadiname *paprastu tekstu*, o šifruotą pranešimą - *šifruotu tekstu*. Programoje reikės saugoti abėcėlę su pakaitiniu kodu. Tam įgyvendinti gali naudoti Phyton *žodyną*. Pakaitinio kodo Phyton žodynas atrodo šitaip::
+Jūsų tikslas paversti „micro:bit“ į įrenginį galintį šifruoti pranešimus naudojant pakaitinį kodą. Pranešimą, kurį norime užšifruoti vadiname *paprastu tekstu*, o šifruotą pranešimą - *šifruotu tekstu*. Programoje reikės saugoti abėcėlę su pakaitiniu kodu. Tam įgyvendinti gali naudoti Python *žodyną*. Pakaitinio kodo Phyton žodynas atrodo šitaip::
 
 	cipher_key = { 'A':'V', 'B':'J', 'C':'Z', 'D':'B', 'E':'G', 'F':'N', 'G':'F', 'H':'E', 'I':'P', 'J':'L', 'K':'I','L':'T','M':'M','N':'X','O':'D','P':'W','Q':'K','R':'Q','S':'U','T':'C','U':'R','V':'Y','W':'A','X':'H','Y':'S','Z':'O'}
 
