@@ -1,7 +1,7 @@
 ********
 Radijas
 ********
-„Micro:bit“ turi radijo lustą, kuris gali siūsti arba gauti žinutes.
+„Micro:bit“ turi radijo lustą, kuris gali siųsti arba gauti žinutes.
 
 .. image:: radio.jpg
    :scale: 80 %
@@ -12,7 +12,7 @@ Paprastos Funkcjijos
 
 Pasiruošimas 
 -------------
-Prieš pradedant naudotis radiju prisimink, kad reikia importuoti ``import`` radijo biblioteką ir jį įjungti. Kai radijas įjungtas jis girdės žinutes iš netoliese esančių kitų „micro:bit“::
+Prieš pradedant naudotis radiju prisiminkite, kad reikia importuoti ``import`` radijo biblioteką ir radiją įjungti. Kai radijas įjungtas, jis girdės žinutes iš netoliese esančių kitų „micro:bit“::
 
 	from microbit import *
 	import radio		
@@ -21,33 +21,33 @@ Prieš pradedant naudotis radiju prisimink, kad reikia importuoti ``import`` rad
 
 Kanalo numerio pasirinkimas
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Jeigu nori dalintis žinutėmis su grupe įrenginių tuomet kiekvienas „micro:bit“ grupėje turi būti sukonfiguruotas nautoti tą patį kanalo numerį. Kanalo numeris turi būti skaičius tarp ``0`` ir ``100``. Gali tai padaryti taip::
+Jeigu norite dalintis žinutėmis su grupe įrenginių, tuomet kiekvienas „micro:bit“ grupėje turi būti sukonfiguruotas naudoti tą patį kanalo numerį. Kanalo numeris turi būti skaičius tarp ``0`` ir ``100``. Gali tai padaryti taip::
 
 	radio.config(channel=19)	# Set the channel number to 19 
 
-Svarbu tai padaryti, jei esi kambaryje su kitais žmonėmis, ir naudoji savo „micro:bit“, nes kitaip „micro:bit“ išgirs visus netoliese esančius pranešimus ir tai nėra tai, ko nori.
+Kanalo numerį svarbu nustatyti jei kambaryje estae ne vienas. Kitu atveju, „micro:bit“ reaguos į visus netoliese esančius pranešimus.
 
 Galios lygio nustatymas
 ^^^^^^^^^^^^^^^^^^^^^^^
-Galiausiai, turi nustatyti radijo galios lygį, pagal nutylėjimą, „micro:bit“ naudoja galios lygį 0, o tai reiškia, kad žinutės keliaus labai netoli. Galios reikšmė gali būti tarp ``0`` ir ``7``::
+Galiausiai, turite nustatyti radijo galios lygį. Pagal nutylėjimą, „micro:bit“ naudoja galios lygį 0, o tai reiškia, kad žinutės keliaus labai netoli. Galios reikšmė gali būti tarp ``0`` ir ``7``::
 
 	radio.config(power=7)	# Set the power level to 7 
 
-Žinučių siūntimas ir gavimas
+Žinučių siuntimas ir gavimas
 -------------------------------
-Dabar esi pasiruošęs siūsti ir gauti žinutes. Gali siūsti tekstinę eilutę kuri yra neilgesnė kaip 250 simbolių. Žemiau pateikiamas pavyzdys::
+Dabar „micro:bit“ yra paruoštas siųsti ir gauti žinutes. Galite siųsti tekstinę eilutę, kuri yra neilgesnė kaip 250 simbolių. Žemiau pateikiamas pavyzdys::
 
 	my_message = "Be nice to yu turkeys dis christmas, Cos' turkeys just wanna hav fun, Turkeys are cool, turkeys are wicked, An every turkey has a Mum."
 
 	radio.send(my_message)
 
-Žinutės gavimo procesas yra panašus, naudok::
+Žinutės gavimo procesas yra panašus, naudokite::
 
     message_received = radio.receive()
 
 Sudėti viską kartu
 -------------------
-Tavo „micro:bit“ yra protingas, jis gali siūsti ir gauti žinutes greitai. Tiesiog nurodyk „micro:bit“ pastoviai jų klausyti arba jas siūsti štai taip::
+Jūsų „micro:bit“ yra išmanus, jis gali greitai siųsti ir gauti žinutes. Tiesiog nurodykite „micro:bit“ nuolatos jų klausyti arba jas siųsti štai taip::
 
 	from microbit import * 
 	import radio
@@ -67,9 +67,9 @@ Tavo „micro:bit“ yra protingas, jis gali siūsti ir gauti žinutes greitai. 
 		    print(incoming)
 		sleep(500)
 
-Jeigu spausdinsi ateinančias žinutes, kartais pamatysi užrašą ``None``. Tai yra todėl, kad „micro:bit“ klausosi žinučių bet jos dar neatėjo. Mes galime ignoruoti šiuos įvykius tikrinant ar ateinančios ``incoming`` žinutės yra lygu ``None``.
+Jeigu spausdinsite ateinančias žinutes, kartais pamatysi užrašą ``None``. Tai yra todėl, kad „micro:bit“ klausosi žinučių, bet jos dar neatėjo. Galite ignoruoti šiuos įvykius tikrinant ar ateinančios ``incoming`` žinutės yra lygu ``None``.
 
 Idėjos projektams su radiju
 =================================
-* Siūsti žinutę kiek vieną kartą kai mygtukas ``A`` yra paspaustas.
-* Tau reikės poros „micro:bit“. Suprogramuok vieną „micro:bit“ gauti žinutes ir jas atspausdinti naudojant ``print()`` metodą. Palik šį „micro:bit“ prijungtą prie kompiuterio su „USB“ laidu. Suprogramuok kitą „micro:bit“ siūsti akselerometro arba temperatūros rodmenis žinutėje kiek vieną sekundę. Atjunk šį „micro:bit“ ir naudok bateriją jam įjungti. Sveikinu! Sukūriai duomenų gavėją ir siuntėją!
+* Siųsti žinutę kiekvieną kartą kai mygtukas ``A`` yra paspaustas.
+* Jums reikės dviejų „micro:bit“. Suprogramuokite vieną „micro:bit“ gauti žinutes ir jas atspausdinti naudojant ``print()`` metodą. Palikite šį „micro:bit“ prijungtą prie kompiuterio su „USB“ laidu. Suprogramuokite kitą „micro:bit“ siųsti akselerometro arba temperatūros rodmenis žinutėje kiekvieną sekundę. Atjunkite šį „micro:bit“ ir naudokite bateriją jam įjungti. Sveikinu! Sukūrėte duomenų gavėją ir siuntėją!

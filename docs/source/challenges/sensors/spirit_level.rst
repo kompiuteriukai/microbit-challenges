@@ -1,63 +1,61 @@
 ***********
-Sprit Level
+Gulsčiukas
 ***********
 
 .. tabularcolumns:: |L|l|
 
 +--------------------------------+----------------------------+
-| **Total points possible**	 | **Uses**	              |
+| **Galimi taškai**		 | **Naudoja**	              |
 +================================+============================+
-| 10			 	 | Accelerometer, LED Display |
+| 10			 	 | Akcelerometrą, LED ekraną  |
 +--------------------------------+----------------------------+
 	
-Description
+Aprašymas
 ===========
-In this project, we will use the accelerometer to make a spirit level.  
+Šiame projekte naudosite akcelerometrą tam, kad sukurtumėte gulsčiuką.  
 
 
 .. figure::  spirit.jpg
    :scale: 60 %
 
-   Image source: Wikipedia
-
-A spirit level, like the one in the picture above, is used to tell whether a surface is flat. If you put a spirit level on a flat surface the bubble will rest in the 
-middle of the tube. If the surface is tilted to the left or right, the bubble will also move to the left or right indicating visually that there is a slope. You can use accelerometer
-values to determine whether the micro:bit is on a flat surface or not and give the user a signal by displaying an arrow, for example, to indicate a tilt. 
+   Nuotraukos šaltinis: Wikipedia
+   
+Gulsčiukas, kuris pavaizduotas viršuje, yra naudojamas patikrinimui ar paviršius yra lygus. Jeigu paviršius yra lygus, burbuliukas bus tubelės viduryje. Jeigu paviršius pakreiptas į kairę ar į dėšinę, burbuliukas taip pat pajudės atitinkama kryptimi ir vizualiai parodys, kad yra nuolydis. Galite naudoti akcelerometro vertes tam, kad pasakytume ar „micro:bit“ yra ant lygaus paviršiaus ar ne, ir duoti vartotojui signalą parodant rodyklę, identikuojančią pakėlimą.
                                                                      
-Basic Task
-===========
-Collect points for these stages: 
+Paprasta užduotis
+==================
+Rinkite taškus už šiuos etapus:
 
 .. tabularcolumns:: |p{14cm}|R|
 
 +---------------------------------------------------------+------------+
-| **Tasks** 		                                  | **Points** |
+| **Užduotys** 		                                  | **Taškai** |
 +=========================================================+============+
-| We are going to use the accelerometer values in the x   | 	 2     |
-| axis. Write some code to print accelerometer values     |            |
-| for the x axis.                                         |            |
-+---------------------------------------------------------+------------+
 |                                                         |            |
-| Write down (on paper) the x axis values for the 	  |      2     |
-| accelerometer when you tilt the board left, when you    |            |
-| tilt the board                                          |            |
-| to the right and when the board is held flat, face-up.  |            |
-| We need to know the minimum and maximum values for the  |            |
-| range.                                                  |            |
+| Naudokite akcelerometro vertes x ašyje. Parašykite 	  | 	 2     |
+| programos kodą, kuris atspausdintų akcelerometro vertes |            |
+| x ašyje.		                                  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| If the micro:bit is tilted to the left, display an      |     2      |
-| arrow pointing leftwards.                               |            |
+| Užrašykite ant popieriaus x ašies duomenis iš 	  |      2     |
+| akcelerometro kai: pakreipiate kompiuteriuką į kairę, į |            |
+| dešinę ir kai jis laikomas tolygiai, veidu į viršų.     |            |
+| Turite sužinoti minimalų ir maksimalų vertės diapozoną. |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| If the micro:bit is tilted to the right, display an     |     2      |
-| arrow pointing leftwards.                               |            |
+| Jeigu „micro:bit“ pakreiptas į kairę, parodykie rodyklę |     2      |
+| nukreiptą į kairę.                                      |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| If the micro:bit is flat, display a dot in the middle of|     2      |
-| the LED display.                               	  |            |
+| Jeigu „micro:bit“ pakreiptas į dešinę, parodykit rodyklę|     2      |
+| nukreiptą į dešinę.                                     |            |
+|                                                         |            |
++---------------------------------------------------------+------------+
+|                                                         |            |
+| Jeigu „micro:bit“ guli tolygiai, parodykite tašką 	  |     2      |
+| viduryje LED ekrano.                            	  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+

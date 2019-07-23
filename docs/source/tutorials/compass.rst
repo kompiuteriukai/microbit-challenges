@@ -5,32 +5,32 @@ Kompasas
 
 Magnetometras matuoja magnetinio lauko stiprumą kiekvienoje iš trijų ašių.
 Jis gali būti naudojamas elektroninio kompaso sukūrimui arba magnetinių laukų
-tyrinėjimui kurie yra generuojami nuolatinio magneto arba elektros laidininku
-tekanti srovė.
+tyrinėjimui, kurie yra generuojami nuolatinio magneto arba elektros laidininku
+tekančia srove.
 
 .. image:: compass.jpg
    :scale: 80 %
 
 Magnetinio lauko galios atvaizdavimas nėra lengvas. Magnetometro
-tvarkyklė grąžina neapdorotas vertes. Kiek vienas magnetometras yra
-skirtingas ir reikės jį kalibruoti, kad būtų atsižvelgta į neapdorotus
+tvarkyklė grąžina neapdorotas vertes. Kiekvienas magnetometras yra
+skirtingas ir jį reikės kalibruoti, kad būtų atsižvelgta į neapdorotus
 skaičius ir magnetinio lauko iškraipymus, kuriuos veikia kietieji ir
 minkštieji geležies trikdžiai, kompensacijos.
 
 Prieš pradedant ką nors daryti, reikia sukalibruoti savo „micro:bit“ kompiuteriuką,
-bet atsimink:
+tačiau atsiminkite:
 
 .. warning::
 
-    Kompaso kalibracija sustabdys tavo programą iki kol šis veiksmas bus atliktas.
-    Kalibracija vyksta žaidimo pavidalu kuriuo reikia nupiešti apskritimą LED
+    Kompaso kalibracija sustabdys jūsų programą iki kol šis veiksmas bus atliktas.
+    Kalibracija vyksta žaidimo pavidalu, kuriuo reikia nupiešti apskritimą LED
     ekrane sukiojant savo įrenginį.
 
 
 Paprastos Funkcijos
 ===================
 Sąsaja su magnetometru atrodo labai panašiai kaip ir sąsaja su akselerometru, iškyrus tai, kad naudojame tik dvi ašis
-x ir y krypčiai nustatyti. Prisimink, prieš pradedant naudoti kompasą turėtum jį sukalibruoti, kitu atvėju rodmenys gali būti neteisingi::
+x ir y krypčiai nustatyti. Prisiminkite, kad prieš pradedant naudoti kompasą, turėtumėte jį sukalibruoti. Kitu atveju rodmenys gali būti neteisingi::
 
     from microbit import *
 
@@ -42,7 +42,7 @@ x ir y krypčiai nustatyti. Prisimink, prieš pradedant naudoti kompasą turėtu
 	print("x reading: ", x, ", y reading: ", y)
 	sleep(500)
 
-Ši dalis patikrina magnetinį lauką diem matmenimis (lygtai taip pat kaip ir tikras kompasas) ir pateikia vertes, kas atrodo pakankamai paprasta. Pabandyk išsiaiškinti, kur šiame magnetometre yra ašis x. Norint sužinoti krypti reikia ją apskaičiuoti :math:`tan^{-1} (y/x)`, „python“ programavimo kalboje tai yra parašoma taip::
+Ši dalis patikrina magnetinį lauką dviem matmenimis (kaip ir tikras kompasas) ir pateikia vertes, kas atrodo pakankamai paprasta. Pabandykite išsiaiškinti, kur šiame magnetometre yra ašis x. Norint sužinoti kryptį, reikia ją apskaičiuoti :math:`tan^{-1} (y/x)`, Phyton programavimo kalboje tai yra parašoma taip::
 
     import math
     from microbit import *
@@ -57,13 +57,13 @@ x ir y krypčiai nustatyti. Prisimink, prieš pradedant naudoti kompasą turėtu
 	print("Direction: ", angle)
 	sleep(500)
 
-180/π yra todėl, kad grįžtamasis kampas yra radianais, o ne laipsniais. Lamei, „micro:bit“ turi funkciją kuri apskaičiuoja poziciją automatiškai::
+180/π yra todėl, kad grįžtamasis kampas yra pateikiamas radianais, o ne laipsniais. Laimei, „micro:bit“ turi funkciją kuri apskaičiuoja poziciją automatiškai::
 
    compass.heading()
 
-Ši funkcija pateikia kompaso kryptį kaip sveikąjį skaičių nuo 0 iki 360, nurodant kampą laipsniais pagal laikrodžio rodyklę ir šiaurė yra 0. Bet prieš naudojant ``compass.heading`` funkciją privalai įrenginį sukalibruoti.
+Ši funkcija pateikia kompaso kryptį, kaip sveikąjį skaičių nuo 0 iki 360, ir kampą nurodo laipsniais pagal laikrodžio rodyklę (šiaurė yra 0). Tačiau prieš naudojant ``compass.heading`` funkciją privalote įrenginį sukalibruoti.
 
 Projekto idėjos su kompasu
 ===================================
-* Paversk „micro:bit“ į kompasą kuris uždegtų LED lemputę arčiausiai ten, kur yra šiaurė.
-* Sukalibruok savo magnetometrą. Išsiaiškint ar kalibracija išlieka panaši po tam tikro laiko ir ar ji būna tokia pati patalpoje, lauke ar ten, kur yra daug metalo (pvz. lifte).
+* Paverskite „micro:bit“ į kompasą, kuris uždegtų LED lemputę arčiausiai ten, kur yra šiaurė.
+* Sukalibruokite savo magnetometrą. Išsiaiškintite, ar kalibracija išlieka panaši po tam tikro laiko, ir ar ji būna tokia pati patalpoje, lauke ar ten, kur yra daug metalo (pvz. lifte).

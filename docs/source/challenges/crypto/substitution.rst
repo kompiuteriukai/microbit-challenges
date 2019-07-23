@@ -13,7 +13,7 @@ Pakaitinis šifras
 Aprašymas
 ===========
 
-Pakaitinis kodas yra apgaulingai paprastas. Pranešimai yra šifruojami naudojant iš anksto sukurtą raktą. Raktas sukuriamas kaitaliojant abėcėlę šitaip:
+Pakaitinis kodas yra apgaulingai paprastas. Pranešimai yra šifruojami naudojant iš anksto sukurtą raktą. Raktas sukuriamas kaitaliojant abėcėlę:
 
 .. figure:: substitution.png
 
@@ -21,9 +21,9 @@ Jūsų tikslas paversti „micro:bit“ į įrenginį galintį šifruoti praneš
 
 	cipher_key = { 'A':'V', 'B':'J', 'C':'Z', 'D':'B', 'E':'G', 'F':'N', 'G':'F', 'H':'E', 'I':'P', 'J':'L', 'K':'I','L':'T','M':'M','N':'X','O':'D','P':'W','Q':'K','R':'Q','S':'U','T':'C','U':'R','V':'Y','W':'A','X':'H','Y':'S','Z':'O'}
 
-Anglų kalboje tai reiškia: simbolis 'A' turėtų būti pakeistas su simboliu 'V'; simbolis 'B' turėtų būti pakeistas su simboliu 'J' ir taip toliau. Gali atspausdinti žodyną naudojant ``print(cipher_key)``.
+Anglų kalboje tai reiškia: simbolis 'A' turėtų būti pakeistas su simboliu 'V'; simbolis 'B' turėtų būti pakeistas su simboliu 'J' ir taip toliau. Galite atspausdinti žodyną naudojant ``print(cipher_key)``.
 
-Išbandykite ir eksperimentuokite naudodamas „REPL“. 
+Išbandykite ir eksperimentuokite naudodamiesi „REPL“. 
 
                                                                      
 Paprasta užduotis

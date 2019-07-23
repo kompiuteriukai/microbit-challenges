@@ -1,42 +1,44 @@
-*********************
-Rock, Paper, Scissors
-*********************
+**************************
+Akmuo, Popierius, Žirklės
+**************************
 
 .. tabularcolumns:: |L|l|
 
 +--------------------------------+-----------------------------------------------------------------------+
-| **Total points possible**	 | **Uses**	                                                         |
+| **Galimi taškai**		 | **Naudoja**	                                                         |
 +================================+=======================================================================+
-| 10			 	 | Two micro:bits, Battery pack with 2 AAA batteries, Radio, LED Display |
+| 10			 	 | Du „micro:bit“, dvi AAA baterijas, radiją, LED ekraną		 |
 +--------------------------------+-----------------------------------------------------------------------+
 	
-Description
+Aprašymas
 ===========
-In this project, we will make a rock, paper, scissors game using use the radio on the micro:bit to send messages from one microbit to another. 
+Šiame projekte, sukursite žaidimą "Akmuo, popierius, žirklės" naudodami „micro:bit“ radiją pranešimų siųntimui iš vieno „micro:bit“ į kitą.
 
-Basic Task
-===========
-Collect points for these stages: 
+Paprasta užduotis
+==================
+Rinkite taškus už šiuos etapus:
 
 .. tabularcolumns:: |p{14cm}|R|
 
 +---------------------------------------------------------+------------+
-| **Tasks** 		                                  | **Points** |
+| **Užduotys** 		                                  | **Taškai** |
 +=========================================================+============+
-| Read the radio tutorial sheet.                          |            |
-| Write code to transmit and receive messages.            |    2       |
-| Print the message sent on the REPL.                     |            |
+|                                                         |            |
+| Perskaitykite radijo pamokos lapą.                      |    2       |
+| Parašykite pranešimų siuntimo ir gavimo programą.	  |            |
+| Atspausdinkite pranešimą „REPL“.                        |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Choose which micro:bit will host the R,P,S game and     |    1       |
-| which micro:bit will be used by the player. On the      |            |
-| host micro:bit, display a welcome message.              |            |
+| Pasirinkite, kuris „micro:bit“ bus naudojamas žaidimo	  |    1       |
+| A,P,Ž laikymui ir kuris „micro:bit“ bus naudojamas	  |            |
+| žaidėjo. Parodykite pasisveikinimo pranešimą		  |            |
+| „micro:bit“, kuriame laikomas žaidimas.                 |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Everyone should know how to play Rock, Paper, Scissors. |    7       |
-| Play the game without using a computer                  |            |
-| and make up your own instructions for the challenge.    |            |
+| Kiekvienas turėtų žinoti kaip žaisti "akmuo, popierius, |    7       |
+| žirklės". Žaiskite žaidimą nenaudojant kompiuteriuko ir |            |
+| sukurkite savo taisykles šiam iššūkiui.		  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+

@@ -1,18 +1,18 @@
 ****************
 Muzika
 ****************
-Tai yra trumpas gidas, skirtas papasakoti dar keliems dalykams ką galima padaryti su „micro:bit“ muzika. Idėja ta, kad gali naudoti šią informaciją eksmperimentams ir kuriant kažką sau. „Micro:bit“ gali groti paprastas melodijas, jeigu prijungsi garsekalbį.
+Tai yra trumpas gidas, skirtas parodyti ką galima padaryti su „micro:bit“ muzika. Galite naudoti šią informaciją eksmperimentams ir kuriant kažką naujo. „Micro:bit“ gali groti paprastas melodijas, jeigu prijungsi garsiakalbį.
 
-Jeigu naudoji garsekalbį, gali jį prijungti prie „micro:bit“ naudojant krokodilinius segtukus štai taip:
+Jeigu naudojate garsiakalbį, galite jį prijungti prie „micro:bit“ naudodami krokodilinius segtukus štai taip:
 
 .. figure:: connect_speaker.jpg
    :scale: 150 %
 
    Paveiksliukas iš: <https://www.kitronik.co.uk/blog/microbit-alarm-kitronik-university/>
 
-.. warning:: Negali valdyti garso lygio apimties iš „micro:bit“. Būk labai atsargus, jei naudosi ausines. Garsiakalbis yra geresnis pasirinkimas darbui su garsu.
+.. warning:: Negalite valdyti garso lygio apimties iš „micro:bit“. Būkite labai atsargus, jeigu naudosite ausines. Garsiakalbis yra geresnis pasirinkimas darbui su garsu.
 
-Jeigu naudosi ausines, gali jas prijungti krokodiliniais segtukais prie „micro:bit“ taip:
+Vis dėlto, jeigu naudosite ausines, galite jas prijungti krokodiliniais segtukais prie „micro:bit“ taip:
 
 .. image:: connect_headphones.jpg
    :scale: 70 %
@@ -22,7 +22,7 @@ Paprastos funkcijos
 
 Groti melodiją
 --------------
-Taigi pagrokime ką nors::
+Ikelkite muziką į „micro:bit“::
 
 	from microbit import *
 	import music
@@ -31,7 +31,7 @@ Taigi pagrokime ką nors::
 
 .. note:: Privalai importuoti modulį ``music`` norėdamas groti ar kontroliuoti garsą.
 
-„Micro:bit“ turi daug integruotų melodijų. Štai keletas iš jų, išbandyk: 
+„Micro:bit“ turi daug integruotų melodijų. Štai keletas iš jų: 
 
  *  ``music.DADADADUM``
  *  ``music.ENTERTAINER``
@@ -41,9 +41,9 @@ Taigi pagrokime ką nors::
  * ``music.RINGTONE``
  
  
-Sukurk savo melodiją
+Sukurkite savo melodiją
 --------------------
-Gali sukurti savo melodiją, žemiau pateikiama kodo iškarpa rodanti kaip groti garsą. Numeris einantis po natos yra oktava, o oktava gali būti bet koks skaičius nuo 1 iki 8. Skaičius po dvitaškio pasako kaip ilgai nata bus grojama::
+Galite sukurti savo melodiją naudodamiesi Žemiau pateikiama kodo iškarpa, rodančia kaip groti garsą. Numeris einantis po natos yra oktava, o oktava gali būti bet koks skaičius nuo 1 iki 8. Skaičius po dvitaškio nusako kaip ilgai nata bus grojama::
 
 	from microbit import *
 	import music
@@ -57,7 +57,7 @@ Gali sukurti savo melodiją, žemiau pateikiama kodo iškarpa rodanti kaip groti
 	# Play a 'C' in octave number 3 for 4 beats long
  	music.play('C3:4')
 
-Groti eilę natų vieną po kitos yra paprasta, sudėk natas, kurias nori groti į sąrašą::
+Groti eilę natų vieną po kitos yra paprasta: sudėkite natas, kurias norite groti, į sąrašą::
 
 	from microbit import *
 	import music
@@ -70,7 +70,7 @@ Groti eilę natų vieną po kitos yra paprasta, sudėk natas, kurias nori groti 
 
 Išplėstinės funkcijos
 =====================
-Taip pat galite nustatyti natos dažnį ``frequency``. Pažiūrėk į šį pavyzdį, kur sukuriame policijos sirenas. Protingas pasirinkimas čia yra tai, kad dažnis ar nata kontroliuojama ``for`` kilpos::
+Taip pat galite nustatyti natos dažnį ``frequency``. Pažiūrėkite į šį pavyzdį, kuriame sukuriamos policijos sirenas. Dažnis ar nata kontroliuojama ``for`` ciklu::
 
 	while True:
 		for freq in range(880, 1760, 16):
@@ -78,9 +78,9 @@ Taip pat galite nustatyti natos dažnį ``frequency``. Pažiūrėk į šį pavyz
 		for freq in range(1760, 880, -16):
 			music.pitch(freq, 6)
 
-Ar gali atspėti ką tai daro? Kiek vieną kartą kilpoje apskaičiuojamas naujas dažnis pridedant (arba atimant) 16.
+Ar galite atspėti ką šis kodas daro? Kiekvieną kartą cikle apskaičiuojamas naujas dažnis pridedant (arba atimant) 16.
 
 Idėjos projektams su muzika 
 ==============================
-* Sukurk savo melodiją.
-* Sukurk muzikinį instrumentą. Pakeisk melodijos skambesį pasinaudojant akselerometro gautais duomenimis. 
+* Sukurkite savo melodiją.
+* Sukurkite muzikinį instrumentą. Pakeiskite melodijos skambesį pasunaudodami akselerometro gautais duomenimis. 

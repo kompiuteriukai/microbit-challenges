@@ -1,60 +1,61 @@
-**************
-Send a Message
-**************
+***************
+Siųsk pranešimą
+***************
 
 .. tabularcolumns:: |L|l|
 
 +--------------------------------+-----------------------------------------------------------------------+
-| **Total points possible**	 | **Uses**	                                                         |
+| **Galimi taškai**		 | **Naudoja**	                                                         |
 +================================+=======================================================================+
-| 10			 	 | Two Micro:bits, Battery pack with 2 AAA batteries, Radio, LED Display |
+| 10			 	 | Du „micro:bit“, dvi AAA baterijas, radiją, LED ekraną		 |
 +--------------------------------+-----------------------------------------------------------------------+
 	
-Description
+Aprašymas
 ===========
-In this project, we will use the radio on the micro:bit to send messages from one microbit to another. You will
-display the number of messages sent between a pair of micro:bits on the LED display.
+Šiame projekte, naudositee „micro:bit“ radiją pranešimų siųntimui iš vieno „micro:bit“ į kitą. Parodysite LED ekrane išsiųstą pranešimų kiekį tarp dviejų „micro:bit“.
 
-
-Basic Task
-===========
-Collect points for these stages: 
+Paprasta užduotis
+==================
+Rinkite taškus už šiuos etapus:
 
 .. tabularcolumns:: |p{14cm}|R|
 
 +---------------------------------------------------------+------------+
-| **Tasks** 		                                  | **Points** |
+| **Užduotys** 		                                  | **Taškai** |
 +=========================================================+============+
-| Read the radio tutorial sheet.                          |            |
-| Write code to transmit and receive messages.            |    2       |
-| Print the message sent on the REPL.                     |            |
+|                                                         |            |
+| Perskaitykite radijo pamokos puslapų.                   |            |
+| Parašykite pranešimų siuntimo ir gavimo programą.       |    2       |
+| Atspausdinkite pranešimą „REPL“.                        |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Add some code so that the message is sent when button   |    1       |
-| a is pressed.                                           |            |
+| Pridėkite dalį kodo, kuris išsiųstų pranešimą		  |    1       |
+| paspaudus mygtuką ``A``.                                |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Connect the battery pack to the second micro:bit.       |     2      |
-| Upload the same code the second micro:bit.              |            |
-|                                                         |            |
-+---------------------------------------------------------+------------+
-| Test the pair of micro:bits. You should be able to      |            |
-| send and receive messages.                              |     2      |
+| Prijunkite baterijas prie antrojo „micro:bit“.          |     2      |
+| Įkelkite tą pačią programą į antrąjį „micro:bit“.       |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Now you should find a way to count the messages. You    |            |
-| could add 1 to a counter every time you send a message, |     1      |
+| Išbandykite du „micro:bit“ kompiuteriukus. Siųskite ir  |     2      |
+| gaukite pranešimus.			                  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| You need to do something special to send and receive    |     2      |
-| numbers - you need to translate the number to a string  |            |
-| using the ``str()`` function before sending it in the   |            |
-| message. At the receiving end you need to translate     |            |
-| the string back into a number using the ``int()``       |            |
-| function.                                               |            |
+| Sugalvokite būdą kaip skaičiuoti pranešimus. Galėtumete |     1      |
+| pridėti 1 prie skaitiklio kaskart išsiuntus pranešimą.  |            |
+|                                               	  |            |
+|                                                         |            |
++---------------------------------------------------------+------------+
+|                                                         |            |
+| Norėdami siųsti ir gauti skačius turite juos paversti	  |     2      |
+| į tekstinę eilutę     				  |            |
+| naudodami ``str()`` funkciją prieš siunčiant pranešimą. |            |
+| Gavėjo pusėje turite paversti tekstinę eilutę atgal į   |            |
+| skaičių naudojant ``int()`` funkciją.			  |            |
+| 			                                  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
