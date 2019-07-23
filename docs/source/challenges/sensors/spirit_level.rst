@@ -12,7 +12,7 @@ Gulsčiukas
 	
 Aprašymas
 ===========
-Šiame projekte naudosi akcelerometrą tam, kad sukurti gulsčiuką.  
+Šiame projekte naudosite akcelerometrą tam, kad sukurtumėte gulsčiuką.  
 
 
 .. figure::  spirit.jpg
@@ -20,11 +20,11 @@ Aprašymas
 
    Nuotraukos šaltinis: Wikipedia
    
-Gulsčiukas, kuris pavaizduotas viršuje yra naudojamas patikrinimui ar paviršius yra lygus. Jeigu paviršius yra lygus burbuliukas bus per vidurį tubelės. Jeigu paviršius pakreiptas į kairę ar į dėšinę, burbuliukas taip pat pajudės atitinkama kryptimi vizualiai parodydamas, kad yra nuolydis. Gali naudoti akcelerometro vertes tam, kad pasakyti ar „micro:bit“ yra ant lygaus paviršiaus ar ne ir duoti vartotojui signalą parodant rodyklę identikuojančią pakėlimą.
+Gulsčiukas, kuris pavaizduotas viršuje, yra naudojamas patikrinimui ar paviršius yra lygus. Jeigu paviršius yra lygus, burbuliukas bus tubelės viduryje. Jeigu paviršius pakreiptas į kairę ar į dėšinę, burbuliukas taip pat pajudės atitinkama kryptimi ir vizualiai parodys, kad yra nuolydis. Galite naudoti akcelerometro vertes tam, kad pasakytume ar „micro:bit“ yra ant lygaus paviršiaus ar ne, ir duoti vartotojui signalą parodant rodyklę, identikuojančią pakėlimą.
                                                                      
 Paprasta užduotis
 ==================
-Rink taškus už šiuos etapus:
+Rinkite taškus už šiuos etapus:
 
 .. tabularcolumns:: |p{14cm}|R|
 
@@ -32,30 +32,30 @@ Rink taškus už šiuos etapus:
 | **Užduotys** 		                                  | **Taškai** |
 +=========================================================+============+
 |                                                         |            |
-| Naudok akcelerometro vertes x ašyje. Parašyk 	 	  | 	 2     |
+| Naudokite akcelerometro vertes x ašyje. Parašykite 	  | 	 2     |
 | programos kodą, kuris atspausdintų akcelerometro vertes |            |
 | x ašyje.		                                  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Užrašyk ant popieriaus x ašies duomenis iš akcelerometro|      2     |
-| kai pakreipi kompiuteriuką į kairę, kai pakreipi į      |            |
-| dešinę ir kai laikomas tolygiai, veidu į viršų.         |            |
-| Turi sužinoti minimalų ir maksimalų vertės diapozoną.   |            |
+| Užrašykite ant popieriaus x ašies duomenis iš 	  |      2     |
+| akcelerometro kai: pakreipiate kompiuteriuką į kairę, į |            |
+| dešinę ir kai jis laikomas tolygiai, veidu į viršų.     |            |
+| Turite sužinoti minimalų ir maksimalų vertės diapozoną. |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Jeigu „micro:bit“ pakreiptas į kairę, parodyk rodyklę   |     2      |
+| Jeigu „micro:bit“ pakreiptas į kairę, parodykie rodyklę |     2      |
 | nukreiptą į kairę.                                      |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Jeigu „micro:bit“ pakreiptas į dešinę, parodyk rodyklę  |     2      |
+| Jeigu „micro:bit“ pakreiptas į dešinę, parodykit rodyklę|     2      |
 | nukreiptą į dešinę.                                     |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
 |                                                         |            |
-| Jeigu „micro:bit“ guli tolygiai, parodyk tašką viduryje |     2      |
-| LED ekrano.                               		  |            |
+| Jeigu „micro:bit“ guli tolygiai, parodykite tašką 	  |     2      |
+| viduryje LED ekrano.                            	  |            |
 |                                                         |            |
 +---------------------------------------------------------+------------+
